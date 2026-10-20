@@ -2,7 +2,7 @@
   "project_name": "Co-Constructing Multispecies Futures",
   "status": "working history",
   "updated": "2026-10-20",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "scope": "Documented workshop materials, presentations, development contexts, and related embodied-worldbuilding projects. A related project does not establish use of the card deck at every event. Dates and locations are left open where the sources do not establish them.",
   "entries": [
     {
@@ -236,16 +236,16 @@
       "id": "scicomm-development",
       "title": "Science-communication workshops / SciComm",
       "connection_kind": "workshop",
-      "date_label": "Workshop dates to confirm",
+      "date_label": "Multiple sessions · materials from 2024",
       "event_start": null,
       "event_end": null,
-      "date_basis": "document label only",
+      "date_basis": "Repeated science-communication sessions are recalled in development discussions. The 2024 year comes from a workshop-slide filename dated 30 October 2024; it does not establish the first or exact workshop date.",
       "place": "Venue not recorded",
       "theme": "Communicating science through speculative stories",
       "iteration": "Development discussions recall science-communication sessions using tailored what-if questions. Workshop slides ask groups to revise and select Sparks; a companion talk explains the Mood / Object / Spark-to-Narrative card structure.",
       "evidence_status": "Retrospective account and workshop slides",
       "confidence": "retrospective",
-      "unknowns": "The workshop file is labeled 30 October 2024; that is a document label, not a confirmed session date.",
+      "unknowns": "The sources describe multiple science-communication sessions. The workshop file is labeled 30 October 2024; this dates the materials, not the first session. The starting year, individual session dates, and venues remain to be confirmed.",
       "sources": [
         {
           "label": "Card-development discussion, “Transcript from zoom from oct 14”"
@@ -258,6 +258,26 @@
         },
         {
           "label": "Co-Creating ArtScience, SciComm 30-minute talk slides, p. 44"
+        }
+      ]
+    },
+    {
+      "id": "usda-workshop",
+      "title": "USDA workshop",
+      "connection_kind": "workshop",
+      "date_label": "Date to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "Event date not yet supplied; owner confirmation dated 20 October 2026",
+      "place": "Location to confirm",
+      "theme": "Theme to confirm",
+      "iteration": "The project owner confirmed that USDA was one specific workshop in the toolkit’s history. Its workshop recipe and deck iteration remain to be documented.",
+      "evidence_status": "Workshop confirmed by the project owner",
+      "confidence": "user-confirmed",
+      "unknowns": "The formal event title, date, location, collaborators, and workshop recipe are still to be added. This is a separate entry from the NIST and PLF workshops.",
+      "sources": [
+        {
+          "label": "Project owner confirmation, 20 October 2026"
         }
       ]
     },
@@ -397,16 +417,16 @@
       "id": "robotics-popup",
       "title": "Speculative Robotics Lab Pop-Up",
       "connection_kind": "related",
-      "date_label": "January 2025; about three months reported",
+      "date_label": "Multiple sessions · documented in January 2025",
       "event_start": "2025-01",
       "event_end": null,
-      "date_basis": "project account",
+      "date_basis": "The manuscript describes a roughly three-month pop-up and locates activity in January 2025. That is a documented activity month, not an established first-session or closing date.",
       "place": "University of Nebraska–Lincoln Innovation Campus",
       "theme": "Encountering: live action robotic roleplay and care",
       "iteration": "Participants rehearsed relations with human-voiced robots and live scenarios. The paper develops encountering from this practice; it does not establish that every pop-up session used the card deck.",
       "evidence_status": "Manuscript project account",
       "confidence": "documented",
-      "unknowns": "The paper reports the duration but does not specify an exact closing date.",
+      "unknowns": "The paper reports roughly three months of activity and describes the room in January 2025. The first and last session dates are not specified, and deck use at each session is not established.",
       "sources": [
         {
           "label": "Performing the What-If, Ash Eliza Smith and Julia McQuillan, §§3–5"
@@ -417,16 +437,16 @@
       "id": "southern-devices",
       "title": "Southern Devices",
       "connection_kind": "related",
-      "date_label": "2024 project reference; workshop dates not given",
+      "date_label": "Multiple community interviews · 2024 project reference",
       "event_start": null,
       "event_end": null,
-      "date_basis": "bibliographic project year",
+      "date_basis": "The manuscript reports roughly 50 community interviews and two years of development. The 2024 year is a bibliographic project reference; it does not establish the first interview or workshop year.",
       "place": "Western North Carolina; Optimist Park",
       "theme": "Moving with: dance, place, infrastructure, and the drone",
       "iteration": "A drone duet and community interviews inform the paper’s account of moving with. This is a related performance and worldbuilding practice, not a documented card-deck workshop.",
       "evidence_status": "Manuscript project account",
       "confidence": "documented",
-      "unknowns": "Two years of development are reported; their exact start and end dates are not specified.",
+      "unknowns": "Roughly 50 community interviews and two years of development are reported. The project is referenced as 2024; exact starting and ending dates are not specified. These encounters are not documented as card-deck workshops.",
       "sources": [
         {
           "label": "Performing the What-If, Ash Eliza Smith and Julia McQuillan, §§3–5"
@@ -437,16 +457,16 @@
       "id": "mumu",
       "title": "MuMu: Worlds of Connections",
       "connection_kind": "related",
-      "date_label": "Playtest dates not recorded; 2025 project reference",
+      "date_label": "Multiple playtests · 2025 project reference",
       "event_start": null,
       "event_end": null,
-      "date_basis": "project reference; playtest dates unknown",
+      "date_basis": "The manuscript reports roughly 20 playtest sessions. The 2025 year identifies the cited XR project, not the first playtest; individual playtest dates are not recorded.",
       "place": "Cedar Point Biological Station (fieldwork); playtest venues not listed",
       "theme": "Becoming-with: a multispecies XR world",
       "iteration": "Youth, scientists, and artists helped shape a world experienced as prairie dog, apple tree, planting robot, and caretaker. Field observation and playtesting inform becoming-with and bodily perspective shifts.",
       "evidence_status": "Manuscript project and fieldwork account",
       "confidence": "documented",
-      "unknowns": "The paper describes about 20 playtests but does not list each event or establish card use at each one.",
+      "unknowns": "The paper describes roughly 20 playtests. The project reference is dated 2025, but the first playtest year and individual session dates are not established. Card use at every playtest is not established.",
       "sources": [
         {
           "label": "Performing the What-If, Ash Eliza Smith and Julia McQuillan, §§3–5"
@@ -457,22 +477,96 @@
       "id": "the-middle",
       "title": "The Middle / rural community futuring",
       "connection_kind": "related",
-      "date_label": "Dates to confirm",
+      "date_label": "Multiple workshops · 2024 publication reference",
       "event_start": null,
       "event_end": null,
-      "date_basis": "not recorded",
-      "place": "Rural Nebraska; specific venue not recorded",
+      "date_basis": "The Hyperrhiz 27 project publication is dated 2024 and describes a series of worldbuilding workshops. That is a publication year, not an established first-workshop date.",
+      "place": "Alliance and Nebraska’s Panhandle · specific venues not recorded",
       "theme": "Community health and preferable local futures",
-      "iteration": "The Great Plains talk describes collective rural futuring that fed a digital story archive through 3D collage, audio, and storytelling. It documents a related workflow rather than a confirmed use of this exact deck.",
-      "evidence_status": "Retrospective project account",
-      "confidence": "retrospective",
-      "unknowns": "Specific workshop dates and locations are not provided in this account.",
+      "iteration": "A series of community worldbuilding workshops fed The Middle’s shared digital environment through 3D scans, collage, drawing, audio, and storytelling. The public project account connects collective imagining in physical spaces with an interactive archive of possible community futures.",
+      "evidence_status": "Published project account and workshop-development record",
+      "confidence": "documented",
+      "unknowns": "The 2024 year refers to the Hyperrhiz publication. The first workshop year, individual session dates, and specific venues remain to be confirmed. Use of this exact card deck at every workshop is not established.",
       "sources": [
         {
           "label": "“Playing with” Creative Engagement, Great Plains Futures Conference script, 1 April 2026"
         },
         {
           "label": "Card-deck instruction drafts, 24 June 2025 development notes"
+        },
+        {
+          "label": "Smith, Bendix, and Lichtman, In the Middle of It All, Hyperrhiz 27 (2024), artists’ statement and credits",
+          "url": "https://hyperrhiz.io/hyperrhiz27/assemblages/02-smith-bendix-lichtman.html"
+        },
+        {
+          "label": "Ash Eliza Smith, In The Middle project page, Alliance, Nebraska",
+          "url": "https://asheveryday.com/index.php/worldbuilding-community/in-the-middle/"
+        }
+      ]
+    },
+    {
+      "id": "radio-play-isea-2022",
+      "title": "Radio Play · ISEA2022",
+      "connection_kind": "related",
+      "date_label": "11 June 2022",
+      "event_start": "2022-06-11",
+      "event_end": null,
+      "date_basis": "The public project page gives June 11 for the ISEA2022 Barcelona workshop. Shared presentation slides identify a photograph of this workshop.",
+      "place": "CCCB · Barcelona, Spain",
+      "theme": "Participatory worldbuilding, collective performance, and human–machine co-authorship",
+      "iteration": "A participatory writers’ room worked with GPT-3 toward a collaboratively authored live radio show. The workshop connects speculative storytelling with performance, listening, and shared authorship.",
+      "evidence_status": "Public project account and workshop photograph",
+      "confidence": "documented",
+      "unknowns": "This is a documented workshop in the wider practice. The reviewed sources do not establish use of the Co-Constructing Multispecies Futures card deck at this event.",
+      "sources": [
+        {
+          "label": "Radio Play project page, Episode 1: Barcelona, ISEA2022, June 11",
+          "url": "https://asheveryday.com/index.php/radio-play/radio-play/"
+        },
+        {
+          "label": "Community Engaged Art and Social Science, Midwest Sociological Society presentation, p. 16: Radio Play workshop photograph"
+        }
+      ]
+    },
+    {
+      "id": "larrp-kiewit-2025",
+      "title": "Live Action Robotic Role Play · Kiewit Luminarium",
+      "connection_kind": "related",
+      "date_label": "17 July 2025",
+      "event_start": "2025-07-17",
+      "event_end": null,
+      "date_basis": "The public event account explicitly dates the Kiewit Luminarium session July 17, 2025, 7–10 p.m.; photographs document interaction and roleplay.",
+      "place": "Kiewit Luminarium · Omaha, Nebraska",
+      "theme": "Multispecies care and live action robotic roleplay",
+      "iteration": "Visitors explored scenarios of more-than-human care with a robotic dog and robotic arm through live action robotic roleplay. The session extended the Speculative Robotics Lab Pop-Up. The project team was Ash Eliza Smith, Robert Twomey, Sam Bendix, and Reid Brockmeier.",
+      "evidence_status": "Dated public event account and workshop photographs",
+      "confidence": "documented",
+      "unknowns": "This is a documented robotic-roleplay workshop. The source does not establish use of the card deck at this particular session.",
+      "sources": [
+        {
+          "label": "Robert Twomey, LARPing with the Bots at Kiewit Luminarium, July 17, 2025",
+          "url": "https://roberttwomey.com/2025/07/larping-with-the-bots-at-kiewit-luminarium/"
+        }
+      ]
+    },
+    {
+      "id": "edgeland-futurism-teaching",
+      "title": "Edgeland Futurism",
+      "connection_kind": "related",
+      "date_label": "Teaching dates to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "The public teaching portfolio identifies the course, UC San Diego, and its instructors, but does not establish the course year or term.",
+      "place": "UC San Diego · San Diego, California",
+      "theme": "Borders, place, and speculative futures",
+      "iteration": "Teaching and exhibition brought speculative futures into movement, performance, objects, images, and shared discussion. The portfolio names Ash Eliza Smith and Pepe Rojo as instructors and documents related embodied speculative-design practice.",
+      "evidence_status": "Public teaching portfolio and project documentation",
+      "confidence": "documented",
+      "unknowns": "The year, academic term, and session dates remain to be confirmed. This is related teaching practice; the source does not establish use of the later card deck.",
+      "sources": [
+        {
+          "label": "Ash Eliza Smith, Edgeland Futurism teaching portfolio: UC San Diego; instructors Ash Eliza Smith and Pepe Rojo",
+          "url": "https://asheveryday.com/index.php/teaching/edgeland-futurism/"
         }
       ]
     }

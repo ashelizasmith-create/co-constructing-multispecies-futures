@@ -1,6 +1,6 @@
 # Zenodo release draft
 
-**Status: preparation draft.** This is editable deposit copy, not a published record or a finalized attribution statement. The current reviewed development version is **0.1.1**; **0.1.0** remains preserved as the first tracked version. The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live. A [GitHub draft release for v0.1.1](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-6910634d001822073a33) is saved with [release notes](RELEASE-NOTES-v0.1.1.md); it is unpublished pending the formal creator roster. No release tag, archival publication date, or DOI is claimed here. GitHub–Zenodo integration is enabled for this repository and reported “Repository synced successfully”; it is the chosen archival route, with no GitHub release or Zenodo record yet published.
+**Status: preparation draft.** This is editable deposit copy, not a published record or a finalized attribution statement. The current source version is **0.1.2**, with [prepared release notes](RELEASE-NOTES-v0.1.2.md); **0.1.0** and **0.1.1** remain preserved. The most recent verified public deployment was 0.1.1; deployment of the new source remains to be checked. The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live. The saved [GitHub draft release for v0.1.2](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) now has the 0.1.2 title, intended tag, and body; API verification identifies release `418649128` as `draft: true` with `published_at: null`. It remains unpublished pending the formal creator roster. No release tag, archival publication date, or DOI is claimed here. GitHub–Zenodo integration is enabled for this repository and reported “Repository synced successfully”; it is the chosen archival route, with no GitHub release or Zenodo record yet published.
 
 ## Proposed title
 
@@ -16,7 +16,7 @@ The toolkit is intended for facilitators, designers, artists, organizers, educat
 
 The toolkit has two formats: **Card Deck** and **Interactive Tool**, both under the title **Co-Constructing Multispecies Futures**. The planned release includes a 94-card general selection, print-at-home and professional print formats, use guidance, accessible card text, and the Interactive Tool with its adapted prompt bank. A separate browser presents the original cards. Historical editions include the complete 122-card multispecies deck and a 100-card precision livestock farming variant. Provenance identifies each source and adaptation. The archival record will preserve the chosen reviewed release, including a numbered standalone HTML download, with a link to the [current online tool](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html).
 
-The toolkit is discussed in *Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies*, a forthcoming book chapter by Ash Eliza Smith and Julia McQuillan. The chapter is not yet public and is not included in this deposit. The toolkit's public paper page provides a short overview and publication status.
+The toolkit is discussed in *Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies*, a forthcoming chapter by Ash Eliza Smith and Julia McQuillan in *Strategic Handbook of Worldbuilding* (Routledge). The chapter is not yet public and is not included in this deposit. The toolkit's public paper page provides a short overview and publication status.
 
 Before archiving, make this file list match the final tagged package. The verified website is https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/; add the eventual published release and DOI links only after publication.
 
@@ -32,7 +32,7 @@ embodied worldbuilding; speculative design; multispecies futures; more-than-huma
 | Creators and order | Confirm with the project team; see candidates below. |
 | Contributors and roles | Verify design, facilitation, research, technical, and other contributions that should be credited separately. |
 | Affiliations / ORCIDs | Enter only identifiers and affiliations confirmed for this release. |
-| Version | 0.1.1 is the current reviewed development candidate; 0.1.0 remains preserved. Confirm the version selected for this deposit; not every development update requires an archive. |
+| Version | 0.1.2 is the current source candidate; 0.1.0 and 0.1.1 remain preserved. Confirm the version selected for this deposit; not every development update requires an archive. |
 | Publication date | Use the actual release date; do not substitute a PDF export date. |
 | DOI | The chosen GitHub integration assigns a DOI when it archives the selected published release; it does not support pre-reservation. No DOI is claimed yet. |
 | Rights / license | Existing repository `LICENSE` is CC0 1.0 Universal and remains unchanged. Confirm scope for all added files; do not replace it with Zenodo's default CC BY by accident. |
@@ -69,15 +69,21 @@ Do not transfer a chapter, framework, or proposal author list to the deck. The s
 
 ## Related forthcoming chapter
 
-**Title:** *Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies*  
-**Authors:** Ash Eliza Smith and Julia McQuillan  
+**Title:** *Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies*
+
+**Authors:** Ash Eliza Smith and Julia McQuillan
+
+**Book:** *Strategic Handbook of Worldbuilding*
+
+**Publisher:** Routledge
+
 **Status:** forthcoming book chapter; not yet public.
 
 Provisional reference:
 
-> Smith, A. E., & McQuillan, J. (forthcoming). *Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies* [Book chapter].
+> Smith, A. E., & McQuillan, J. (forthcoming). Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies. In *Strategic Handbook of Worldbuilding*. Routledge.
 
-No book title, publisher, publication year, public URL, or DOI has been supplied. Keep these fields empty until confirmed. The [paper overview](../site/paper.html), [publication metadata](../site/data/publications.json), and README's [Paper and tools](../README.md#paper-and-tools) section provide the public cross-reference without distributing the manuscript. A future public chapter identifier can be added as a related publication; it is separate from the toolkit's release DOI.
+The project owner supplied the book title, *Strategic Handbook of Worldbuilding*, and publisher, Routledge. Editors, publication year, page range, public URL, and DOI remain unspecified; keep those fields empty until confirmed. The [paper overview](../site/paper.html), [publication metadata](../site/data/publications.json), and README's [Paper and tools](../README.md#paper-and-tools) section provide the public cross-reference without distributing the manuscript. A future public chapter identifier can be added as a related publication; it is separate from the toolkit's release DOI.
 
 ## Methodological lineage
 
@@ -94,9 +100,9 @@ The supplied HTML explicitly acknowledges *The Thing From The Future* by **Stuar
 
 ## Interactive source and integration status
 
-The original standalone HTML has been received, inspected, and preserved without modification; its historical identity is recorded in [PROVENANCE.md](PROVENANCE.md). The active **Co-Constructing Multispecies Futures — Interactive Tool** at `site/interactive.html` is now **0.1.1**. Its reviewed standalone download, `Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html`, is 57,084 bytes and matches the current tool; SHA-256: `fbc104a5a43dcebbd5c4d014f1aec251b1c8bfc7eabe551fc3bced0797c72ef2`. The 0.1.0 snapshot remains unchanged at SHA-256 `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254`.
+The original standalone HTML has been received, inspected, and preserved without modification; its historical identity is recorded in [PROVENANCE.md](PROVENANCE.md). The active **Co-Constructing Multispecies Futures — Interactive Tool** at `site/interactive.html` is now **0.1.2**. Its standalone download, `Co-Constructing_Multispecies_Futures_Interactive_v0.1.2.html`, is 57,290 bytes and matches the current source; SHA-256: `0601ce6479e0144607a408f3edc77169e45ab559da7b2769adc4817b98d8c4bb`. The 0.1.0 and 0.1.1 snapshots remain unchanged, with their checksums in [PROVENANCE.md](PROVENANCE.md). Version and byte checks passed; the 0.1.2 public deployment remains to be verified. The saved GitHub draft now identifies 0.1.2 and remains unpublished.
 
-Browser checks passed for drawing, holding results, optional layers, custom duplicate prompts, literal treatment of entered text, unlocking after prompt removal, and modal keyboard behavior. All 244 WebP card images decoded successfully. The 0.1.1 browser check also verified the homepage-to-citation route, exact copied citation, and app navigation that opens the other toolkit pages in a new tab to preserve a session. Private preview v4 succeeded at `2026-10-20T16:56:57.105973Z`. The public [GitHub Pages website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live following successful workflow 39461638283 from commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`. All 300 repository paths matched their expected Git blob hashes, including 256 binary assets. On the public site, citation copying returned the exact 0.1.1 reference and Print cards navigation worked; the downloaded Letter Fold PDF matched the local 173,930-byte file byte for byte. Real microphone recording and physical printer registration remain untested. See the changelog and release checklist for the bounded verification record.
+Baseline browser checks passed for drawing, holding results, optional layers, custom duplicate prompts, literal treatment of entered text, unlocking after prompt removal, and modal keyboard behavior. All 244 WebP card images decoded successfully. The 0.1.1 browser check also verified the homepage-to-citation route, exact copied citation, and app navigation that opens the other toolkit pages in a new tab to preserve a session. Private preview v4 succeeded at `2026-10-20T16:56:57.105973Z`. The public [GitHub Pages website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live following successful workflow 39461638283 from commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`. All 300 repository paths matched their expected Git blob hashes, including 256 binary assets. On the public site, citation copying returned the exact 0.1.1 reference and Print cards navigation worked; the downloaded Letter Fold PDF matched the local 173,930-byte file byte for byte. Real microphone recording and physical printer registration remain untested. See the changelog and release checklist for the bounded verification record.
 
 Describe the adapted prompt bank and original-card browser separately; do not claim the app includes every physical card. Final creator/order and license-scope review remain publication checks. The connected integration does not resolve those metadata decisions.
 

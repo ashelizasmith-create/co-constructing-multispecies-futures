@@ -1,12 +1,12 @@
 # Co-Constructing Multispecies Futures v0.1.1
 
-**DRAFT — development release pending the formal creator roster and final archival metadata.** Prepared October 20, 2026. The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live. The [GitHub v0.1.1 release draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-6910634d001822073a33) is saved but unpublished; no release tag, Zenodo record, or DOI has been created.
+**Historical 0.1.1 development draft.** Prepared October 20, 2026. At this baseline, the [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) was verified live and a GitHub v0.1.1 release draft had been saved but not published. The same [saved GitHub draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) now identifies v0.1.2; see the [current release notes](RELEASE-NOTES-v0.1.2.md). The historical source, snapshot, and checks below remain specific to 0.1.1. No release tag, Zenodo record, or DOI has been created.
 
 ## What changed and why
 
 This update makes it easier to find, use, and cite the Card Deck and Interactive Tool. Shared navigation leads to Start here, Interactive Tool, Print cards, Facilitate, and About & cite. From the tool, the other pages open in a new tab so a working session remains available.
 
-The About & cite page adds a copyable title-first development citation, a concise orientation to embodied worldbuilding, both primary lineages—*The Thing From The Future* and *Rehearsing Realities*—and the separate reference to the forthcoming *Performing the What-If* chapter. The chapter is not yet public and its manuscript is not included.
+The About & cite page adds a copyable title-first development citation, a concise orientation to embodied worldbuilding, both primary lineages—*The Thing From The Future* and *Rehearsing Realities*—and the separate reference to the forthcoming *Performing the What-If* chapter in *Strategic Handbook of Worldbuilding* (Routledge). The chapter is not yet public and its manuscript is not included.
 
 A planned review of anthropomorphism is recorded in [DEVELOPMENT-NOTES.md](DEVELOPMENT-NOTES.md): examine imposed human feelings or motives while retaining partial, situated perspectives and species/material capacities, constraints, and resistance. This release does not claim to complete that review or rewrite the full prompt bank.
 
@@ -26,11 +26,11 @@ File: `site/downloads/Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.ht
 Size: **57,084 bytes**  
 SHA-256: `fbc104a5a43dcebbd5c4d014f1aec251b1c8bfc7eabe551fc3bced0797c72ef2`
 
-This snapshot matches the current `site/interactive.html`. The earlier 0.1.0 file remains unchanged at SHA-256 `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254`. A later tool update must use a new numbered snapshot.
+This snapshot matched `site/interactive.html` at the 0.1.1 baseline; it remains preserved after later source updates. The earlier 0.1.0 file remains unchanged at SHA-256 `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254`. A later tool update must use a new numbered snapshot.
 
 ## Verification
 
-**0.1.1 checks:** browser navigation from the homepage to About & cite, exact copied citation text, app navigation/current-page label, and links opening other pages in a new tab passed. Private preview v4 succeeded at `2026-10-20T16:56:57.105973Z`. Current source and snapshot match byte for byte.
+**0.1.1 checks:** browser navigation from the homepage to About & cite, exact copied citation text, app navigation/current-page label, and links opening other pages in a new tab passed. Private preview v4 succeeded at `2026-10-20T16:56:57.105973Z`. The reviewed 0.1.1 source and snapshot matched byte for byte.
 
 **Public deployment:** [Pages workflow 39461638283](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39461638283) succeeded from commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`. The live homepage, routes, cards, and print section were checked in the browser. How to cite → Copy citation returned the exact 0.1.1 text. Print cards navigation worked, and the downloaded Letter Fold PDF matched the local file byte for byte (173,930 bytes). All 300 repository paths, including all 256 binary assets, matched their expected Git blob hashes.
 

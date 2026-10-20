@@ -1,0 +1,65 @@
+/* Original facilitator cards alongside readable source text. */
+.guide-page main { max-width: 1140px; }
+.guide-copy { max-width: 770px; }
+.guide-step { margin: 44px 0; padding-top: 10px; border-top: 1px solid var(--line); }
+.guide-step > .guide-copy h2 { margin-top: 22px; }
+.source-card-row { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px; align-items: start; margin: 28px 0; }
+.source-card-figure { margin: 0; }
+.source-card-figure > a { display: block; }
+.source-card-figure img { display: block; width: 100%; height: auto; object-fit: contain; border: 1px solid #dfd9cd; box-shadow: 0 5px 14px #20396e0b; }
+.source-card-figure figcaption { margin-top: 10px; font-size: 12px; color: var(--muted); }
+.source-card-panel { border-left: 2px solid #c3cce1; padding: 3px 0 3px 22px; min-width: 0; }
+.source-card-label { font-size: 11px; line-height: 1.6; color: var(--muted); margin-bottom: 13px; }
+.source-card-panel h3 { margin: 0 0 18px; font-size: 16px; line-height: 1.35; font-weight: 600; letter-spacing: .025em; }
+.card-transcript { padding: 0; margin: 0; font-size: 16px; line-height: 1.55; }
+.card-transcript p { margin: 0 0 16px; }
+.card-transcript p:last-child { margin-bottom: 0; }
+.card-transcript strong { font-weight: 600; }
+.current-guidance { border-left: 3px solid #d1a279; padding-left: 19px; font-size: 15px; }
+.recipe-options { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 26px; background: #e5eaf2; margin: 28px 0; }
+.recipe-options h3 { font-size: 20px; line-height: 1.25; margin-bottom: 15px; }
+.recipe-options p { font-size: 15px; }
+.recipe-options .small { font-size: 13px; margin-bottom: 0; }
+.original-sequence { margin-top: 44px; border-top: 1px solid var(--line); }
+.source-archive { margin-top: 22px; border: 1px solid var(--line); padding: 18px 22px; }
+.source-archive summary { cursor: pointer; font-size: 16px; font-weight: 600; }
+.source-archive-list { columns: 2; column-gap: 44px; margin: 24px 0 0; padding-left: 26px; }
+.source-archive-list li { font-size: 14px; padding-left: 4px; margin-bottom: 18px; }
+.archive-links { display: block; margin-top: 5px; font-size: 12px; }
+.archive-print-note { display: none; }
+.guide-credits { overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .source-card-row { grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 756px; }
+  .source-card-panel { padding-left: 19px; }
+  .recipe-options { gap: 24px; }
+}
+@media (max-width: 600px) {
+  .guide-step { margin-top: 34px; }
+  .recipe-options { grid-template-columns: 1fr; padding: 22px; }
+  .source-archive-list { columns: 1; }
+  .source-archive { padding: 16px 18px; }
+  .source-card-panel h3 { font-size: 15px; }
+  .card-transcript { font-size: 15px; }
+}
+@media print {
+  .guide-page main { max-width: none; }
+  .guide-copy { max-width: none; }
+  .guide-step { margin: 20px 0; padding-top: 0; }
+  .guide-step h2 { break-after: avoid; }
+  .source-card-row { display: block; margin: 14px 0; break-inside: avoid; }
+  .source-card-figure { display: none; }
+  .source-card-panel { padding: 0 0 0 12px; border-left: 1pt solid #bfcada; }
+  .source-card-label { font-size: 8pt; margin-bottom: 4px; }
+  .source-card-panel h3 { font-size: 10pt; margin-bottom: 7px; letter-spacing: 0; }
+  .card-transcript { font-size: 10pt; line-height: 1.4; }
+  .card-transcript p { margin-bottom: 7px; }
+  .current-guidance { font-size: 10pt; padding-left: 12px; }
+  .recipe-options { display: block; padding: 12px 15px; margin: 14px 0; break-inside: avoid; background: transparent; border: 1px solid #bfcada; }
+  .recipe-options > div + div { margin-top: 14px; }
+  .recipe-options h3 { font-size: 11pt; margin-bottom: 6px; }
+  .recipe-options p { font-size: 10pt; margin-bottom: 7px; }
+  .recipe-options .small { font-size: 9pt; }
+  .original-sequence { margin-top: 20px; }
+  .source-archive { display: none; }
+  .archive-print-note { display: block; font-size: 9pt; }
+}

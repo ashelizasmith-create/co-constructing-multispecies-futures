@@ -1,0 +1,43 @@
+/* Homepage-only visual routes. Photographs and source cards remain uncropped. */
+.hero.hero-with-practice{grid-template-columns:minmax(0,.97fr) minmax(0,1.03fr);gap:42px;align-items:start;overflow:visible;padding-top:58px;padding-bottom:58px}
+.hero-with-practice h1{font-size:clamp(3.05rem,5.2vw,4.65rem)}
+.hero-practice{min-width:0;padding-top:2px}
+.practice-photo{display:block;background:#fffbf2;border:1px solid #c5cddd;text-decoration:none}
+.practice-photo figure{margin:0}
+.practice-photo img{display:block;width:100%;height:auto;object-fit:contain}
+.practice-photo figcaption{padding:12px 14px 13px;line-height:1.45}
+.practice-photo figcaption strong{display:block;font-size:14px;font-weight:600}
+.practice-photo figcaption>span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.practice-photo:hover figcaption strong{text-decoration:underline;text-underline-offset:4px}
+.practice-photo-lead figcaption{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:3px 15px}
+.practice-photo-lead figcaption>span{margin:0}
+.practice-photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px;align-items:start}
+.practice-photo-frame{aspect-ratio:1080/766;display:flex;align-items:center;justify-content:center;background:#e9e8e0}
+.practice-photo-frame img{width:100%;height:100%;object-fit:contain}
+.practice-photo-note{font-size:11px;line-height:1.55;color:var(--muted);margin:12px 0 0}
+.entry-path.entry-path-visual{padding:0;display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.entry-copy{padding:24px}
+.entry-path-visual .entry-number{margin-bottom:17px}
+.entry-visual{height:232px;display:flex;flex-direction:column;justify-content:center;align-items:stretch;border-bottom:1px solid #b8c3d6;min-width:0}
+.entry-visual img{display:block;width:100%;height:190px;object-fit:contain;min-height:0}
+.visual-caption{display:block;padding:10px 14px;font-size:11px;line-height:1.4;text-align:center;letter-spacing:0;color:var(--ink)}
+.route-reels{background:#244da5;padding:20px 16px 0;color:#fff8e9}
+.mini-reels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:stretch}
+.mini-reel{padding:9px;background:#1a3573;border:1px solid #9db3e2;border-radius:4px;text-align:center;min-width:0}
+.mini-reel>span{display:block;font-size:10px;letter-spacing:.13em;font-weight:600;margin:1px 0 9px;color:#dce7ff}
+.mini-reel strong{display:flex;align-items:center;justify-content:center;min-height:102px;padding:12px 6px;background:#fff5e4;color:#1d3773;font-size:19px;font-weight:500;line-height:1.25;border-radius:2px}
+.route-reels .visual-caption{color:#f1f4ff;padding:13px 0 14px;font-size:11px}
+.route-print{background:#f2eee5;border-bottom-color:#d7ccba}
+.route-print img{padding:0 12px}
+.route-guide{background:#fff5e4;border-bottom-color:#bfd0bb}
+.route-guide img{padding:11px 14px 0}
+.route-guide .visual-caption{padding-top:8px}
+.home-examples-panel{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:30px;padding:27px 30px;background:#e5eaf2;border:1px solid #c5cfe0;border-left:5px solid var(--blue)}
+.home-examples-panel .eyebrow{font-size:10px;margin-bottom:10px}
+.home-examples-panel h3{font-size:26px;margin-bottom:9px}
+.home-examples-panel p:last-child{font-size:14px;line-height:1.5;color:var(--muted);margin:0;max-width:650px}
+.home-examples-panel .button{flex-shrink:0}
+@media(max-width:1100px){.hero.hero-with-practice{gap:28px}.practice-photo figcaption{padding:10px 12px}.practice-photo figcaption strong{font-size:13px}.practice-photo figcaption>span{font-size:11px}.entry-copy{padding:22px}.entry-visual{height:208px}.entry-visual img{height:166px}.route-reels{padding:15px 12px 0}.mini-reels{gap:9px}.mini-reel{padding:7px}.mini-reel strong{font-size:17px;min-height:90px}.route-reels .visual-caption{font-size:10px}.home-examples-panel{padding:23px 25px}}
+@media(max-width:760px){.hero.hero-with-practice{display:flex;gap:30px;padding-top:38px;padding-bottom:38px}.hero-with-practice h1{font-size:clamp(2.8rem,9.1vw,4.5rem)}.hero-practice{width:100%;max-width:620px;margin:0 auto}.practice-photo figcaption{padding:12px 14px}.practice-photo figcaption strong{font-size:14px}.practice-photo figcaption>span{font-size:12px}.practice-photo-note{font-size:12px}.entry-path.entry-path-visual{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:stretch}.entry-visual{height:auto;min-height:220px;border-bottom:0;border-right:1px solid #bdc8d9}.entry-visual img{height:auto;max-height:200px}.route-reels{padding:18px 13px 0}.mini-reel strong{font-size:17px;min-height:90px}.entry-copy{padding:24px}.entry-path-visual .entry-number{margin-bottom:13px}.entry-path-visual h3{font-size:24px}.home-examples-panel{align-items:flex-start;gap:20px;flex-direction:column;padding:24px}.home-examples-panel .button{align-self:flex-start}}
+@media(max-width:520px){.practice-photo-pair{grid-template-columns:1fr;gap:14px;margin-top:14px}.practice-photo-frame{aspect-ratio:auto}.practice-photo-frame img{height:auto}.entry-path.entry-path-visual{display:flex}.entry-visual{height:226px;min-height:0;border-right:0;border-bottom:1px solid #bdc8d9}.entry-visual img{height:184px;max-height:none}.mini-reel strong{font-size:21px;min-height:104px}.route-reels{padding:18px 22px 0}.mini-reels{gap:14px}.route-reels .visual-caption{font-size:11px}.entry-copy{padding:24px}.home-examples-panel h3{font-size:25px}}
+@media print{.hero-practice,.home-examples-panel{display:none!important}.hero.hero-with-practice{display:block;padding:0}.hero-with-practice h1{font-size:30px}}

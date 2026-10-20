@@ -1,6 +1,6 @@
 # Source provenance
 
-This inventory distinguishes original repository files, later supplied exports, and website adaptations. Historical filenames are retained as evidence of the source, including names that refer to a particular client or workshop.
+This inventory distinguishes original repository files, later supplied exports, and website adaptations. Historical filenames are recorded here as source evidence. The retained files now have descriptive project names; see [the filename map](FILE-NAMES.md). USDA identifies one workshop context, not the umbrella project or every use of the deck.
 
 ## Original repository snapshot
 
@@ -107,7 +107,7 @@ Working documents, meeting transcripts, participant information, and contextual 
 
 The project owner supplied `451Smith_McQuillan_Performing_the_What-If_final_pass.docx` and directed that its account of the deck guide this work. The manuscript remains outside the public repository and release package. This documentation uses a short, curated overview rather than reproducing it.
 
-The owner subsequently clarified that **Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies**, by **Ash Eliza Smith and Julia McQuillan**, is a **forthcoming book chapter and is not yet public**. No book title, publisher, publication year, public URL, or chapter DOI is inferred. Public-facing metadata is in [publications.json](../site/data/publications.json), with a short [paper overview](../site/paper.html). The README's `paper-and-tools` heading provides a durable entry point from the chapter to the tools.
+The owner subsequently clarified that **Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies**, by **Ash Eliza Smith and Julia McQuillan**, is a **forthcoming chapter in *Strategic Handbook of Worldbuilding* (Routledge) and is not yet public**. The book title and publisher come from the project owner's publication update. Editors, publication year, page range, public URL, and chapter DOI remain unspecified. Public-facing metadata is in [publications.json](../site/data/publications.json), with a short [paper overview](../site/paper.html). The README's `paper-and-tools` heading provides a durable entry point from the chapter to the tools.
 
 Its methodology section identifies the card deck and interactive site as shared tools for building and telling speculative scenes, explicitly building on *The Thing From The Future* (Candy & Watson, 2014) and the *Rehearsing Realities* framework (Smith, Leadabrand, et al., in press). Its wider practice moves iteratively between discussion and imagination, embodied rehearsal, reflection, and writing or making.
 
@@ -117,7 +117,7 @@ The intended audiences named in the manuscript are facilitators, designers, arti
 
 ## Supplied interactive source
 
-The project owner supplied `futures_machinenew.html`. Its original bytes are preserved in `originals/futures_machinenew.html`; the active working copy is now `site/interactive.html`.
+The project owner supplied `futures_machinenew.html`. Its original bytes are preserved in `originals/Co-Constructing_Multispecies_Futures_Interactive_Imported.html`; the active working copy is now `site/interactive.html`.
 
 | Original file property | Value |
 | --- | --- |
@@ -127,22 +127,23 @@ The project owner supplied `futures_machinenew.html`. Its original bytes are pre
 | Title within source credit paragraph | Co-Constructing Multispecies Worlds |
 | Umbrella project / repository title | Co-Constructing Multispecies Futures |
 
-The original file retains its historical filename and titles. At the project owner's request, the active project is titled **Co-Constructing Multispecies Futures**, with **Card Deck** and **Interactive Tool** as its two format labels. The current Interactive Tool path is `site/interactive.html`; the earlier working path `site/futures-machine.html` has been replaced. This naming change does not alter the preserved original bytes or credit names.
+The imported source retains its original bytes and internal titles under its new descriptive filename. Its supplied filename is recorded above and in the filename map. At the project owner's request, the active project is titled **Co-Constructing Multispecies Futures**, with **Card Deck** and **Interactive Tool** as its two format labels. The current Interactive Tool path is `site/interactive.html`; the earlier working path `site/futures-machine.html` has been replaced. This naming change does not alter the preserved original bytes or credit names.
 
 The original's default bank contains 84 options across nine layers: Spatial (10), Temporal (10), Affect (10), Voice (8), Form (10), Collaborator (8), Pivot (8), Speculation (10), and Sensing (10). This is an **adapted bank**, separate from the 94 physical cards in the general selection and the 122 paired cards in the full original deck.
 
 The source supplies spatial/temporal defaults, optional layers, a lever-based draw, locks, custom text, Tell it / Now: try it areas, and local microphone-recording code. The integrated version adds current-slip and notes export as text or JSON and printing of the current slip and notes. JSON includes the current prompts, active layers and locks, adapted prompt bank, and embodied prompt. It is not a saved session history or an import system. Edits and recordings remain in the page session; users must download what they want to keep, with audio downloaded separately. No participant stories or recordings are uploaded by the app.
 
-The original and integrated copies remain separately identifiable. The preserved original's checksum was verified against the supplied file. **0.1.0** is the first tracked development version; its snapshot remains unchanged. **0.1.1** is the current reviewed tool and adds navigation, orientation, and citation improvements. Both snapshots are retained in `site/downloads/`.
+The original and integrated copies remain separately identifiable. The preserved original's checksum was verified against the supplied file. **0.1.0** is the first tracked development version; its snapshot remains unchanged. **0.1.1** preserves navigation, orientation, and citation improvements. **0.1.2** is the current source and adds the confirmed book metadata and an Examples navigation link. All three snapshots are retained in `site/downloads/`.
 
 | Standalone snapshot | Bytes | SHA-256 |
 | --- | ---: | --- |
 | `Co-Constructing_Multispecies_Futures_Interactive_v0.1.0.html` | 55,421 | `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254` |
 | `Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html` | 57,084 | `fbc104a5a43dcebbd5c4d014f1aec251b1c8bfc7eabe551fc3bced0797c72ef2` |
+| `Co-Constructing_Multispecies_Futures_Interactive_v0.1.2.html` | 57,290 | `0601ce6479e0144607a408f3edc77169e45ab559da7b2769adc4817b98d8c4bb` |
 
-The 0.1.1 snapshot matches the current `site/interactive.html`. Baseline draw, hold, prompt editing, modal keyboard, and image-decoding checks are recorded in the changelog. The 0.1.1 browser check verified the homepage-to-citation path, exact clipboard citation, and the app's five-item navigation with a current-page label; other toolkit pages open in a new tab from the app to preserve the session. The private preview deployment was verified on October 20, 2026. Real microphone recording and physical printer registration remain untested.
+The 0.1.2 snapshot matches the current `site/interactive.html`. Its diff against 0.1.1 is limited to the version, two book-credit sentences, and the Examples navigation link; functional JavaScript is unchanged apart from `APP_VERSION`. The 0.1.0 and 0.1.1 snapshot checksums remain unchanged. Public deployment of 0.1.2 still requires verification. Baseline draw, hold, prompt editing, modal keyboard, and image-decoding checks are recorded in the changelog. The 0.1.1 browser check verified the homepage-to-citation path, exact clipboard citation, and the app's five-item navigation with a current-page label; other toolkit pages open in a new tab from the app to preserve the session. The private preview deployment was verified on October 20, 2026. Real microphone recording and physical printer registration remain untested.
 
-Integration and usability changes preserve source credit names; the manuscript-informed overview adds the fuller methodological context. See [VERSIONING.md](VERSIONING.md), the [changelog](../CHANGELOG.md), and the [0.1.1 release draft](RELEASE-NOTES-v0.1.1.md).
+Integration and usability changes preserve source credit names; the manuscript-informed overview adds the fuller methodological context. See [VERSIONING.md](VERSIONING.md), the [changelog](../CHANGELOG.md), and the [0.1.2 release draft](RELEASE-NOTES-v0.1.2.md).
 
 The supplied credit paragraph says:
 

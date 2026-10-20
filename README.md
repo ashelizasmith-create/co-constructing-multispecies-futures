@@ -16,7 +16,7 @@ Use the toolkit across settings. Food-system, USDA, and precision livestock farm
 
 ### Use the Interactive Tool
 
-1. Open [the Interactive Tool online](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html). To keep a standalone copy, use [the version-history download](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html#v0-1-1) or save [the version 0.1.1 HTML](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html) and open the saved file in a browser.
+1. Open [the Interactive Tool online](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html). To keep a standalone copy, use [the version-history download](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html#v0-1-2) or save [the version 0.1.2 HTML](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Co-Constructing_Multispecies_Futures_Interactive_v0.1.2.html) and open the saved file in a browser.
 2. Begin with **Spatial** and **Temporal**. Pull to draw a combination, hold a result you want to keep, and add optional layers.
 3. Use **Tell it** to write, then **Now: try it** to take the scene into movement, attention, or rehearsal.
 4. Save your session slip and notes as text or JSON, or print them. Download voice recordings separately before closing or reloading the page.
@@ -79,41 +79,50 @@ For an optional food-system recipe, the FoodID handout begins with a pleasant se
 
 See the [printable use guide](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html) for a longer session and [the paper overview](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html) for the methodological framing.
 
+### Examples and visual guidance prepared for 0.1.2
+
+The prepared [Examples page](site/examples.html) brings together **25 images** with source context, captions, credits, and image descriptions: all three owner-authorized manuscript figures, MuMu, The Middle, workshop and robotic practice, and six teaching images. These document related practices as well as card sessions; inclusion does not establish that the deck was used in every image. The homepage now uses photographs and card previews to make the routes into the tool, printing, and facilitation easier to recognize. The expanded guide presents eight original instruction-card images with their text and links to the complete 18-card sequence.
+
+A separate [community preparation preview](integrations/community/README.md), version **0.1.0**, lets someone prepare an image, credit, alt text, and reflection locally, then download a package. It does **not** upload, receive, review, or publish contributions. A connected-form specification is included, but no form account or submission endpoint is configured. Run the current source locally to review these 0.1.2 additions; their public deployment is not yet verified.
+
 ## Repository structure
 
 | Path | Purpose |
 | --- | --- |
-| `site/index.html` | Toolkit homepage, original-card browser, downloads, and use guidance. |
+| `site/index.html` | Visually guided toolkit homepage, original-card browser, downloads, and use guidance. |
 | `site/interactive.html` | Current Interactive Tool. |
-| `site/guide.html` | Printable facilitation guide. |
+| `site/guide.html` | Printable facilitation guide with eight original instruction-card images and text, plus the complete source-sequence index. |
 | `site/paper.html` | About & cite: framework orientation, development citation, lineages, and the forthcoming chapter. |
+| `site/examples.html`, `site/data/examples.json` | Prepared 25-image Examples collection with source context, captions, credits, image descriptions, and reuse information. |
 | `site/workshops.html` | Searchable working history of workshops, development contexts, presentations, and related practice. |
 | `site/versions.html` | Version history and numbered tool downloads. |
+| `site/data/workshops.json` | Single editable source for the 25-entry workshop and development log; generates its CSV and public history entries. |
 | `site/downloads/` | Print files, instructions, and versioned HTML snapshots. |
 | `site/data/` | Card text, publication metadata, and download/provenance manifests. |
 | `site/assets/` | Card images, shared styles, and browser code. |
 | `originals/` | Byte-preserved supplied interactive source; historical identity is documented in provenance. |
-| `scripts/` | Asset preparation, home-print generation, and guarded interactive snapshots. |
+| `scripts/` | Asset preparation, home-print generation, workshop-log exports, and guarded interactive snapshots. |
 | `docs/` | Provenance, versioning, publishing guidance, release checklist, and draft archival metadata. |
 | `integrations/indexhibit/` | Ready-to-paste exhibit content and installation notes for the existing portfolio page. |
+| `integrations/community/` | Local image-preparation preview v0.1.0, downloadable notes/package workflow, and an unconfigured connected-form specification. |
 | `.github/workflows/pages.yml` | GitHub Actions deployment of `site/` to the verified public website. |
 | `VERSION`, `site/version.json` | Current development version information. |
 
-Original repository PDFs and the engagement image are also retained at the repository root.
+Original repository PDFs, the workshop image, and the imported interactive source are retained under descriptive names in `originals/`. The [filename map](docs/FILE-NAMES.md) records their earlier names and unchanged checksums. To add or correct an event, follow [Keeping the workshop log](docs/WORKSHOP-LOG.md); edit its JSON source, then regenerate the CSV and page.
 
 ## Versions and changelog
 
-The current development version is **0.1.1**, with clearer navigation and citation guidance. The first tracked version, **0.1.0**, is preserved as a separate download. Fixes advance the patch number; features or new prompt layers advance the minor number, such as **0.2.0**. **1.0.0** will be a deliberate stable release.
+The current source version is **0.1.2**, with a 25-image Examples collection, a visually guided homepage, original instruction-card guidance, confirmed book metadata, clearer source filenames, and a 25-entry workshop log maintained from one JSON source. It also includes the separately versioned **0.1.0 local community preparation preview**. The **0.1.0** and **0.1.1** Interactive Tool downloads remain preserved. Fixes advance the patch number; features or new prompt layers advance the minor number, such as **0.2.0**. **1.0.0** will be a deliberate stable release.
 
 See [version history](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html), the [changelog](CHANGELOG.md), and the [versioning policy](docs/VERSIONING.md). After browser QA, the snapshot command preserves the reviewed HTML and refuses to replace different contents under an existing version number. Selected releases can be archived in Zenodo; routine commits do not require a new DOI. Current verification and publication status is recorded in the [release checklist](docs/RELEASE-CHECKLIST.md).
 
-The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live with version **0.1.1**. A GitHub release draft is saved; it remains unpublished while the formal creator roster is settled. No release tag or Zenodo DOI has been created. See the [release draft notes](docs/RELEASE-NOTES-v0.1.1.md).
+The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) was last verified with version **0.1.1**. Version **0.1.2** is prepared in the current source; its public deployment remains to be verified. The saved [GitHub v0.1.2 release draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) has been updated to this version but remains unpublished while the formal creator roster is settled. No release tag or Zenodo DOI has been created. See the [0.1.2 release draft notes](docs/RELEASE-NOTES-v0.1.2.md).
 
 ## Paper and tools
 
 **Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies**  
 **Ash Eliza Smith and Julia McQuillan**  
-**Forthcoming book chapter; not yet public.**
+**Forthcoming chapter in *Strategic Handbook of Worldbuilding* (Routledge); not yet public.**
 
 The chapter presents an artist-led account of embodied worldbuilding: people develop worlds by entering them through performance and play, alongside more-than-human others. Imagining, rehearsing, reflecting, and writing inform one another. Its overlapping modes—encountering, moving with, and becoming-with—describe different relations through which a scene can take shape.
 
@@ -121,9 +130,9 @@ The chapter identifies this Card Deck and Interactive Tool as shared tools for b
 
 **Provisional chapter reference:**
 
-> Smith, A. E., & McQuillan, J. (forthcoming). *Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies* [Book chapter].
+> Smith, A. E., & McQuillan, J. (forthcoming). Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies. In *Strategic Handbook of Worldbuilding*. Routledge.
 
-Book title, publisher, publication year, and public URL have not been supplied. The unpublished manuscript is not included in this repository. These details can be added when available; no chapter DOI is claimed.
+The book title and publisher were supplied by the project owner. Editors, publication year, page range, DOI, and public URL remain unspecified. The full unpublished manuscript is not included in this repository. Three owner-authorized figures appear separately in the prepared Examples collection with their source context and credits.
 
 **Deck and framework lineage:**
 
@@ -136,7 +145,7 @@ These are the two foundations explicitly named for the deck and interactive site
 
 Use this interim title-first reference for the current development edition:
 
-> *Co-Constructing Multispecies Futures: Card Deck and Interactive Tool.* (2026). Version 0.1.1 (development edition). https://github.com/ashelizasmith-create/co-constructing-multispecies-futures
+> *Co-Constructing Multispecies Futures: Card Deck and Interactive Tool.* (2026). Version 0.1.2 (development edition). https://github.com/ashelizasmith-create/co-constructing-multispecies-futures
 
 The [About & cite page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html#cite) provides a copyable reference and the separate chapter citation. The formal toolkit creator list is being confirmed. Narrative project credits are preserved below; framework and chapter authorship remain separate.
 
@@ -150,7 +159,7 @@ The two primary deck/framework references are credited above. Workshop activity 
 
 ## License
 
-The repository retains its existing [CC0 1.0 Universal dedication](LICENSE) unchanged. Credit and provenance remain documented with the materials. Licensing scope for added release components is included in the [release checklist](docs/RELEASE-CHECKLIST.md). The unpublished chapter is not part of the toolkit's distributed files.
+The repository retains its existing [CC0 1.0 Universal dedication](LICENSE) unchanged. Credit and provenance remain documented with the materials. Licensing scope for added release components is included in the [release checklist](docs/RELEASE-CHECKLIST.md). Gallery images retain their individual source and reuse information; permission to display them does not establish a new blanket image license. The full unpublished chapter is not part of the toolkit's distributed files.
 
 ## Contributing and support
 

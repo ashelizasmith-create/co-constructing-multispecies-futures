@@ -1,0 +1,200 @@
+CO-CONSTRUCTING MULTISPECIES FUTURES
+Community contribution form — copy and implementation specification
+
+STATUS
+Prepared form copy only. No Tally owner account, form, upload destination, or
+public form URL is configured by this file. Do not show the confirmation below
+in the local preparation prototype. It belongs only to a connected form that
+has actually accepted a submission.
+
+Recommended service: Tally, with no respondent login required and a maximum
+upload size of 10 MB per file. The project owner supplies and controls the form
+account. Start with a normal link to the hosted form; an embed is optional later.
+
+FORM TITLE
+Share an example
+
+INTRODUCTION
+What did you make, notice, or try with Co-Constructing Multispecies Futures?
+Share an image or a link, a few words about the experience, and the credit you
+would like us to use. An unfinished experiment, question, or reflection is welcome.
+
+The project team will review your contribution before deciding whether to display
+it in the public examples collection. Sending this form does not publish it.
+You do not need a Tally account to contribute.
+
+Your title, contribution, description, context, and chosen credit may be displayed
+after review, with your permission below. The optional contact field is private
+to the review team and will not appear in the public collection.
+
+FIELDS
+
+1. Title
+   Key: title
+   Type: short text; required; maximum 140 characters.
+   Help: What would you call this example?
+
+2. What are you sharing?
+   Key: media_choice
+   Type: single choice; required.
+   Choices: Image(s) / A media link / Images and a media link
+   Implementation: show and require the appropriate fields below so a submission
+   always includes at least one image or a complete media URL.
+
+3a. Image(s)
+    Key: images
+    Type: file upload; required for Image(s) or Images and a media link.
+    Accept: JPEG, PNG, WebP. Allow 1–3 images, maximum 10 MB each.
+    Help: Include only images you have permission to share. Keep your originals.
+    If your photo is HEIC, export a JPEG or PNG copy first. A small, clear image
+    is enough; the local preparation tool can help reduce its size.
+    Implementation: configure the count/type/size restrictions in the live form
+    and check an accepted and a rejected upload before linking it from the site.
+
+3b. Video, audio, or other media URL
+    Key: media_url
+    Type: URL; required for A media link or Images and a media link.
+    Help: Use the complete https:// address of the work. Use a link for video or
+    audio rather than uploading a large file. Do not include access tokens,
+    private account links, or a participant's personal details.
+    Implementation: do not automatically fetch or embed submitted URLs.
+
+4. What did you try or learn?
+   Key: description
+   Type: long text; required; maximum 5,000 characters.
+   Help: Describe the scene or activity, what you noticed as you tried it, and
+   what remains open. What surprised you or changed the direction of the work?
+
+5. Where did this happen?
+   Key: setting_type
+   Type: single choice; required.
+   Choices: Independent exploration / A workshop or class / Another gathering
+   Follow-up key: workshop_or_gathering
+   Type: short text; optional; maximum 180 characters.
+   Label: Workshop, class, or gathering name (optional)
+   Help: Add a public event name if it helps explain the example. Independent
+   exploration is equally welcome. Leave out private participant details.
+
+6. Year (optional)
+   Key: year
+   Type: short text; optional; four-digit year when supplied.
+   Help: When did the activity happen? Leave this blank if you are not sure.
+
+7. Prompts, cards, or tool version (optional)
+   Keys: prompts; tool_version_or_deck_edition
+   Types: optional long text for prompts; optional short text for the edition.
+   Labels: Which prompts or cards did you use? / Tool version or deck edition
+   Help: You can paste the prompts from your session slip. If you know the
+   Interactive Tool version or the Card Deck filename/edition, include it too.
+
+8. Public credit
+   Key: display_credit
+   Type: long text; required; maximum 500 characters.
+   Help: Write the credit exactly as you want it displayed. Include the maker,
+   photographer, and collaborators where relevant. You may use a group name or
+   "Anonymous." Do not put your private email or phone number in this field.
+
+9. Describe the image(s)
+   Key: image_alt_text
+   Type: long text; required when images are uploaded.
+   Help: Briefly describe what is visible for someone who cannot see the image.
+   For multiple images, use one line each: "Image 1: …", "Image 2: …".
+   Include the important action, setting, and materials. A visible person's name
+   is not necessary unless it is relevant and approved for public display.
+   Implementation: match each description to the correct image during review.
+
+10. Private contact email (optional)
+    Key: private_contact_email
+    Type: email; optional.
+    Help: Add an email only if you would like the project team to contact you
+    with questions about this contribution. It will not be displayed in the
+    public collection or copied into public files. Leaving it blank is fine.
+
+11. Permission to share the material
+    Key: authority_to_share
+    Type: required checkbox; unchecked by default.
+    Label: I made this material or have permission from its creators and anyone
+    identifiable in it to share it with this project and display it as described
+    below. The credit I have provided includes the relevant collaborators and
+    photographer.
+
+12. Permission to display after review
+    Key: permission_to_display
+    Type: required checkbox; unchecked by default.
+    Label: I give the Co-Constructing Multispecies Futures project permission
+    to display this contribution, its description, and the public details I
+    supplied on the project's examples pages after review, with the public
+    credit above. I understand that submitting does not guarantee publication.
+
+    Supporting text:
+    You retain any rights you hold in your contribution. This permission covers
+    display with credit and technical resizing or compression for the website.
+    It does not transfer ownership, apply CC0 to your contribution, or authorize
+    the project to relicense it. Other uses are outside this request. The toolkit's
+    existing repository license does not replace this contribution permission.
+
+SUBMIT BUTTON
+Send for review
+
+CONNECTED FORM CONFIRMATION — ONLY AFTER A SUCCESSFUL REAL SUBMISSION
+Received for review — not public yet
+
+Thank you. Your contribution has been received by the project team for review.
+It has not been published. We will check the material, description, permissions,
+and credit before deciding whether to include it. If you supplied a private
+contact email, we may use it to ask about this contribution.
+
+Keep a copy of your original files and the details you sent.
+
+IMPLEMENTATION AND REVIEW SPECIFICATION
+
+Owner setup
+- Use the owner's Tally account. Keep the form URL unconfigured until a real
+  form exists and its upload, required-field, and confirmation behavior is tested.
+- Keep respondents free of login requirements. Restrict response and uploaded-file
+  access to the project review team; do not enable a public responses view.
+- Complete the owner's contact/correction route and retention wording before
+  opening the form. Do not invent a contact address or a deletion schedule.
+- Notifications and exports are private administrative records. Do not send
+  messages or connect external automations as part of implementing this draft.
+
+Private intake record
+- Keep the original Tally submission ID, received time, submitted fields, upload
+  references, exact permission wording/version, checkbox values, and optional
+  contact in a private review record outside the public repository.
+- Add review status: received / needs clarification / approved / declined /
+  withdrawn. Keep reviewer decisions and any correspondence private.
+- A submission is never an automatic public-gallery entry. Reviewer approval
+  covers the selected image(s), context, title, caption, public credit, alt text,
+  display permission, and the absence of private details.
+
+Public source of truth
+- Proposed file: site/data/community-contributions.json. Create it when the
+  reviewed gallery is implemented; this specification does not create it.
+- This one JSON file owns approved community entries. The public page is generated
+  from it or reads it; do not maintain a separate, divergent HTML list.
+- Suggested public record: schema_version; stable public id; title; description;
+  setting_type; workshop_or_gathering; year (or null); prompts (or null);
+  tool_version_or_deck_edition (or null); display_credit; images [{path, alt,
+  caption, credit, width, height}]; reviewed media_url (or null); rights_statement.
+- Add only reviewed public fields. Never copy raw Tally responses or a private
+  review record into the public JSON, Git history, page source, browser payload,
+  download, or logs. In particular, exclude private_contact_email, provider
+  submission IDs, internal notes, permission evidence, and private upload URLs.
+- Keep a private mapping between the public id and original submission ID so
+  corrections or withdrawal requests can be traced without publishing contact data.
+- Preserve each contributor's supplied rights and credit. Display permission
+  alone is not permission to include third-party images in a blanket CC0 archive.
+  Make the contribution-specific rights scope explicit before publishing assets
+  in the repository or including them in a Zenodo release.
+
+Publication and later migration
+- For the first implementation, review and promote approved records manually.
+  Publish selected optimized files with the public JSON and verify the displayed
+  credit and alt text. Do not publish the whole intake queue.
+- Keep the public field names and stable public IDs independent of Tally. A later
+  form provider or backend can map its intake into the same private review record
+  and approved public JSON without changing the gallery's content model.
+- Leave the local prototype truthful: it prepares downloads only. A future
+  "Send for review" link should point to the configured form rather than replace
+  local preparation with a simulated submission-success message.

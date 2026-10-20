@@ -47,6 +47,6 @@ The HTML and TXT fragments are identical. Their `data-ccmf-path` values preserve
 
 The fragment uses **Co-Constructing Multispecies Futures** as the project name, with **Card Deck** and **Interactive Tool** as the formats. It follows the supplied chapter's embodied-worldbuilding framing and credits both *The Thing From The Future* and *Rehearsing Realities* as the deck's foundations.
 
-The chapter is described as forthcoming and not yet public. No manuscript, book title, publisher, publication year, or DOI has been invented or included. The current Interactive Tool label is **v0.1.1 · Development edition**.
+The chapter is described as forthcoming in *Strategic Handbook of Worldbuilding* (Routledge), using the project owner's supplied publication metadata. It is not yet public. Editors, publication year, pages, DOI, and public URL remain unspecified; the manuscript is not included. The current Interactive Tool label is **v0.1.2 · Development edition**.
 
 This integration requires no JavaScript, new image imports, or changes to Indexhibit's automatic gallery controls. Its styles apply only within the fragment's own wrapper.

@@ -25,7 +25,7 @@ def build(uploads, audit):
         (site / directory).mkdir(parents=True, exist_ok=True)
     data = json.loads((audit / "core-deck-cards.json").read_text())
     cropped = uploads / "USDA_FullDeckwBleed_EditableText.pdf"
-    bleed = repo / "USDA_FullDeckwBleed_TextAsShapes_WithBleed.pdf"
+    bleed = repo / "originals/Co-Constructing_Multispecies_Futures_Complete_Deck_Print.pdf"
     source = fitz.open(cropped)
     # Visual page review confirms these are extraction losses of the ft ligature.
     corrections = {3: [("shif-work", "shift-work")],
@@ -51,6 +51,10 @@ def build(uploads, audit):
             pix = source[number - 1].get_pixmap(matrix=fitz.Matrix(3, 3).prerotate(-90), alpha=False)
             pix.pil_save(str(site / rel), format="WEBP", quality=88)
             card[face + "_image"] = rel
+    data["original_source_filename"] = cropped.name
+    data["source_file"] = "Multispecies_Futures_Original_LiveText.pdf"
+    for card in data["cards"]:
+        card["source_file"] = data["source_file"]
     data["edition"] = "Working web edition; original card wording retained"
     data["general_cards"] = sum(c["collection"] == "general" for c in data["cards"])
     data["digital_adaptation_note"] = (
@@ -91,7 +95,7 @@ def build(uploads, audit):
         shutil.copy2(path, target)
         manifest.append({"download": name, "source_filename": path.name, "sha256": digest(target), "bytes": target.stat().st_size})
     shutil.copy2(repo / "LICENSE", site / "downloads/EXISTING-REPOSITORY-LICENSE.txt")
-    shutil.copy2(repo / "SDL_WB_Engagement.png", site / "assets/workshop-cards.png")
+    shutil.copy2(repo / "originals/Co-Constructing_Multispecies_Futures_Workshop_Image.png", site / "assets/workshop-cards.png")
     manifest.append({"download": general_pdf.name, "source_filename": bleed.name,
                      "sha256": digest(general_pdf), "bytes": general_pdf.stat().st_size,
                      "derivation": "General activity cards only; unchanged artwork and page boxes. No contextual speculation or old facilitator sequence.",

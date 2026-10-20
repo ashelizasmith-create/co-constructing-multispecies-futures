@@ -1,10 +1,12 @@
 # Release checklist
 
-This checklist covers current development version **0.1.1**, with **0.1.0** preserved. It separates completed preparation from publication steps that still require verification. An unchecked item is not a claim that it has failed.
+This checklist covers current source version **0.1.2**, with **0.1.0** and **0.1.1** preserved. Public-deployment checks below identify the exact baseline verified. It separates completed preparation from publication steps that still require verification. An unchecked item is not a claim that it has failed.
 
 ## Source preparation
 
-- [x] Inventory the original repository files and retain their filenames.
+- [x] Inventory the original repository files and retain their historical filenames in provenance.
+- [x] Rename retained source artifacts with descriptive project names and verify unchanged bytes; record the map in `FILE-NAMES.md`.
+- [x] Maintain the 25-entry sourced workshop log in JSON and verify its generated CSV/history page with `export_workshop_log.py --check`.
 - [x] Record original and supplied PDF page counts, sizes, and SHA-256 checksums.
 - [x] Distinguish the general multispecies deck from the PLF workshop variant.
 - [x] Identify different export geometry in similarly named PDFs.
@@ -16,9 +18,9 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [x] Read the complete supplied *Performing the What-If* manuscript and use it to guide the public method description.
 - [x] Include both *The Thing From The Future* and *Rehearsing Realities* in the deck's methodological lineage.
 - [x] Preserve encountering, moving with, and becoming-with, with embodied rehearsal and reflection feeding the next iteration.
-- [x] Keep the manuscript outside the public repository and separate chapter/framework authorship from deck credits.
-- [x] Describe the related paper as a forthcoming, not-yet-public book chapter with its exact supplied title and authors.
-- [x] Add a paper overview and publication metadata with unknown book, publisher, year, URL, and DOI fields left empty.
+- [x] Keep the full manuscript outside the public repository and separate chapter/framework authorship from deck credits; present only the three owner-authorized figures separately with context and credits.
+- [x] Describe the related paper as a forthcoming, not-yet-public chapter in *Strategic Handbook of Worldbuilding* (Routledge), with its exact supplied title and authors.
+- [x] Add the owner-supplied book title and publisher to the paper overview and publication metadata; leave editors, year, pages, URL, and DOI unspecified.
 - [x] Give the README a durable `paper-and-tools` heading linking the chapter context to the current tool, guide, and version history.
 - [ ] Complete a final card-text review against the selected PDF sources, including instructions and page references.
 - [ ] Review the browser adaptation's spatial/temporal split and optional layers against the intended play method.
@@ -26,13 +28,27 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [x] Choose the supplied app as the primary interactive experience, alongside the original-card browser.
 - [x] Verify that the preserved original HTML exactly matches the supplied file; record its historical identity in provenance.
 - [x] Use Co-Constructing Multispecies Futures as the active project name, with Card Deck and Interactive Tool format labels.
-- [x] Give the Interactive Tool the stable `site/interactive.html` path, beginning at 0.1.0 and advancing to current version 0.1.1.
+- [x] Give the Interactive Tool the stable `site/interactive.html` path, beginning at 0.1.0 and advancing to current source version 0.1.2.
 - [x] Integrate `site/interactive.html` under the requested project title, preserving source-supported credit names; complete the browser checks listed below.
 - [ ] Confirm exact creator names, author order, roles, and any designer/illustrator credit.
 - [ ] Resolve the differing Lisa PytlikZilig credit drafts and confirm Sam/Samantha Bendix's preferred release name.
 - [ ] Review exercise and theoretical lineage acknowledgements separately from the creator roster.
 - [ ] Confirm which historical workshop acknowledgements belong to this release.
 - [ ] Confirm licensing scope for newly added material while preserving the existing dedication.
+
+## Examples, facilitation, and local preparation
+
+- [x] Prepare the 25-image Examples collection and its JSON inventory, including all three owner-authorized manuscript figures, MuMu, The Middle, workshop/robotic practice, and six teaching images.
+- [x] Include captions, credits, image descriptions, source context, and reuse information; distinguish related practice from confirmed card-deck use.
+- [x] Add a visually guided homepage with complete workshop, drone, and robotic-arm images and visual cues for its three starting routes; retain existing card-browser IDs, scripts, and download links.
+- [x] Expand the guide with eight original instruction-card images, verbatim text, PDF references, and an index linking all 18 source cards; verify the eight text comparisons and local links/anchors.
+- [x] Keep the original five-deck facilitation recipe distinct from the current Spatial + Temporal modular route.
+- [x] Include the local-only community image-preparation preview v0.1.0 and its connected-form specification; state that no account, form URL, upload endpoint, or submission service is configured.
+- [x] Verify preparation of a 2,334 × 2,000 image into a 1,600 × 1,371 JPEG of 167,110 bytes and a readable notes download; check JavaScript syntax and ZIP text/binary round trips.
+- [x] Replace asynchronous automatic ZIP download with an explicit prepared-package link; review stale-input invalidation and object-URL lifetime.
+- [ ] Verify the revised ZIP download link in the browser and the final homepage, guide, and Examples layouts at desktop and narrow widths.
+
+The preparation preview is separate from the curated Examples collection. It does not receive or publish contributions. Connected submissions and review are future implementation, not enabled release features.
 
 ## Print and download checks
 
@@ -54,7 +70,7 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [x] Verify modal keyboard behavior.
 - [x] Decode all 244 WebP card images successfully.
 - [x] Verify the 0.1.1 homepage → About & cite → Copy citation path and the exact title-first clipboard text.
-- [x] Verify the app's five-item navigation, current-page label, and new-tab links that preserve the app session.
+- [x] Verify the 0.1.1 app's five-item navigation, current-page label, and new-tab links that preserve the app session.
 - [ ] Verify that prompts have the intended deck provenance and that no workshop-specific prompt is silently relabeled as universal.
 - [x] Document that the app's 84 default options are an adapted bank, separate from the physical-card corpus.
 - [ ] Complete remaining narrow-screen, general keyboard/focus, readable-text, and reduced-motion checks beyond the verified modal behavior.
@@ -71,7 +87,7 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [x] Verify private preview v4 at `2026-10-20T16:56:57.105973Z`, source `5e997d4ad09f2289cd473e551b5f0e866ff795dd`; keep it distinct from public Pages publication.
 - [x] Complete and hash-verify all 256 binary asset uploads.
 - [x] Confirm successful [Pages workflow 39461638283](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39461638283) from commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`.
-- [x] Verify the [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/), its current 0.1.1 homepage, navigation routes, cards, and print section.
+- [x] Verify the [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/), its verified 0.1.1 homepage, navigation routes, cards, and print section.
 - [x] Verify live How to cite → Copy citation against the exact 0.1.1 text and use the live Print cards navigation.
 - [x] Download the live Letter Fold PDF and confirm its 173,930 bytes match the local file byte for byte.
 - [x] Add the verified public URL and hosted download links to the README.
@@ -86,14 +102,21 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [x] Document patch, minor, and stable-release conventions in `VERSIONING.md`.
 - [x] Create the reviewed standalone `Co-Constructing_Multispecies_Futures_Interactive_v0.1.0.html` download.
 - [x] Retain the 0.1.0 baseline unchanged at SHA-256 `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254`.
-- [x] Create the 57,084-byte `Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html` snapshot and confirm it matches the current tool; SHA-256 `fbc104a5a43dcebbd5c4d014f1aec251b1c8bfc7eabe551fc3bced0797c72ef2`.
+- [x] Create the 57,084-byte `Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html` snapshot and confirm it matched the 0.1.1 source; SHA-256 `fbc104a5a43dcebbd5c4d014f1aec251b1c8bfc7eabe551fc3bced0797c72ef2`.
 - [x] Preserve the earlier numbered snapshot when advancing to 0.1.1.
+- [x] Create the 57,290-byte 0.1.2 snapshot, verify that it matches current source, and recheck both earlier hashes; SHA-256 `0601ce6479e0144607a408f3edc77169e45ab559da7b2769adc4817b98d8c4bb`.
+- [x] Restrict the app diff from 0.1.1 to the version, confirmed book credits, and Examples navigation; preserve functional JavaScript apart from `APP_VERSION`.
+- [ ] Verify the final 0.1.2 browser routes, citation copying, new Examples destination, and deployed standalone download.
+- [ ] Deploy and verify the current 0.1.2 site; the completed public-deployment checks above describe 0.1.1.
 - [ ] Create a corresponding Git tag/release when the reviewed package is deliberately released.
 
 ## Publish an archival release
 
-- [x] Prepare concrete [0.1.1 release notes](RELEASE-NOTES-v0.1.1.md), including contents, checks, known limits, and the interim title-first citation.
-- [x] Save the [GitHub v0.1.1 draft release](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-6910634d001822073a33); leave it unpublished pending the formal creator roster. No release tag has been created.
+- [x] Retain the historical [0.1.1 release notes](RELEASE-NOTES-v0.1.1.md).
+- [x] Prepare concrete [0.1.2 release notes](RELEASE-NOTES-v0.1.2.md), including contents, bounded checks, known limits, and the interim title-first citation.
+- [x] Update the saved [GitHub draft release](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) to **Co-Constructing Multispecies Futures v0.1.2**, intended tag `v0.1.2`, and the 0.1.2 body.
+- [x] Verify release ID `418649128` through the API as `draft: true` and `published_at: null`; leave it unpublished pending the formal creator roster. No release tag has been created.
+- [ ] Reconcile final reviewed contents and archival metadata with the saved v0.1.2 draft before publishing.
 - [ ] Confirm final title, description, keywords, creators/order, licensing, and relevant funding acknowledgements.
 - [ ] Choose the reviewed project version to archive and make its metadata, changelog, and deposited files agree.
 - [ ] Prepare the reviewed files and source archive without private working documents.
@@ -106,4 +129,4 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [ ] Add validated `CITATION.cff` before the archival release; if `.zenodo.json` is used, keep its higher-priority metadata aligned.
 - [ ] Record the final Git commit/tag and Zenodo record together.
 
-See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages and the private preview are verified. The GitHub release is a saved draft; no archival DOI has been issued.
+See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages and the private preview were verified for 0.1.1; verification of the new 0.1.2 deployment remains open. The GitHub release is a saved draft; no archival DOI has been issued.
