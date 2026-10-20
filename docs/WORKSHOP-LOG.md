@@ -81,6 +81,8 @@ Preserve uncertainty when sources disagree. Keep a concise public qualification 
 
 The USDA entry demonstrates the intended pattern: `event_start` and `event_end` are `null`, `date_label` says “Date to confirm,” and the source names the project owner's confirmation on 20 October 2026. The confirmation establishes one workshop; it does not supply an event date or identify it with another event. Replace unknowns only as the project owner or another suitable source supplies the missing information.
 
+Seabreeze Bop City is recorded separately as related student fieldwork and community futuring in Seabreeze, North Carolina. Its public project account and the owner's clarification establish that context; they do not establish a first year, session count, or card-deck use. Keep its fieldwork dates open and do not label it “Multiple” without further evidence. Seabreeze Bop City is one project title and is distinct from Edgeland Futurism.
+
 ## What the export preserves
 
 The export checks required fields, unique stable IDs, date formats, category names, source labels, and HTTP(S) link formats. It escapes entry text before inserting it into the public page. It regenerates only the marked workshop-list block; the page's introduction, navigation, styling, and other content remain outside that block.

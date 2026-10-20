@@ -569,6 +569,30 @@
           "url": "https://asheveryday.com/index.php/teaching/edgeland-futurism/"
         }
       ]
+    },
+    {
+      "id": "seabreeze-bop-city",
+      "title": "Seabreeze Bop City",
+      "connection_kind": "related",
+      "date_label": "Fieldwork dates to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "The public project account and the project owner’s clarification identify student fieldwork and community futuring but do not give event dates, a start year, or the number of sessions. The owner’s confirmation on 20 October 2026 is not an event date.",
+      "place": "Seabreeze, North Carolina · specific fieldwork sites not recorded",
+      "theme": "Student fieldwork, community histories, land, and preferable futures",
+      "iteration": "Students work with community through fieldwork, place-based storytelling, and immersive media to explore preferable futures. Seabreeze Bop City connects community histories and land with shared ways of imagining and making, bringing futures practice into community settings.",
+      "evidence_status": "Public project account and project-owner clarification",
+      "confidence": "documented",
+      "unknowns": "Fieldwork dates, the starting year, individual sites, and the number of sessions remain to be confirmed. This is related community and teaching practice; use of the card deck is not established.",
+      "sources": [
+        {
+          "label": "Ash Eliza Smith, Seabreeze Bop City project page: student fieldwork, community engagement, and place-based futures",
+          "url": "https://asheveryday.com/index.php/seabreeze-bop-city/seabreeze-bop-city/"
+        },
+        {
+          "label": "Project owner’s clarification, 20 October 2026: Seabreeze Bop City images show students doing futuring with community"
+        }
+      ]
     }
   ]
 }

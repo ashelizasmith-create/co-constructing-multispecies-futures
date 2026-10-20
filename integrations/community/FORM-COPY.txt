@@ -1,5 +1,7 @@
 CO-CONSTRUCTING MULTISPECIES FUTURES
-Community contribution form — copy and implementation specification
+Community intake form — copy and implementation specification
+Preparation prototype: v0.2.0
+Draft revision: workshop-intake-2026-10-20
 
 STATUS
 Prepared form copy only. No Tally owner account, form, upload destination, or
@@ -12,22 +14,43 @@ upload size of 10 MB per file. The project owner supplies and controls the form
 account. Start with a normal link to the hosted form; an embed is optional later.
 
 FORM TITLE
-Share an example
+Share an example, plan a workshop, or ask for help
 
 INTRODUCTION
-What did you make, notice, or try with Co-Constructing Multispecies Futures?
-Share an image or a link, a few words about the experience, and the credit you
-would like us to use. An unfinished experiment, question, or reflection is welcome.
+What would you like to do with Co-Constructing Multispecies Futures? Share
+something you tried, let us know where you are considering a workshop, or ask
+for facilitation help. An unfinished experiment or an early question is welcome.
+
+A workshop plan is not a booking or a commitment. You can be still exploring,
+and you do not need to supply an exact address. Planning details and help
+requests are private unless you separately opt in to a public history listing.
 
 The project team will review your contribution before deciding whether to display
 it in the public examples collection. Sending this form does not publish it.
 You do not need a Tally account to contribute.
 
-Your title, contribution, description, context, and chosen credit may be displayed
-after review, with your permission below. The optional contact field is private
+If you share an example, its title, contribution, description, context, and
+chosen credit may be displayed after review, with your permission below. The optional contact field is private
 to the review team and will not appear in the public collection.
 
-FIELDS
+ROUTE SELECTOR — FIRST FIELD
+
+What would you like to do?
+Key: intent
+Type: required single choice.
+Choices / stored values:
+- Share an example / share_example
+- Plan a workshop / plan_workshop
+- Ask for facilitation help / ask_help
+
+Show only the relevant branch. Do not require media, image permission, a public
+credit, a workshop title, or a location for a help-only inquiry. A question is
+enough. A workshop plan can also include a support request.
+
+BRANCH A — SHARE AN EXAMPLE
+
+Use the fields below only for share_example. Media and permission requirements
+do not carry over to the workshop or help branches.
 
 1. Title
    Key: title
@@ -133,10 +156,113 @@ FIELDS
     the project to relicense it. Other uses are outside this request. The toolkit's
     existing repository license does not replace this contribution permission.
 
-SUBMIT BUTTON
-Send for review
+BRANCH B — PLAN A WORKSHOP
+
+B1. Workshop or project name
+    Key: workshop_name
+    Type: short text; required; maximum 180 characters.
+    Help: A working title is fine.
+
+B2. Town, region, country, or online
+    Key: workshop_location
+    Type: short text; required; maximum 240 characters.
+    Help: A broad location or online setting is enough. Do not give an exact
+    private address. This helps the project understand where the practice travels.
+
+B3. When might it happen?
+    Key: timing_status
+    Type: required single choice; default Still exploring — no date yet.
+    Choices: Still exploring — no date yet / I have a possible date or year
+    Stored values: still_exploring / date_or_year
+    Conditional field: timing_detail; short text; required only for date_or_year;
+    maximum 180 characters.
+    Label: Possible date, period, or year
+    Help: An approximate time is enough. This does not confirm or book a workshop.
+
+B4. Who is it for, and what would you like to explore?
+    Key: audience_and_context
+    Type: long text; required; maximum 5,000 characters.
+    Help: Tell us about the community, class, group, or setting and the questions
+    you want to work with. Leave out private participant details.
+
+B5. Expected number of participants (optional)
+    Key: expected_participants
+    Type: optional whole number, minimum 1 when supplied.
+    Help: An estimate is fine. An estimate is not an attendance count.
+
+B6. Tool version or deck edition (optional)
+    Key: tool_version_or_deck_edition
+    Type: optional short text; maximum 180 characters.
+    Help: Leave blank if you are still deciding.
+
+B7. Would you like help with this workshop?
+    Key: support_requested
+    Type: optional checkbox; unchecked by default.
+    Label: I would also like help with this workshop.
+    Implementation: if checked, show the support fields in Branch C. Record
+    requests as [plan_workshop, ask_help]; otherwise [plan_workshop].
+
+BRANCH C — ASK FOR FACILITATION HELP
+
+C1. What support would be useful? (optional choices)
+    Key: support_types
+    Type: multiple choice; none checked by default.
+    Choices: Finding or printing materials / Access and participation /
+    Adapting the activity to our context / Facilitation or session planning /
+    A possible collaboration
+    Stored values: materials / accessibility / adaptation / facilitation /
+    collaboration
+
+C2. Your question or request
+    Key: support_details
+    Type: long text; required for ask_help or when support_requested is checked;
+    maximum 5,000 characters.
+    Help: What would help you begin? You can describe another kind of support here.
+
+For a help-only inquiry, workshop name, broad location, audience/context,
+participants, edition, and approximate timing may all remain optional. Keep
+Still exploring as the timing default. Do not require a fictitious workshop
+name, an image, or a public credit to ask a question. Record requests as [ask_help].
+
+PRIVATE REPLY DETAILS — WORKSHOP AND HELP BRANCHES
+
+Name (optional, private): contact_name; short text; maximum 180 characters.
+Organization or group (optional, private): contact_organization; short text;
+maximum 180 characters.
+Reply email (optional, private): private_contact_email; email type.
+
+Help: Add an address if you would like the project team to reply. These details
+are for the private inquiry and will not appear in the public workshop history.
+Leaving them blank is fine, but the team then has no reply address.
+
+SEPARATE PUBLIC WORKSHOP-HISTORY OPT-IN
+
+Show for workshop plans and for help inquiries that include a workshop. Do not
+precheck this box and do not make it a requirement for submitting or getting help.
+
+Key: permission_to_list_workshop
+Type: optional checkbox; unchecked by default.
+Label: After review, I permit the project to list this workshop's name, broad
+location, date or year, audience/context, and chosen public credit in the workshop
+history. A planned workshop should be labeled as planned until it has happened.
+
+Conditional field: public_workshop_credit; required only when permission is given;
+short text; maximum 240 characters.
+Label: Public credit for the workshop
+Help: A name, a group, or Anonymous. Only this chosen credit may appear publicly;
+your private reply details are excluded.
+
+Supporting text: Your planning details stay private by default. Asking for help
+does not add you to the public workshop history. The team will review any proposed
+listing; receiving a plan does not establish that a workshop has taken place.
+
+SUBMIT BUTTONS — CONNECTED FORM ONLY
+Share an example: Send for review
+Plan a workshop: Send workshop plan
+Ask for help: Send question
 
 CONNECTED FORM CONFIRMATION — ONLY AFTER A SUCCESSFUL REAL SUBMISSION
+For examples:
 Received for review — not public yet
 
 Thank you. Your contribution has been received by the project team for review.
@@ -145,6 +271,20 @@ and credit before deciding whether to include it. If you supplied a private
 contact email, we may use it to ask about this contribution.
 
 Keep a copy of your original files and the details you sent.
+
+For workshop plans:
+Workshop idea received
+Thank you for telling us what you are considering. This is a planning record,
+not a booking or confirmation that the workshop has happened. Your details stay
+private unless you opted in to a public history listing and it is reviewed. If
+you requested support and supplied an email, the team can use it to reply. No
+response time or facilitation commitment is promised by this confirmation.
+
+For help inquiries:
+Question received
+Thank you. Your question is with the project team. If you supplied an email, the
+team can use it to reply. It has not been added to the public workshop history.
+No response time or facilitation commitment is promised by this confirmation.
 
 IMPLEMENTATION AND REVIEW SPECIFICATION
 
@@ -167,6 +307,26 @@ Private intake record
 - A submission is never an automatic public-gallery entry. Reviewer approval
   covers the selected image(s), context, title, caption, public credit, alt text,
   display permission, and the absence of private details.
+
+Workshop and support tracking
+- Maintain a private workshop/inquiry register outside the public repository.
+  Store the submission ID and received time, intent/requests, workshop name,
+  broad location, timing_status/timing_detail, audience/context, participant
+  estimate, edition, support types/question, private reply details, and the exact
+  optional public-history permission and chosen public credit.
+- Track inquiry status separately: received / needs reply / in conversation /
+  closed. Track activity status separately: exploring / planned / postponed /
+  completed / cancelled / unknown. Begin with exploring or planned according to
+  what was supplied, never completed. No automatic confirmation messages or
+  follow-up automation are enabled by this specification.
+- Keep uncertain dates as text or null. Do not turn a project reference year
+  into a start date or an estimated group size into actual attendance.
+- After review and explicit opt-in, add only agreed public fields to the existing
+  canonical site/data/workshops.json history. Generate the CSV with the existing
+  exporter. A planned entry must say planned; completion needs later confirmation.
+- Private contacts, internal tracking IDs, correspondence, and support notes
+  stay outside that JSON, public CSV, page source, Git history, and Zenodo archive.
+  A private inquiry is never automatically a public workshop entry.
 
 Public source of truth
 - Proposed file: site/data/community-contributions.json. Create it when the

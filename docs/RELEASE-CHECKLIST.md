@@ -6,7 +6,7 @@ This checklist covers current source version **0.1.2**, with **0.1.0** and **0.1
 
 - [x] Inventory the original repository files and retain their historical filenames in provenance.
 - [x] Rename retained source artifacts with descriptive project names and verify unchanged bytes; record the map in `FILE-NAMES.md`.
-- [x] Maintain the 25-entry sourced workshop log in JSON and verify its generated CSV/history page with `export_workshop_log.py --check`.
+- [x] Maintain the 26-entry sourced workshop log in JSON and verify its generated CSV/history page with `export_workshop_log.py --check`.
 - [x] Record original and supplied PDF page counts, sizes, and SHA-256 checksums.
 - [x] Distinguish the general multispecies deck from the PLF workshop variant.
 - [x] Identify different export geometry in similarly named PDFs.
@@ -48,7 +48,15 @@ This checklist covers current source version **0.1.2**, with **0.1.0** and **0.1
 - [x] Replace asynchronous automatic ZIP download with an explicit prepared-package link; review stale-input invalidation and object-URL lifetime.
 - [x] Check the local Examples and guide views and the live 0.1.2 homepage, including all three hero images and layout without overflow.
 - [x] Verify the public Examples route with 25 records, its featured image, and the preparation-preview link.
-- [x] Verify the public workshop-history page contains the expected 25 entries.
+- [x] Verify the earlier public workshop-history baseline contains 25 entries.
+- [x] Add Seabreeze Bop City as related student community fieldwork, retain unknown dates, and verify the prepared 26-entry JSON/CSV/history export.
+- [x] Rebuild the empty `middle-map.webp` and `teaching-fabric-prop.webp` from originals; decode all 25 gallery assets and check dimensions and checksums.
+- [x] Make the examples exporter reject empty, undecodable, mismatched, or incorrectly sized images; verify that a zero-byte file is rejected even with a matching recorded checksum.
+- [ ] Deploy and verify the prepared two-image repairs and 26-entry history.
+- [x] Verify Community Preparation v0.2.0 locally: a plan without media and a help-only question both produce ready package-download links; optional controls reveal correctly and public-history opt-in starts unchecked.
+- [x] Verify the help-only export excludes stale media/public-description fields and keeps reply details and the support question private, without duplicating the question into the generic description.
+- [x] Match the v0.2.0 source and download at 57,477 bytes, SHA-256 `3aafa6d8b8dfcb32248189e0914ef1343350cea5cea5dd1e9c56ef215d01f9b2`; preserve the original community v0.1.0 download and Interactive Tool v0.1.2 snapshot unchanged.
+- [ ] Deploy and check Community Preparation v0.2.0 publicly; no submission endpoint is connected.
 - [x] Verify image resizing on the public HTTPS preparation preview to the expected 167,110-byte JPEG and confirm the explicit ZIP link becomes ready.
 - [ ] Verify the ZIP browser download; the event monitor timed out and reset the browser, so the download remains unverified rather than known broken or blocked.
 - [x] Verify the live guide's eight expected source images, six session steps, and 18-card index, with no overflow.
@@ -117,7 +125,7 @@ The preparation preview is separate from the curated Examples collection. It doe
 - [x] Create the 57,290-byte 0.1.2 snapshot, verify that it matches current source, and recheck both earlier hashes; SHA-256 `0601ce6479e0144607a408f3edc77169e45ab559da7b2769adc4817b98d8c4bb`.
 - [x] Restrict the app diff from 0.1.1 to the version, confirmed book credits, and Examples navigation; preserve functional JavaScript apart from `APP_VERSION`.
 - [x] Verify the immediate citation-selection/manual-copy fallback locally: all 189 characters selected, “Citation copied.” status, and clipboard readback exactly matching the 0.1.2 reference.
-- [ ] Deploy and verify that citation improvement on the public page; the earlier public clipboard operation did not return completed status or clipboard text.
+- [x] Deploy the citation improvement through [Pages workflow 39478715228](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39478715228), commit `332ba263dd77ea13e323a2f1d68f3700ed958f11`; verify all 189 characters selected and “Citation copied.” on the live page.
 - [x] Deploy and verify the current 0.1.2 site, preserving the earlier 0.1.1 deployment checks as a historical baseline.
 - [ ] Create a corresponding Git tag/release when the reviewed package is deliberately released.
 
@@ -140,4 +148,4 @@ The preparation preview is separate from the curated Examples collection. It doe
 - [ ] Add validated `CITATION.cff` before the archival release; if `.zenodo.json` is used, keep its higher-priority metadata aligned.
 - [ ] Record the final Git commit/tag and Zenodo record together.
 
-See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages is verified live at 0.1.2; remaining interaction checks are listed above. The last verified private preview remains v4. The GitHub v0.1.2 release is a saved draft; no archival DOI has been issued.
+See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages is verified live at 0.1.2; remaining interaction checks are listed above. The last verified private preview remains v4; v5 publishing is blocked by the automatic approval rejection and sandboxed network failure documented in `PUBLISHING.md`. The GitHub v0.1.2 release is a saved draft; no archival DOI has been issued.
