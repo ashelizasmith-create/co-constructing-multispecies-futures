@@ -1,38 +1,56 @@
 # Indexhibit exhibit integration
 
-Prepared exhibit text and an additive image insert for the existing exhibit:
+Prepared exhibit text, quick links, and an additive image insert for the existing exhibit:
 
 https://asheveryday.com/index.php/worldbuilding-community/co-constructing-multispecies-futures/
 
-On **20 October 2026**, Ash reported applying the prepared text to Indexhibit. That report is retained as the current status; the latest live text has not been independently verified. The new **image insert v0.1** is ready for Ash to paste into that existing text. It has not been applied to Indexhibit. The earlier full-text files are retained for reference.
+On **20 October 2026**, Ash reported applying the prepared text to Indexhibit. That report is retained as the current status; the latest live text has not been independently verified. The **Quick Links v0.1** and **Images v0.1** inserts are ready to paste into that existing text. Neither has been applied to Indexhibit by this work. The canonical full-text files are retained and now include the quick links.
 
-## Add the images to the text already installed
+## Give visitors two clear destinations
 
-Open `Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.txt` and copy the complete block, including its scoped styles. Paste it just after the introductory paragraph in the existing exhibit's text/source editor, after the closing `</p>`. Keep the rest of the current text and the native card-image gallery.
+Use this order: **introduction → quick links → images → context and further links**. Both main destinations appear before the photographs.
+
+Open `Co-Constructing_Multispecies_Futures_Indexhibit_Quick_Links_v0.1.txt` and copy the complete block, including its scoped styles. Paste it immediately after the introductory paragraph's closing `</p>`, before the image insert. It presents:
+
+- **Open project website ↗** — Interactive Tool, printable cards and facilitation guides. This is the primary black button.
+- **View GitHub repository ↗** — Source files, documentation and version history. This is the outlined button.
+- A smaller row for **Try the Interactive Tool**, **Print the Card Deck**, and **How to cite**.
+
+The two destinations stack on narrow screens. Links open in the same tab, with visible keyboard focus. The block needs no JavaScript, new assets, or global template changes.
+
+**Use one installation method:** add the small Quick Links insert to the already-edited page, **or** use the refreshed canonical full-text HTML/TXT fragment. The full-text fragment already contains the block; installing both would duplicate it. The small insert preserves Ash's latest text edits. If using it, remove the repeated Interactive Tool, Print the Card Deck, and About & cite links from the old lower row, leaving Lead a Session, Workshops & development, Examples, and Versions as contextual links.
+
+See `Co-Constructing_Multispecies_Futures_Indexhibit_Quick_Links_README.txt` for paste instructions and destinations.
+
+## Add the images below the quick links
+
+Open `Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.txt` and copy the complete block, including its scoped styles. Paste it after the Quick Links block and before the contextual body text. If the images are already installed, place Quick Links immediately before their `<style>` block. Keep the rest of the current text and the native card-image gallery.
 
 The insert presents **Gestures with a robotic arm** as the lead, then **Moving with a drone** and **Making with materials**. It uses existing public toolkit image URLs, so no image upload or new Indexhibit media tags are required. Each image retains its full frame, a caption, a credit, alt text, and a link to its gallery context. On narrow screens the supporting images stack in one column.
 
 The source images are unchanged WebPs, each below 200,000 bytes: robot (46,632 bytes), drone (170,140 bytes), and fabric (69,098 bytes). The ZIP contains those exact files as optional copies. The existing native card photo is not duplicated.
 
-See `Co-Constructing_Multispecies_Futures_Indexhibit_Images_README.txt` for paste instructions and the complete image/source credits.
+See `Co-Constructing_Multispecies_Futures_Indexhibit_Images_README.txt` for current placement instructions and the complete image/source credits. The versioned Images v0.1 HTML/TXT files and ZIP remain unchanged; their earlier placement instructions are superseded by the order above.
 
 ## Files
 
+- `Co-Constructing_Multispecies_Futures_Indexhibit_Quick_Links_v0.1.html` and identical `.txt`: compact additive destination links, with CSS scoped to `#ccmf-quick-links`.
+- `Co-Constructing_Multispecies_Futures_Indexhibit_Quick_Links_README.txt`: placement instructions and destination URLs.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.html` and identical `.txt`: additive three-image insert, with CSS scoped to `#ccmf-practice-images`.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Images_README.txt`: placement instructions, credits, source URLs, and image sizes.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.zip`: the insert, instructions, and unchanged copies of the three images in `images/`.
 
-- `Co-Constructing_Multispecies_Futures_Indexhibit.html`: HTML fragment with styles scoped to `#ccmf-exhibit`.
+- `Co-Constructing_Multispecies_Futures_Indexhibit.html`: full exhibit text, refreshed to include Quick Links immediately after the introduction. The lower navigation contains only contextual extras. The separate image insert is not included.
 - `Co-Constructing_Multispecies_Futures_Indexhibit.txt`: the identical fragment in a plain-text file for copying.
-- [Preview page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/indexhibit-preview.html): a clearly labeled proposed image insert in the earlier prepared exhibit copy, with local image assets and toolkit links. It does not verify or reproduce Ash's latest live edits.
+- [Preview page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/indexhibit-preview.html): a clearly labeled proposed layout with quick links before the photographs, prepared exhibit text, and local assets. It does not verify or reproduce Ash's latest live edits.
 
-## Earlier full-text installation instructions (retained for reference)
+## Full-text installation option (retained for reference)
 
-Ash reports completing this text update. Use the additive image instructions above for the current task; do not replace freshly edited text with the earlier full-text fragment.
+Ash reports completing the earlier text update. The additive instructions above preserve those edits. Use the refreshed full-text option only when intentionally replacing the exhibit text; do not also add the Quick Links insert.
 
 1. Open the existing **Co-Constructing Multispecies Futures** exhibit in Indexhibit. Keep a copy of the current exhibit text so it can be restored.
 2. Open the fragment as source text. Copy the complete fragment, including its scoped `<style>` block. Do not copy the preview page's sidebar, document shell, or image.
-3. In the exhibit text/source editor, replace the existing “Interactive link coming soon” text with the fragment. This is an HTML fragment, so it belongs in the exhibit text rather than the site's global template.
+3. In the exhibit text/source editor, replace the intended exhibit text with the fragment. This is an HTML fragment, so it belongs in the exhibit text rather than the site's global template. The Quick Links block is already included. Add the separate image insert after it if desired.
 4. Preserve the exhibit's existing image, image order, width, and gallery settings. Do not import or upload the image again.
 5. Save when ready and use Indexhibit's preview to check the exhibit. Confirm there is one existing image, the text is readable, and the project links lead to their intended destinations. Check a narrow screen as well.
 
@@ -44,20 +62,23 @@ The current image width is 480 pixels. The fragment leaves image rendering to th
 
 ## Link destinations
 
-The toolkit action links use the public toolkit address:
+The project website is the public toolkit. GitHub is the source repository:
 
 https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/
 
 | Action | Destination |
 | --- | --- |
+| Open project website | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#start` |
+| View GitHub repository | `https://github.com/ashelizasmith-create/co-constructing-multispecies-futures` |
 | Try the Interactive Tool | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html` |
 | Print the Card Deck | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#print` |
+| How to cite | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html#cite` |
 | Lead a Session | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html` |
 | Workshops and development | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/workshops.html` |
-| About & cite | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html` |
+| Examples | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html` |
 | Versions | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html` |
 
-The HTML and TXT fragments are identical. Their `data-ccmf-path` values preserve each destination if the toolkit is hosted elsewhere later. The preview uses local toolkit links and is a sample of the proposed image insert within the earlier exhibit copy. It is not a live-site verification.
+Each HTML/TXT pair is identical. The `data-ccmf-path` values preserve toolkit destinations if the toolkit is hosted elsewhere later. The preview uses local toolkit links and image assets, with the real GitHub destination kept distinct. It is a proposed layout, not a live-site verification.
 
 ## Content and status
 
@@ -65,4 +86,4 @@ The fragment uses **Co-Constructing Multispecies Futures** as the project name, 
 
 The chapter is described as forthcoming in *Strategic Handbook of Worldbuilding* (Routledge), using the project owner's supplied publication metadata. It is not yet public. Editors, publication year, pages, DOI, and public URL remain unspecified; the manuscript is not included. The current Interactive Tool label is **v0.1.2 · Development edition**.
 
-The text and image inserts require no JavaScript, new image imports, or changes to Indexhibit's automatic gallery controls. Each insert scopes its styles to its own wrapper.
+The text, quick links, and image inserts require no JavaScript, new image imports, or changes to Indexhibit's automatic gallery controls. Each insert scopes its styles to its own wrapper.

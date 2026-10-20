@@ -9,12 +9,18 @@ ADD THE IMAGES
 1. Keep a backup of the current Indexhibit exhibit text.
 2. Open Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.txt as text.
 3. Copy the complete block, including its <style> section.
-4. In the existing exhibit's text/source editor, paste it just after the introductory
-   paragraph ending “through chance, affect, storytelling, and embodied play.”
-   Paste after that paragraph's closing </p>, not inside it. If you revised the
-   introduction, use the equivalent position after your opening paragraph.
+4. In the existing exhibit's text/source editor, paste it after the Quick Links block,
+   before the contextual body text. If the image insert is already present, place
+   the Quick Links block immediately before it. The intended order is:
+   introduction -> quick links -> images -> context.
 5. Keep the rest of your freshly edited text and the existing native card-image gallery.
 6. Preview, save, and check the page on desktop and a narrow screen.
+
+The separate Quick Links insert distinguishes the project website from GitHub.
+Use that small insert with your current text OR the refreshed full-text fragment,
+which already includes quick links; do not install the quick links twice.
+The retained Images_v0.1 files and ZIP predate this placement update. Follow the
+order above, placing the images below the quick links.
 
 The block uses absolute HTTPS image links to the public toolkit. No image upload
 or replacement media tags are needed. Do not paste the whole preview page or
@@ -65,5 +71,5 @@ It is the four-card tabletop photograph; this insert does not duplicate it.
 
 PREVIEW
 https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/indexhibit-preview.html
-The preview uses the earlier prepared exhibit copy plus this proposed image insert.
+The preview uses prepared exhibit copy with quick links before this image insert.
 It is not a copy of your current live Indexhibit text.
