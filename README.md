@@ -79,11 +79,11 @@ For an optional food-system recipe, the FoodID handout begins with a pleasant se
 
 See the [printable use guide](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html) for a longer session and [the paper overview](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html) for the methodological framing.
 
-### Examples and visual guidance prepared for 0.1.2
+### Examples and visual guidance
 
-The prepared [Examples page](site/examples.html) brings together **25 images** with source context, captions, credits, and image descriptions: all three owner-authorized manuscript figures, MuMu, The Middle, workshop and robotic practice, and six teaching images. These document related practices as well as card sessions; inclusion does not establish that the deck was used in every image. The homepage now uses photographs and card previews to make the routes into the tool, printing, and facilitation easier to recognize. The expanded guide presents eight original instruction-card images with their text and links to the complete 18-card sequence.
+The [Examples page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html) brings together **25 images** with source context, captions, credits, and image descriptions: all three owner-authorized manuscript figures, MuMu, The Middle, workshop and robotic practice, and six teaching images. These document related practices as well as card sessions; inclusion does not establish that the deck was used in every image. The homepage now uses photographs and card previews to make the routes into the tool, printing, and facilitation easier to recognize. The expanded guide presents eight original instruction-card images with their text and links to the complete 18-card sequence.
 
-A separate [community preparation preview](integrations/community/README.md), version **0.1.0**, lets someone prepare an image, credit, alt text, and reflection locally, then download a package. It does **not** upload, receive, review, or publish contributions. A connected-form specification is included, but no form account or submission endpoint is configured. Run the current source locally to review these 0.1.2 additions; their public deployment is not yet verified.
+A separate [community preparation preview](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Co-Constructing_Multispecies_Futures_Community_Preparation_v0.1.0.html), version **0.1.0**, prepares an image, credit, alt text, and reflection in the browser for download. It does **not** upload, receive, review, or publish contributions. The preview is available through the Examples page and processes the chosen image locally. Its [source notes and connected-form specification](integrations/community/README.md) describe a future submission flow; no form account or submission endpoint is configured.
 
 ## Repository structure
 
@@ -93,7 +93,7 @@ A separate [community preparation preview](integrations/community/README.md), ve
 | `site/interactive.html` | Current Interactive Tool. |
 | `site/guide.html` | Printable facilitation guide with eight original instruction-card images and text, plus the complete source-sequence index. |
 | `site/paper.html` | About & cite: framework orientation, development citation, lineages, and the forthcoming chapter. |
-| `site/examples.html`, `site/data/examples.json` | Prepared 25-image Examples collection with source context, captions, credits, image descriptions, and reuse information. |
+| `site/examples.html`, `site/data/examples.json` | 25-image Examples collection with source context, captions, credits, image descriptions, and reuse information. |
 | `site/workshops.html` | Searchable working history of workshops, development contexts, presentations, and related practice. |
 | `site/versions.html` | Version history and numbered tool downloads. |
 | `site/data/workshops.json` | Single editable source for the 25-entry workshop and development log; generates its CSV and public history entries. |
@@ -116,7 +116,7 @@ The current source version is **0.1.2**, with a 25-image Examples collection, a 
 
 See [version history](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html), the [changelog](CHANGELOG.md), and the [versioning policy](docs/VERSIONING.md). After browser QA, the snapshot command preserves the reviewed HTML and refuses to replace different contents under an existing version number. Selected releases can be archived in Zenodo; routine commits do not require a new DOI. Current verification and publication status is recorded in the [release checklist](docs/RELEASE-CHECKLIST.md).
 
-The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) was last verified with version **0.1.1**. Version **0.1.2** is prepared in the current source; its public deployment remains to be verified. The saved [GitHub v0.1.2 release draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) has been updated to this version but remains unpublished while the formal creator roster is settled. No release tag or Zenodo DOI has been created. See the [0.1.2 release draft notes](docs/RELEASE-NOTES-v0.1.2.md).
+The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live at **0.1.2**, deployed from commit `8215b73e2f65f383e981c16a7949e1e430e99f3a` by successful [Pages workflow 39476840082](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39476840082). The homepage, 25-entry Examples page, eight-image instruction guide, and correct 0.1.2 citation and forthcoming Routledge chapter text were checked. The hosted 57,290-byte standalone HTML matches the current source exactly. A citation-selection/manual-copy improvement passed local verification, including exact clipboard readback, and awaits deployment; copying on the earlier public page remains unverified. Image resizing and preparation of the explicit ZIP link passed, while the actual ZIP browser download remains unverified. The saved [GitHub v0.1.2 release draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) remains unpublished while the formal creator roster is settled. No release tag or Zenodo DOI has been created. See the [0.1.2 release draft notes](docs/RELEASE-NOTES-v0.1.2.md).
 
 ## Paper and tools
 
@@ -132,7 +132,7 @@ The chapter identifies this Card Deck and Interactive Tool as shared tools for b
 
 > Smith, A. E., & McQuillan, J. (forthcoming). Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies. In *Strategic Handbook of Worldbuilding*. Routledge.
 
-The book title and publisher were supplied by the project owner. Editors, publication year, page range, DOI, and public URL remain unspecified. The full unpublished manuscript is not included in this repository. Three owner-authorized figures appear separately in the prepared Examples collection with their source context and credits.
+The book title and publisher were supplied by the project owner. Editors, publication year, page range, DOI, and public URL remain unspecified. The full unpublished manuscript is not included in this repository. Three owner-authorized figures appear separately in the Examples collection with their source context and credits.
 
 **Deck and framework lineage:**
 

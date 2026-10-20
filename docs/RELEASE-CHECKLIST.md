@@ -46,9 +46,14 @@ This checklist covers current source version **0.1.2**, with **0.1.0** and **0.1
 - [x] Include the local-only community image-preparation preview v0.1.0 and its connected-form specification; state that no account, form URL, upload endpoint, or submission service is configured.
 - [x] Verify preparation of a 2,334 × 2,000 image into a 1,600 × 1,371 JPEG of 167,110 bytes and a readable notes download; check JavaScript syntax and ZIP text/binary round trips.
 - [x] Replace asynchronous automatic ZIP download with an explicit prepared-package link; review stale-input invalidation and object-URL lifetime.
-- [ ] Verify the revised ZIP download link in the browser and the final homepage, guide, and Examples layouts at desktop and narrow widths.
+- [x] Check the local Examples and guide views and the live 0.1.2 homepage, including all three hero images and layout without overflow.
+- [x] Verify the public Examples route with 25 records, its featured image, and the preparation-preview link.
+- [x] Verify the public workshop-history page contains the expected 25 entries.
+- [x] Verify image resizing on the public HTTPS preparation preview to the expected 167,110-byte JPEG and confirm the explicit ZIP link becomes ready.
+- [ ] Verify the ZIP browser download; the event monitor timed out and reset the browser, so the download remains unverified rather than known broken or blocked.
+- [x] Verify the live guide's eight expected source images, six session steps, and 18-card index, with no overflow.
 
-The preparation preview is separate from the curated Examples collection. It does not receive or publish contributions. Connected submissions and review are future implementation, not enabled release features.
+The preparation preview is separate from the curated Examples collection. It does not receive or publish contributions. Connected submissions and review are future implementation, not enabled release features. Comprehensive narrow-viewport UI testing has not been performed; this is a recorded testing limit, not a gate for the current website publication.
 
 ## Print and download checks
 
@@ -82,7 +87,7 @@ The preparation preview is separate from the curated Examples collection. It doe
 ## Publish GitHub Pages
 
 - [x] Confirm connected GitHub account access with repository administration and push permissions.
-- [x] Push the reviewed website files and Pages workflow; verify all 300 repository paths against their exact Git blob hashes.
+- [x] Push the reviewed 0.1.1 website files and Pages workflow; verify all 300 baseline repository paths against their exact Git blob hashes.
 - [x] Select **GitHub Actions** in repository **Settings → Pages**.
 - [x] Verify private preview v4 at `2026-10-20T16:56:57.105973Z`, source `5e997d4ad09f2289cd473e551b5f0e866ff795dd`; keep it distinct from public Pages publication.
 - [x] Complete and hash-verify all 256 binary asset uploads.
@@ -93,6 +98,11 @@ The preparation preview is separate from the curated Examples collection. It doe
 - [x] Add the verified public URL and hosted download links to the README.
 - [x] Save the repository About description and website with the verified public URL.
 - [x] Verify the saved About description and website link in the rendered repository page.
+- [x] Deploy 0.1.2 with successful [Pages workflow 39476840082](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39476840082), commit `8215b73e2f65f383e981c16a7949e1e430e99f3a`, tree `577499a3e8d4e224af410073ba3a74e6f7a183ad`.
+- [x] Verify all 341 remote file paths and hashes against the reviewed 0.1.2 expected tree.
+- [x] Verify the live 0.1.2 homepage version, loaded hero images, Examples navigation, and layout without overflow.
+- [x] Verify the public About & cite page displays the correct 0.1.2 citation and forthcoming Routledge chapter text.
+- [x] Download the hosted 0.1.2 standalone HTML over public HTTP and match its 57,290 bytes and SHA-256 `0601ce6479e0144607a408f3edc77169e45ab559da7b2769adc4817b98d8c4bb` to current source.
 - [x] Prepare matching Indexhibit HTML/TXT fragments with six verified-site destinations; preserve the existing gallery image.
 - [ ] Apply the prepared fragment to the existing Indexhibit exhibit; its live text has not been edited.
 
@@ -106,8 +116,9 @@ The preparation preview is separate from the curated Examples collection. It doe
 - [x] Preserve the earlier numbered snapshot when advancing to 0.1.1.
 - [x] Create the 57,290-byte 0.1.2 snapshot, verify that it matches current source, and recheck both earlier hashes; SHA-256 `0601ce6479e0144607a408f3edc77169e45ab559da7b2769adc4817b98d8c4bb`.
 - [x] Restrict the app diff from 0.1.1 to the version, confirmed book credits, and Examples navigation; preserve functional JavaScript apart from `APP_VERSION`.
-- [ ] Verify the final 0.1.2 browser routes, citation copying, new Examples destination, and deployed standalone download.
-- [ ] Deploy and verify the current 0.1.2 site; the completed public-deployment checks above describe 0.1.1.
+- [x] Verify the immediate citation-selection/manual-copy fallback locally: all 189 characters selected, “Citation copied.” status, and clipboard readback exactly matching the 0.1.2 reference.
+- [ ] Deploy and verify that citation improvement on the public page; the earlier public clipboard operation did not return completed status or clipboard text.
+- [x] Deploy and verify the current 0.1.2 site, preserving the earlier 0.1.1 deployment checks as a historical baseline.
 - [ ] Create a corresponding Git tag/release when the reviewed package is deliberately released.
 
 ## Publish an archival release
@@ -129,4 +140,4 @@ The preparation preview is separate from the curated Examples collection. It doe
 - [ ] Add validated `CITATION.cff` before the archival release; if `.zenodo.json` is used, keep its higher-priority metadata aligned.
 - [ ] Record the final Git commit/tag and Zenodo record together.
 
-See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages and the private preview were verified for 0.1.1; verification of the new 0.1.2 deployment remains open. The GitHub release is a saved draft; no archival DOI has been issued.
+See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages is verified live at 0.1.2; remaining interaction checks are listed above. The last verified private preview remains v4. The GitHub v0.1.2 release is a saved draft; no archival DOI has been issued.

@@ -114,6 +114,10 @@
   const status = document.getElementById('copy-status');
   button.hidden = false;
   button.addEventListener('click', async () => {
+    citation.focus();
+    citation.select();
+    citation.setSelectionRange(0, citation.value.length);
+    status.textContent = 'Citation selected. Use your browser’s Copy command.';
     try {
       if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Use selection fallback');
       await navigator.clipboard.writeText(citation.value);

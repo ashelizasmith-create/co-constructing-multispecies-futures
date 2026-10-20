@@ -44,7 +44,7 @@ After 1.0.0, patch versions continue to identify fixes, minor versions identify 
 
 The 0.1.0, 0.1.1, and 0.1.2 snapshots have been preserved, with checksums in [PROVENANCE.md](PROVENANCE.md). Further changes belong to a later version. Before creating its snapshot, complete the relevant checks; once preserved, do not replace its bytes. A version assignment or snapshot alone does not mean the website or an archival record has been published.
 
-The saved GitHub release draft now identifies **v0.1.2** and remains unpublished; its intended tag name does not establish a created Git tag. The last verified public website deployment remains **0.1.1**. See [PUBLISHING.md](PUBLISHING.md) for the verified draft and deployment records.
+The saved GitHub release draft identifies **v0.1.2** and remains unpublished; its intended tag name does not establish a created Git tag. The public website is verified live at **0.1.2**, and its hosted standalone download matches the current 57,290-byte source and recorded SHA-256. The displayed citation is correct. A citation-selection/manual-copy improvement passed local verification, including exact clipboard readback, and awaits deployment; the earlier public page's clipboard result remains unverified. See [PUBLISHING.md](PUBLISHING.md) for the verified draft and deployment records.
 
 ### Snapshot command
 
