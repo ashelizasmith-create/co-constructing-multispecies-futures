@@ -10,7 +10,7 @@ The live exhibit has not been modified. The files are ready to copy into its exi
 
 - `Co-Constructing_Multispecies_Futures_Indexhibit.html`: HTML fragment with styles scoped to `#ccmf-exhibit`.
 - `Co-Constructing_Multispecies_Futures_Indexhibit.txt`: the identical fragment in a plain-text file for copying.
-- [Preview page](../../site/indexhibit-preview.html): a separate, clearly labeled visual preview with local toolkit links. It is not the live Indexhibit page or a replacement for its template.
+- [Preview page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/indexhibit-preview.html): a separate, clearly labeled visual preview with local toolkit links. It is not the live Indexhibit page or a replacement for its template.
 
 ## Apply to the existing exhibit
 
@@ -28,21 +28,20 @@ The current image width is 480 pixels. The fragment leaves image rendering to th
 
 ## Link destinations
 
-Until the hosted toolkit address is verified, the paste fragment's public action links point to the existing repository quickstart:
+All six action links now use the verified public toolkit address:
 
-https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart
+https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/
 
-Each link carries a `data-ccmf-path` value so the verified hosted destinations can be substituted consistently:
-
-| Action | Path beneath the verified toolkit URL |
+| Action | Destination |
 | --- | --- |
-| Play with the Interactive Tool | `interactive.html` |
-| Print the Card Deck | `index.html#print` |
-| Workshops and development | `workshops.html` |
-| Paper and tools | `paper.html` |
-| Versions | `versions.html` |
+| Try the Interactive Tool | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html` |
+| Print the Card Deck | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#print` |
+| Lead a Session | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html` |
+| Workshops and development | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/workshops.html` |
+| About & cite | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html` |
+| Versions | `https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html` |
 
-Once the public base URL is verified, replace each action's `href` with that base URL plus the corresponding path, in **both** the HTML and TXT fragments. Keep the two fragments identical. The preview already uses these local paths so the sample can be explored now.
+The HTML and TXT fragments are identical. Their `data-ccmf-path` values preserve each destination if the toolkit is hosted elsewhere later. The preview uses local toolkit links and is a sample of the exhibit update; the existing Indexhibit exhibit has not been edited.
 
 ## Content and status
 

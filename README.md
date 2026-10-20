@@ -2,7 +2,7 @@
 
 An evolving toolkit for imagining and rehearsing multispecies futures through chance, affect, storytelling, and embodied play. Available as a **Card Deck** and **Interactive Tool**.
 
-[Interactive Tool](site/interactive.html) · [Print the cards](#formats-and-printing) · [Facilitation guide](site/guide.html) · [How to cite](#citing-the-toolkit) · [Workshop history](site/workshops.html) · [Versions](site/versions.html)
+[Website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) · [Interactive Tool](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html) · [Print the cards](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#print) · [Facilitation guide](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html) · [How to cite](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html#cite) · [Workshop history](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/workshops.html) · [Versions](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html)
 
 ## Overview
 
@@ -16,7 +16,7 @@ Use the toolkit across settings. Food-system, USDA, and precision livestock farm
 
 ### Use the Interactive Tool
 
-1. Download [the version 0.1.1 Interactive Tool HTML](site/downloads/Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html). On GitHub, use **Download raw file** to save the HTML, then open the saved file in a browser.
+1. Open [the Interactive Tool online](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html). To keep a standalone copy, use [the version-history download](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html#v0-1-1) or save [the version 0.1.1 HTML](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html) and open the saved file in a browser.
 2. Begin with **Spatial** and **Temporal**. Pull to draw a combination, hold a result you want to keep, and add optional layers.
 3. Use **Tell it** to write, then **Now: try it** to take the scene into movement, attention, or rehearsal.
 4. Save your session slip and notes as text or JSON, or print them. Download voice recordings separately before closing or reloading the page.
@@ -33,7 +33,7 @@ cd co-constructing-multispecies-futures
 python3 -m http.server 8000 --directory site
 ```
 
-Open <http://localhost:8000/> to browse the cards, use the tool, and read the guide. Repository-relative links are provided here until a public deployment URL is verified. See [publishing guidance](docs/PUBLISHING.md) for GitHub Pages setup.
+Open <http://localhost:8000/> to browse the cards, use the tool, and read the guide locally. The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is also live on GitHub Pages. See [publishing guidance](docs/PUBLISHING.md) for deployment records and future updates.
 
 ## Formats and printing
 
@@ -41,17 +41,17 @@ Open <http://localhost:8000/> to browse the cards, use the tool, and read the gu
 
 | Edition | Contents | Download |
 | --- | --- | --- |
-| General selection | 94 activity cards / 188 sides; original artwork selected for use across settings. | [Individual-card print PDF](site/downloads/Multispecies_Futures_General_Cards.pdf) |
-| Complete multispecies source | 122 paired cards: 94 general activity cards, 10 food-system speculation cards, and 18 facilitator cards. | [Original print edition](site/downloads/Multispecies_Futures_Original_Print.pdf) · [PDF with live text](site/downloads/Multispecies_Futures_Original_LiveText.pdf) |
-| PLF workshop edition | 100 paired cards / 200 sides; a related precision livestock farming edition with its own categories and repeated instruction cards. | [PLF PDF](site/downloads/PLF2025_Workshop_Deck.pdf) |
-| Accessible card text | 122 source-card entries with categories, transcriptions, and original page references. | [CSV](site/data/cards.csv) · [JSON](site/data/cards.json) |
+| General selection | 94 activity cards / 188 sides; original artwork selected for use across settings. | [Individual-card print PDF](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_General_Cards.pdf) |
+| Complete multispecies source | 122 paired cards: 94 general activity cards, 10 food-system speculation cards, and 18 facilitator cards. | [Original print edition](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Original_Print.pdf) · [PDF with live text](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Original_LiveText.pdf) |
+| PLF workshop edition | 100 paired cards / 200 sides; a related precision livestock farming edition with its own categories and repeated instruction cards. | [PLF PDF](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/PLF2025_Workshop_Deck.pdf) |
+| Accessible card text | 122 source-card entries with categories, transcriptions, and original page references. | [CSV](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/data/cards.csv) · [JSON](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/data/cards.json) |
 
 For ordinary printers, choose a **home-print edition of the 94-card general selection**:
 
 | Paper | Single-sided fold | Duplex | Print guide |
 | --- | --- | --- | --- |
-| US Letter | [Letter fold PDF](site/downloads/Multispecies_Futures_Home_Print_Letter_Fold.pdf) · 32 sheets | [Letter duplex PDF](site/downloads/Multispecies_Futures_Home_Print_Letter_Duplex.pdf) · 16 sheets | [Letter instructions](site/downloads/Multispecies_Futures_Home_Print_Letter_Instructions.pdf) |
-| A4 | [A4 fold PDF](site/downloads/Multispecies_Futures_Home_Print_A4_Fold.pdf) · 32 sheets | [A4 duplex PDF](site/downloads/Multispecies_Futures_Home_Print_A4_Duplex.pdf) · 16 sheets | [A4 instructions](site/downloads/Multispecies_Futures_Home_Print_A4_Instructions.pdf) |
+| US Letter | [Letter fold PDF](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Home_Print_Letter_Fold.pdf) · 32 sheets | [Letter duplex PDF](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Home_Print_Letter_Duplex.pdf) · 16 sheets | [Letter instructions](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Home_Print_Letter_Instructions.pdf) |
+| A4 | [A4 fold PDF](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Home_Print_A4_Fold.pdf) · 32 sheets | [A4 duplex PDF](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Home_Print_A4_Duplex.pdf) · 16 sheets | [A4 instructions](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Multispecies_Futures_Home_Print_A4_Instructions.pdf) |
 
 Print at **Actual size / 100%** on the matching paper size. Turn off Fit, Shrink, Multiple pages per sheet, and Booklet settings. Finished cards measure **3.5 × 2.5 inches**.
 
@@ -63,7 +63,7 @@ Individual-card print PDFs retain production page boxes and crop marks for a pri
 
 ### Interactive Tool
 
-[Open the current tool file](site/interactive.html) or visit [version history](site/versions.html) to choose a numbered standalone download. The stable online tool path will track the current version; numbered HTML files preserve earlier reviewed versions. The browser for the original cards is in [the complete website](site/index.html#deck).
+[Open the current tool online](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html) or visit [version history](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html) to choose a numbered standalone download. The stable online tool path serves the current version; numbered HTML files preserve earlier reviewed versions. The browser for the original cards is in [the complete website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#deck).
 
 ## Usage
 
@@ -77,7 +77,7 @@ Individual-card print PDFs retain production page boxes and crop marks for a pri
 
 For an optional food-system recipe, the FoodID handout begins with a pleasant sensory memory, invites each person to write a “What if, in 2046…” future-fantasy card, then has each group choose Construction, Speculation, and Affect prompts for a two- or three-sentence sensory story. This setting belongs to that workshop; groups can choose another horizon.
 
-See the [printable use guide](site/guide.html) for a longer session and [the paper overview](site/paper.html) for the methodological framing.
+See the [printable use guide](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html) for a longer session and [the paper overview](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html) for the methodological framing.
 
 ## Repository structure
 
@@ -86,7 +86,7 @@ See the [printable use guide](site/guide.html) for a longer session and [the pap
 | `site/index.html` | Toolkit homepage, original-card browser, downloads, and use guidance. |
 | `site/interactive.html` | Current Interactive Tool. |
 | `site/guide.html` | Printable facilitation guide. |
-| `site/paper.html` | Forthcoming chapter overview and relationship to the tools. |
+| `site/paper.html` | About & cite: framework orientation, development citation, lineages, and the forthcoming chapter. |
 | `site/workshops.html` | Searchable working history of workshops, development contexts, presentations, and related practice. |
 | `site/versions.html` | Version history and numbered tool downloads. |
 | `site/downloads/` | Print files, instructions, and versioned HTML snapshots. |
@@ -96,7 +96,7 @@ See the [printable use guide](site/guide.html) for a longer session and [the pap
 | `scripts/` | Asset preparation, home-print generation, and guarded interactive snapshots. |
 | `docs/` | Provenance, versioning, publishing guidance, release checklist, and draft archival metadata. |
 | `integrations/indexhibit/` | Ready-to-paste exhibit content and installation notes for the existing portfolio page. |
-| `.github/workflows/pages.yml` | Prepared GitHub Actions deployment of `site/`. |
+| `.github/workflows/pages.yml` | GitHub Actions deployment of `site/` to the verified public website. |
 | `VERSION`, `site/version.json` | Current development version information. |
 
 Original repository PDFs and the engagement image are also retained at the repository root.
@@ -105,7 +105,9 @@ Original repository PDFs and the engagement image are also retained at the repos
 
 The current development version is **0.1.1**, with clearer navigation and citation guidance. The first tracked version, **0.1.0**, is preserved as a separate download. Fixes advance the patch number; features or new prompt layers advance the minor number, such as **0.2.0**. **1.0.0** will be a deliberate stable release.
 
-See [version history](site/versions.html), the [changelog](CHANGELOG.md), and the [versioning policy](docs/VERSIONING.md). After browser QA, the snapshot command preserves the reviewed HTML and refuses to replace different contents under an existing version number. Selected releases can be archived in Zenodo; routine commits do not require a new DOI. Current verification and publication status is recorded in the [release checklist](docs/RELEASE-CHECKLIST.md).
+See [version history](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html), the [changelog](CHANGELOG.md), and the [versioning policy](docs/VERSIONING.md). After browser QA, the snapshot command preserves the reviewed HTML and refuses to replace different contents under an existing version number. Selected releases can be archived in Zenodo; routine commits do not require a new DOI. Current verification and publication status is recorded in the [release checklist](docs/RELEASE-CHECKLIST.md).
+
+The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live with version **0.1.1**. A GitHub release draft is saved; it remains unpublished while the formal creator roster is settled. No release tag or Zenodo DOI has been created. See the [release draft notes](docs/RELEASE-NOTES-v0.1.1.md).
 
 ## Paper and tools
 
@@ -115,7 +117,7 @@ See [version history](site/versions.html), the [changelog](CHANGELOG.md), and th
 
 The chapter presents an artist-led account of embodied worldbuilding: people develop worlds by entering them through performance and play, alongside more-than-human others. Imagining, rehearsing, reflecting, and writing inform one another. Its overlapping modes—encountering, moving with, and becoming-with—describe different relations through which a scene can take shape.
 
-The chapter identifies this Card Deck and Interactive Tool as shared tools for building and telling speculative scenes. The repository provides the tools and practical instructions; [the paper page](site/paper.html) provides a short conceptual overview and publication status. Use [the current Interactive Tool](site/interactive.html), [the guide](site/guide.html), or [version history](site/versions.html) from this entry point.
+The chapter identifies this Card Deck and Interactive Tool as shared tools for building and telling speculative scenes. The repository provides the tools and practical instructions; [the paper page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html) provides a short conceptual overview and publication status. Use [the current Interactive Tool](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html), [the guide](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html), or [version history](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html) from this entry point.
 
 **Provisional chapter reference:**
 
@@ -136,7 +138,7 @@ Use this interim title-first reference for the current development edition:
 
 > *Co-Constructing Multispecies Futures: Card Deck and Interactive Tool.* (2026). Version 0.1.1 (development edition). https://github.com/ashelizasmith-create/co-constructing-multispecies-futures
 
-The [About & cite page](site/paper.html#cite) provides a copyable reference and the separate chapter citation. The formal toolkit creator list is being confirmed. Narrative project credits are preserved below; framework and chapter authorship remain separate.
+The [About & cite page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html#cite) provides a copyable reference and the separate chapter citation. The formal toolkit creator list is being confirmed. Narrative project credits are preserved below; framework and chapter authorship remain separate.
 
 Record the exact Interactive Tool version or Card Deck PDF edition used, along with the date of use. A numbered HTML download preserves the tool version; a session export preserves the prompts and notes made with it. GitHub–Zenodo integration is enabled for selected published releases. No toolkit DOI has been issued yet. Once an archival release exists, use its specific version DOI when citing that release. See the [Zenodo draft](docs/ZENODO-DRAFT.md) for the prepared archival metadata.
 

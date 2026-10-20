@@ -1,6 +1,6 @@
 # Co-Constructing Multispecies Futures v0.1.1
 
-**DRAFT — development release pending the formal creator roster and final archival metadata.** Prepared October 20, 2026. This document proposes a release; it does not claim a published GitHub release, Zenodo record, or DOI.
+**DRAFT — development release pending the formal creator roster and final archival metadata.** Prepared October 20, 2026. The [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) is verified live. The [GitHub v0.1.1 release draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-6910634d001822073a33) is saved but unpublished; no release tag, Zenodo record, or DOI has been created.
 
 ## What changed and why
 
@@ -30,7 +30,9 @@ This snapshot matches the current `site/interactive.html`. The earlier 0.1.0 fil
 
 ## Verification
 
-**0.1.1 checks:** browser navigation from the homepage to About & cite, exact copied citation text, app navigation/current-page label, and links opening other pages in a new tab passed. Private preview deployment v3 succeeded at **16:41 UTC on October 20, 2026**. Current source and snapshot match byte for byte.
+**0.1.1 checks:** browser navigation from the homepage to About & cite, exact copied citation text, app navigation/current-page label, and links opening other pages in a new tab passed. Private preview v4 succeeded at `2026-10-20T16:56:57.105973Z`. Current source and snapshot match byte for byte.
+
+**Public deployment:** [Pages workflow 39461638283](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39461638283) succeeded from commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`. The live homepage, routes, cards, and print section were checked in the browser. How to cite → Copy citation returned the exact 0.1.1 text. Print cards navigation worked, and the downloaded Letter Fold PDF matched the local file byte for byte (173,930 bytes). All 300 repository paths, including all 256 binary assets, matched their expected Git blob hashes.
 
 **Baseline checks retained:** draw/hold, optional layers, custom duplicate prompts, literal treatment of entered text, unlocking after prompt removal, and modal keyboard behavior passed before the 0.1.0 snapshot. All 244 WebP card sides decoded. Home-print geometry, coverage, front/back pairing, representative sheets, and instruction sheets were checked digitally; all 188 Letter-fold artwork placements were compared with the original source.
 
@@ -38,8 +40,8 @@ This snapshot matches the current `site/interactive.html`. The earlier 0.1.0 fil
 
 - Real microphone recording and physical printer registration have not been tested. Print the calibration sheet and a first sheet/pair before a full run.
 - The interactive prompt bank is an adaptation, not a transcription of every physical card. Session edits and recordings stay in the page session; download the work to retain it.
-- The private preview is verified. Public GitHub Pages publication is pending completion of binary asset uploads.
-- GitHub–Zenodo integration is enabled and synced. Publishing the selected GitHub release will trigger archiving; no DOI exists for this proposed release yet.
+- The [public GitHub Pages website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) and private preview are verified. The numbered [0.1.1 HTML snapshot](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/downloads/Co-Constructing_Multispecies_Futures_Interactive_v0.1.1.html) is available from the public site.
+- GitHub–Zenodo integration is enabled and synced. The saved GitHub draft is unpublished and has no created release tag. Publishing the selected release will trigger archiving; no DOI exists yet.
 - The formal creator roster is pending. This title-first reference supports interim citation without inventing that roster.
 
 ## Interim development citation
@@ -50,4 +52,4 @@ Identify the precise HTML version or Card Deck PDF edition used. Once the select
 
 ## Before publishing this draft
 
-Confirm the final creator names/order and contributor roles, complete the remaining rights/metadata review, verify the complete tagged source package and public destinations, and then publish through the chosen GitHub–Zenodo route. Replace this draft status with the actual release/tag and verified Zenodo identifiers only after those actions succeed. See [PUBLISHING.md](PUBLISHING.md) and [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md).
+Confirm the final creator names/order and contributor roles, complete the remaining rights/metadata review, verify the final tagged source package against the reviewed files, and then publish through the chosen GitHub–Zenodo route. Replace this draft status with the actual release/tag and verified Zenodo identifiers only after those actions succeed. See [PUBLISHING.md](PUBLISHING.md) and [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md).

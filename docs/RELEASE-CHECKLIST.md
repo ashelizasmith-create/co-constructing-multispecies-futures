@@ -66,14 +66,19 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 ## Publish GitHub Pages
 
 - [x] Confirm connected GitHub account access with repository administration and push permissions.
-- [ ] Push the reviewed `site/` files and Pages workflow to the intended branch.
+- [x] Push the reviewed website files and Pages workflow; verify all 300 repository paths against their exact Git blob hashes.
 - [x] Select **GitHub Actions** in repository **Settings → Pages**.
-- [x] Deploy and verify private preview v3 at 16:41 UTC on October 20, 2026; keep it distinct from public Pages publication.
-- [ ] Complete remaining binary asset uploads for public Pages publication.
-- [ ] Confirm a successful workflow/deployment result.
-- [ ] Open and verify the actual published URL and all downloads.
-- [ ] Add the verified URL to the README and repository description.
-- [ ] Link from the project owner's website, or verify a separately hosted/embedded copy.
+- [x] Verify private preview v4 at `2026-10-20T16:56:57.105973Z`, source `5e997d4ad09f2289cd473e551b5f0e866ff795dd`; keep it distinct from public Pages publication.
+- [x] Complete and hash-verify all 256 binary asset uploads.
+- [x] Confirm successful [Pages workflow 39461638283](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39461638283) from commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`.
+- [x] Verify the [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/), its current 0.1.1 homepage, navigation routes, cards, and print section.
+- [x] Verify live How to cite → Copy citation against the exact 0.1.1 text and use the live Print cards navigation.
+- [x] Download the live Letter Fold PDF and confirm its 173,930 bytes match the local file byte for byte.
+- [x] Add the verified public URL and hosted download links to the README.
+- [x] Save the repository About description and website with the verified public URL.
+- [x] Verify the saved About description and website link in the rendered repository page.
+- [x] Prepare matching Indexhibit HTML/TXT fragments with six verified-site destinations; preserve the existing gallery image.
+- [ ] Apply the prepared fragment to the existing Indexhibit exhibit; its live text has not been edited.
 
 ## Preserve tracked versions
 
@@ -87,7 +92,8 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 
 ## Publish an archival release
 
-- [x] Prepare a concrete [0.1.1 release draft](RELEASE-NOTES-v0.1.1.md), including contents, checks, known limits, and the interim title-first citation.
+- [x] Prepare concrete [0.1.1 release notes](RELEASE-NOTES-v0.1.1.md), including contents, checks, known limits, and the interim title-first citation.
+- [x] Save the [GitHub v0.1.1 draft release](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-6910634d001822073a33); leave it unpublished pending the formal creator roster. No release tag has been created.
 - [ ] Confirm final title, description, keywords, creators/order, licensing, and relevant funding acknowledgements.
 - [ ] Choose the reviewed project version to archive and make its metadata, changelog, and deposited files agree.
 - [ ] Prepare the reviewed files and source archive without private working documents.
@@ -100,4 +106,4 @@ This checklist covers current development version **0.1.1**, with **0.1.0** pres
 - [ ] Add validated `CITATION.cff` before the archival release; if `.zenodo.json` is used, keep its higher-priority metadata aligned.
 - [ ] Record the final Git commit/tag and Zenodo record together.
 
-See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. A private preview is verified; public Pages deployment and DOI publication remain unverified.
+See [PUBLISHING.md](PUBLISHING.md) for the deployment and archival steps. Public GitHub Pages and the private preview are verified. The GitHub release is a saved draft; no archival DOI has been issued.

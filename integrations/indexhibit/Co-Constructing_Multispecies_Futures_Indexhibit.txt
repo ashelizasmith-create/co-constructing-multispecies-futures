@@ -28,12 +28,12 @@
   <p>Begin with where and when. Add a feeling, a voice, a form, a more-than-human collaborator, or a pivot. Use chance to find a beginning, then decide together what to keep, change, and try.</p>
 
   <nav class="ccmf-actions" aria-label="Toolkit links">
-    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="interactive.html">Try the Interactive Tool</a>
-    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="index.html#print">Print the Card Deck</a>
-    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="guide.html">Lead a Session</a>
-    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="workshops.html">Workshops &amp; development</a>
-    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="paper.html">About &amp; cite</a>
-    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="versions.html">Versions</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html" data-ccmf-path="interactive.html">Try the Interactive Tool</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#print" data-ccmf-path="index.html#print">Print the Card Deck</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html" data-ccmf-path="guide.html">Lead a Session</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/workshops.html" data-ccmf-path="workshops.html">Workshops &amp; development</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html" data-ccmf-path="paper.html">About &amp; cite</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html" data-ccmf-path="versions.html">Versions</a>
   </nav>
   <p class="ccmf-small">The project repository brings together the tools, print files, and instructions. The general Card Deck includes 94 cards, with US Letter and A4 home-print options. The Interactive Tool has an adapted prompt bank and numbered versions to keep.</p>
 

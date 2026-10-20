@@ -4,7 +4,7 @@ This file records changes to **Co-Constructing Multispecies Futures**, with **Ca
 
 ## 0.1.1 — Navigation, orientation, and citation
 
-**Status:** reviewed development update with a matching numbered HTML snapshot and verified private preview. The 0.1.0 snapshot remains unchanged. Public Pages publication is pending binary asset uploads; formal creator metadata and a Zenodo DOI remain pending.
+**Status:** development version 0.1.1 is [live on GitHub Pages](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/), with a matching numbered HTML snapshot and verified private preview. The 0.1.0 snapshot remains unchanged. A GitHub release draft is saved but unpublished pending the formal creator roster; no release tag or Zenodo DOI has been created.
 
 - Clarifies the common navigation around Start here, Interactive Tool, Print cards, Facilitate, and About & cite.
 - Reworks the paper overview as **About & cite**, with concise framework orientation, both primary lineages, and the forthcoming chapter's separate reference.
@@ -14,13 +14,15 @@ This file records changes to **Co-Constructing Multispecies Futures**, with **Ca
 
 ### Verification
 
-The homepage → About & cite → Copy citation path passed a browser check, including the exact 0.1.1 clipboard text. The app's five-item navigation and current-page label were checked; links to other toolkit pages open in a new tab to preserve the session. Private preview deployment v3 succeeded at **16:41 UTC on October 20, 2026**.
+The homepage → About & cite → Copy citation path passed a browser check, including the exact 0.1.1 clipboard text. The app's five-item navigation and current-page label were checked; links to other toolkit pages open in a new tab to preserve the session. Private preview deployment v3 succeeded at **16:41 UTC on October 20, 2026**; v4 subsequently succeeded at `2026-10-20T16:56:57.105973Z`.
+
+[Pages workflow 39461638283](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39461638283) successfully deployed commit `26e11b445e600c6a3fa5c97b3c9abf33fa86d27d`. Browser review confirmed the public 0.1.1 homepage, routes, cards, and print section. The live How to cite → Copy citation path produced the exact 0.1.1 reference; Print cards navigation worked. The live Letter Fold PDF download matched the local file byte for byte (173,930 bytes). All 300 repository paths, including 256 binary assets, matched their expected Git blob hashes.
 
 The 0.1.1 standalone snapshot is **57,084 bytes** and matches the current app: SHA-256 `fbc104a5a43dcebbd5c4d014f1aec251b1c8bfc7eabe551fc3bced0797c72ef2`. The 0.1.0 snapshot remains unchanged. Real microphone recording and physical printer registration remain untested. See the [0.1.1 release draft](docs/RELEASE-NOTES-v0.1.1.md) for the proposed archival package.
 
 ## 0.1.0 — First tracked development version
 
-**Status:** development baseline with a reviewed numbered HTML snapshot and verified private preview. GitHub Pages is configured for Actions, and GitHub–Zenodo integration is enabled. Public Pages deployment, a GitHub release, and a Zenodo record/DOI are not yet claimed.
+**Status at this baseline:** development version 0.1.0 had a reviewed numbered HTML snapshot and verified private preview. Pages was configured for Actions and GitHub–Zenodo integration was enabled, but public Pages deployment and archival publication had not yet occurred. The later website publication is recorded under 0.1.1 above.
 
 ### Added
 
@@ -55,4 +57,4 @@ Home-print geometry, complete card coverage, front/back pairing, representative 
 
 Browser checks passed for draw/hold, optional layers, custom duplicate prompts, literal treatment of entered text, unlocking after prompt removal, and modal keyboard behavior. All 244 WebP card images decoded successfully. Real microphone recording remains untested.
 
-The numbered 0.1.0 HTML snapshot was created from the reviewed 0.1.0 tool and is preserved unchanged: SHA-256 `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254`. At the 0.1.0 baseline, its native private preview was deployed and verified, Pages had its Actions source saved, and Zenodo had reported a successful repository sync; those preparation steps did not establish a published Pages site or archival DOI. Confirmed public URLs and release identifiers will be added when verified. See the [release checklist](docs/RELEASE-CHECKLIST.md).
+The numbered 0.1.0 HTML snapshot was created from the reviewed 0.1.0 tool and is preserved unchanged: SHA-256 `5efdce2494d75c5f0c7e29a29ac6bd263d600a8a7a5378f28a8d5a8b40651254`. At the 0.1.0 baseline, its native private preview was deployed and verified, Pages had its Actions source saved, and Zenodo had reported a successful repository sync; those preparation steps did not establish a published Pages site or archival DOI. The later public website is recorded under 0.1.1 above; archival release identifiers remain pending. See the [release checklist](docs/RELEASE-CHECKLIST.md).
