@@ -52,11 +52,13 @@ This checklist covers current source version **0.1.2**, with **0.1.0** and **0.1
 - [x] Add Seabreeze Bop City as related student community fieldwork, retain unknown dates, and verify the prepared 26-entry JSON/CSV/history export.
 - [x] Rebuild the empty `middle-map.webp` and `teaching-fabric-prop.webp` from originals; decode all 25 gallery assets and check dimensions and checksums.
 - [x] Make the examples exporter reject empty, undecodable, mismatched, or incorrectly sized images; verify that a zero-byte file is rejected even with a matching recorded checksum.
-- [ ] Deploy and verify the prepared two-image repairs and 26-entry history.
+- [x] Deploy the two-image repairs, 26-entry history, and Community Preparation v0.2.0 through successful [Pages workflow 39481709085](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/actions/runs/39481709085), commit `fa792bf5972b1b853fa1aa1a5307b7db36a58a2d`, tree `feb59296faaa02bd19871e41c82d18108f53dabd`; verify all 342 remote paths and hashes.
+- [x] Verify the repaired gallery images publicly: `middle-map.webp` loads at 1600 × 1000 and `teaching-fabric-prop.webp` at 640 × 427; no failed loaded images were observed.
+- [x] Check the public 26-entry history: searching for Seabreeze returns its student/community fieldwork entry, with dates explicitly open and source context retained.
 - [x] Verify Community Preparation v0.2.0 locally: a plan without media and a help-only question both produce ready package-download links; optional controls reveal correctly and public-history opt-in starts unchecked.
 - [x] Verify the help-only export excludes stale media/public-description fields and keeps reply details and the support question private, without duplicating the question into the generic description.
 - [x] Match the v0.2.0 source and download at 57,477 bytes, SHA-256 `3aafa6d8b8dfcb32248189e0914ef1343350cea5cea5dd1e9c56ef215d01f9b2`; preserve the original community v0.1.0 download and Interactive Tool v0.1.2 snapshot unchanged.
-- [ ] Deploy and check Community Preparation v0.2.0 publicly; no submission endpoint is connected.
+- [x] Verify all three public Examples links target Community Preparation v0.2.0 intent routes; open the Plan link and verify Plan selection, Still exploring timing, optional private contact, unchecked public listing, the nothing-sent notice, and v0.2.0 footer. No submission endpoint is connected.
 - [x] Verify image resizing on the public HTTPS preparation preview to the expected 167,110-byte JPEG and confirm the explicit ZIP link becomes ready.
 - [ ] Verify the ZIP browser download; the event monitor timed out and reset the browser, so the download remains unverified rather than known broken or blocked.
 - [x] Verify the live guide's eight expected source images, six session steps, and 18-card index, with no overflow.
@@ -133,7 +135,7 @@ The preparation preview is separate from the curated Examples collection. It doe
 
 - [x] Retain the historical [0.1.1 release notes](RELEASE-NOTES-v0.1.1.md).
 - [x] Prepare concrete [0.1.2 release notes](RELEASE-NOTES-v0.1.2.md), including contents, bounded checks, known limits, and the interim title-first citation.
-- [x] Update the saved [GitHub draft release](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) to **Co-Constructing Multispecies Futures v0.1.2**, intended tag `v0.1.2`, and the 0.1.2 body.
+- [x] Update the [saved v0.1.2 release draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases) to **Co-Constructing Multispecies Futures v0.1.2**, intended tag `v0.1.2`, and the body identifying 26 history entries and Community Preparation v0.2.0.
 - [x] Verify release ID `418649128` through the API as `draft: true` and `published_at: null`; leave it unpublished pending the formal creator roster. No release tag has been created.
 - [ ] Reconcile final reviewed contents and archival metadata with the saved v0.1.2 draft before publishing.
 - [ ] Confirm final title, description, keywords, creators/order, licensing, and relevant funding acknowledgements.

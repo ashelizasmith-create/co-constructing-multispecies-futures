@@ -1,6 +1,6 @@
 # Co-Constructing Multispecies Futures v0.1.1
 
-**Historical 0.1.1 development draft.** Prepared October 20, 2026. At this baseline, the [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) was verified live and a GitHub v0.1.1 release draft had been saved but not published. The same [saved GitHub draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases/edit/untagged-cf112a03683f19d6fbec) now identifies v0.1.2; see the [current release notes](RELEASE-NOTES-v0.1.2.md). The historical source, snapshot, and checks below remain specific to 0.1.1. No release tag, Zenodo record, or DOI has been created.
+**Historical 0.1.1 development draft.** Prepared October 20, 2026. At this baseline, the [public website](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/) was verified live and a GitHub v0.1.1 release draft had been saved but not published. The same [saved GitHub draft](https://github.com/ashelizasmith-create/co-constructing-multispecies-futures/releases) now identifies v0.1.2; see the [current release notes](RELEASE-NOTES-v0.1.2.md). The historical source, snapshot, and checks below remain specific to 0.1.1. No release tag, Zenodo record, or DOI has been created.
 
 ## What changed and why
 
