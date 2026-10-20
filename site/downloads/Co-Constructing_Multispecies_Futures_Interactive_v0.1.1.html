@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Co-Constructing Multispecies Futures</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#0A0D0A;
+  --panel:#141810;
+  --green:#3FB871;
+  --green-bright:#7CF7AA;
+  --white:#F4F4EF;
+  --ink:#11140F;
+  --item-h: 128px;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{ margin:0; }
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at 50% -10%, #16271c 0%, var(--bg) 55%);
+  font-family:'Work Sans', Arial, sans-serif;
+  color: var(--white);
+  padding: 36px 16px;
+}
+
+.machine{
+  position:relative;
+  width:100%;
+  max-width: 980px;
+  background: linear-gradient(180deg, var(--panel), #060805);
+  border: 1px solid rgba(63,184,113,0.35);
+  border-radius: 18px;
+  padding: 36px 40px 32px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.rivet{
+  position:absolute;
+  width:10px; height:10px;
+  border-radius:50%;
+  background: radial-gradient(circle at 35% 35%, var(--green-bright), var(--green) 60%, #1c4a30 100%);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+}
+.rivet.tl{ top:14px; left:14px; }
+.rivet.tr{ top:14px; right:14px; }
+.rivet.bl{ bottom:14px; left:14px; }
+.rivet.br{ bottom:14px; right:14px; }
+
+.header-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 16px;
+}
+
+.eyebrow{
+  font-family:'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin: 0 0 8px;
+}
+
+.header-actions{
+  display:flex;
+  gap: 8px;
+  flex-shrink:0;
+}
+
+.icon-btn{
+  flex-shrink:0;
+  width: 30px; height:30px;
+  border-radius:50%;
+  border: 1px solid rgba(63,184,113,0.45);
+  background: transparent;
+  color: var(--green-bright);
+  font-family:'Space Mono', monospace;
+  font-size:0.85rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: all 0.2s ease;
+}
+.icon-btn:hover{
+  background: rgba(63,184,113,0.15);
+  border-color: var(--green-bright);
+}
+
+h1{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin: 0 0 14px;
+  letter-spacing: 0.01em;
+}
+
+.intro{
+  margin: 0 0 28px;
+  max-width: 58ch;
+  font-size: 0.98rem;
+  line-height:1.6;
+  color: rgba(244,244,239,0.78);
+}
+
+.layer-toggles{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.chip{
+  font-family:'Space Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(63,184,113,0.4);
+  background: transparent;
+  color: var(--white);
+  cursor:pointer;
+  transition: all 0.2s ease;
+}
+.chip:hover{ border-color: var(--green-bright); }
+.chip.active{
+  background: var(--green);
+  color: var(--ink);
+  border-color: var(--green);
+}
+.chip.core{
+  opacity:0.5;
+  cursor:default;
+  border-style:dashed;
+}
+.chip.core:hover{ border-color: rgba(63,184,113,0.4); }
+
+.reel-bank{
+  display:flex;
+  gap: 28px;
+  align-items:flex-end;
+  flex-wrap:wrap;
+}
+
+.reels{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 18px;
+  flex:1;
+}
+
+.reel{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+  width: 204px;
+}
+.reel.inactive{ display:none; }
+
+.reel-label-flip{
+  width:100%;
+  height: 50px;
+  perspective: 600px;
+  cursor: help;
+}
+.reel-label-flip:focus-visible{
+  outline: 2px solid var(--green-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.reel-label-inner{
+  position:relative;
+  width:100%; height:100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.reel-label-flip:hover .reel-label-inner,
+.reel-label-flip.flipped .reel-label-inner{
+  transform: rotateX(180deg);
+}
+.reel-label-front, .reel-label-back{
+  position:absolute; inset:0;
+  backface-visibility: hidden;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.reel-label-front{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+}
+.reel-label-front small{
+  display:block;
+  font-size:0.65rem;
+  letter-spacing:0.08em;
+  text-transform:lowercase;
+  color: rgba(244,244,239,0.55);
+  margin-top:3px;
+}
+.reel-label-back{
+  transform: rotateX(180deg);
+  font-family:'Work Sans', sans-serif;
+  font-size:0.72rem;
+  line-height:1.3;
+  color: rgba(244,244,239,0.9);
+  padding: 0 4px;
+}
+
+.reel-window{
+  position:relative;
+  width:100%;
+  height: var(--item-h);
+  border-radius: 10px;
+  border: 3px solid var(--green);
+  background: var(--white);
+  overflow:hidden;
+  box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.35);
+}
+.reel-window::after{
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0) 32%, rgba(0,0,0,0) 68%, rgba(0,0,0,0.18));
+  pointer-events:none;
+}
+.reel-window.landed{ animation: clickFlash 0.4s ease; }
+@keyframes clickFlash{
+  0%{ box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 0 0 0 rgba(124,247,170,0.7); }
+  40%{ box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 0 0 7px rgba(124,247,170,0.35); }
+  100%{ box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.35); }
+}
+
+.reel-strip{
+  display:flex;
+  flex-direction:column;
+  will-change: transform;
+}
+.reel-item{
+  height: var(--item-h);
+  flex: 0 0 var(--item-h);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 0 16px;
+  font-family:'Space Mono', monospace;
+  font-size: 0.86rem;
+  line-height:1.35;
+  color: var(--ink);
+}
+
+.lock{
+  font-size:0.74rem;
+  background:transparent;
+  border:1px solid rgba(63,184,113,0.4);
+  color: var(--white);
+  border-radius:999px;
+  padding:5px 14px;
+  cursor:pointer;
+  font-family:'Space Mono', monospace;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  transition: all 0.2s ease;
+}
+.lock[aria-pressed="true"]{
+  background: var(--green);
+  color: var(--ink);
+  border-color: var(--green);
+}
+
+.lever-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  padding-bottom: 30px;
+}
+
+.lever{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding: 0;
+}
+.lever-track{
+  display:block;
+  width: 16px;
+  height: 100px;
+  background: linear-gradient(180deg, #060805, #1f3a27);
+  border-radius: 999px;
+  border: 1px solid rgba(63,184,113,0.5);
+  position:relative;
+}
+.lever-handle{
+  position:absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px; height:40px;
+  border-radius:50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff, var(--white) 65%, #c9d1c7 100%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.3);
+  transition: top 0.18s ease;
+}
+.lever.pulling .lever-handle{ animation: pull 0.6s ease; }
+@keyframes pull{
+  0%{ top:-6px; }
+  45%{ top: 66px; }
+  100%{ top:-6px; }
+}
+.lever-label{
+  font-family:'Space Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.22em;
+  color: var(--green-bright);
+}
+
+.ticket{
+  margin-top: 30px;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 24px 26px 18px;
+  font-family:'Space Mono', monospace;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  position:relative;
+}
+.ticket::before{
+  content:'';
+  position:absolute;
+  top:-6px; left:0; right:0; height:12px;
+  background-image: radial-gradient(circle, var(--bg) 6px, transparent 6.5px);
+  background-size: 22px 12px;
+  background-position: 0 -6px;
+  background-repeat: repeat-x;
+}
+.ticket-head{
+  display:flex;
+  justify-content:space-between;
+  font-size:0.78rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  border-bottom: 1px dashed rgba(17,20,15,0.3);
+  padding-bottom:12px;
+  margin-bottom:10px;
+}
+#ticket-lines{ list-style:none; margin:0; padding:0; }
+#ticket-lines li{
+  display:flex;
+  justify-content:space-between;
+  gap: 18px;
+  padding: 9px 0;
+  border-bottom: 1px dotted rgba(17,20,15,0.18);
+  font-size:0.9rem;
+}
+#ticket-lines li:last-child{ border-bottom:none; }
+.t-label{
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-size:0.7rem;
+  color: rgba(17,20,15,0.5);
+  white-space:nowrap;
+  padding-top:3px;
+}
+.t-value{ text-align:right; overflow-wrap:anywhere; }
+.t-value.flash{ animation: textFlash 0.6s ease; }
+@keyframes textFlash{
+  0%{ color: var(--green); }
+  100%{ color: var(--ink); }
+}
+
+.footnote{
+  margin-top:18px;
+  font-size:0.78rem;
+  color: rgba(244,244,239,0.45);
+  line-height:1.5;
+}
+
+.scratchpad{
+  margin-top: 22px;
+}
+.scratchpad-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.scratchpad-label{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+  margin: 0;
+}
+
+.embodiment{
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px dashed rgba(63,184,113,0.3);
+}
+.embodiment-label{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+  margin: 0 0 10px;
+}
+.embodiment-instruction{
+  font-size:0.98rem;
+  line-height:1.6;
+  color: rgba(244,244,239,0.85);
+  margin: 0 0 8px;
+  max-width: 60ch;
+  min-height: 1.6em;
+}
+.embodiment-followup{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  letter-spacing:0.04em;
+  color: rgba(244,244,239,0.45);
+  margin: 0;
+}
+.record-controls{
+
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.record-btn{
+  display:flex;
+  align-items:center;
+  gap: 7px;
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(63,184,113,0.4);
+  background: transparent;
+  color: var(--green-bright);
+  cursor:pointer;
+  transition: all 0.2s ease;
+}
+.record-btn:hover{ border-color: var(--green-bright); }
+.record-dot{
+  display:inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #e0556b;
+}
+.record-btn.recording{
+  border-color: #e0556b;
+  color: #ff9aa8;
+}
+.record-btn.recording .record-dot{
+  animation: recordPulse 1s ease-in-out infinite;
+}
+@keyframes recordPulse{
+  0%, 100%{ opacity: 1; transform: scale(1); }
+  50%{ opacity: 0.4; transform: scale(0.8); }
+}
+.record-status{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  color: rgba(244,244,239,0.5);
+}
+.recording-playback{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.recording-playback audio{
+  height: 32px;
+}
+.recording-playback .download-link{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+  text-decoration: underline;
+}
+.harvest-notes{
+  width:100%;
+  min-height: 90px;
+  resize: vertical;
+  font-family:'Work Sans', sans-serif;
+  font-size:0.92rem;
+  line-height:1.55;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid rgba(63,184,113,0.4);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.harvest-notes::placeholder{ color: rgba(17,20,15,0.4); }
+.harvest-notes:focus{
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+  opacity:0;
+  visibility:hidden;
+  transition: opacity 0.2s ease;
+  z-index: 50;
+}
+.modal-overlay.open{ opacity:1; visibility:visible; }
+
+.modal-panel{
+  position:relative;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 10px;
+  border: 3px solid var(--green);
+  max-width: 480px;
+  width:100%;
+  padding: 30px 28px 22px;
+  font-family:'Work Sans', sans-serif;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transform: translateY(12px);
+  transition: transform 0.2s ease;
+}
+.modal-overlay.open .modal-panel{ transform: translateY(0); }
+
+.modal-panel h2{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.5rem;
+  margin: 0 0 16px;
+}
+
+.modal-close{
+  position:absolute;
+  top:14px; right:14px;
+  width:28px; height:28px;
+  border-radius:50%;
+  border:1px solid rgba(17,20,15,0.25);
+  background:transparent;
+  color: var(--ink);
+  font-size:1.2rem;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.modal-close:hover{ background: rgba(17,20,15,0.08); }
+
+.modal-list{
+  margin:0 0 16px;
+  padding-left: 20px;
+  font-size:0.92rem;
+  line-height:1.6;
+}
+.modal-list li{ margin-bottom:10px; }
+.modal-list li:last-child{ margin-bottom:0; }
+
+.modal-footnote{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  color: rgba(17,20,15,0.55);
+  margin:0;
+  border-top: 1px dashed rgba(17,20,15,0.2);
+  padding-top:12px;
+}
+
+.modal-credits{
+  font-family:'Work Sans', sans-serif;
+  font-size:0.78rem;
+  line-height:1.5;
+  color: rgba(17,20,15,0.45);
+  margin: 12px 0 0;
+}
+
+.customize-panel{
+  max-width: 600px;
+  max-height: 84vh;
+  display:flex;
+  flex-direction:column;
+}
+.customize-intro{
+  font-size:0.9rem;
+  line-height:1.55;
+  color: rgba(17,20,15,0.75);
+  margin: 0 0 18px;
+}
+#customize-fields{
+  overflow-y:auto;
+  padding-right: 6px;
+  margin-bottom: 16px;
+}
+.customize-field{
+  margin-bottom: 16px;
+}
+.customize-field label{
+  display:block;
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.customize-field label .field-sub{
+  text-transform:lowercase;
+  letter-spacing:0.04em;
+  color: rgba(17,20,15,0.45);
+  margin-left: 6px;
+}
+.customize-field textarea{
+  width:100%;
+  min-height: 96px;
+  resize: vertical;
+  font-family:'Space Mono', monospace;
+  font-size:0.82rem;
+  line-height:1.5;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid rgba(17,20,15,0.2);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+.customize-field textarea:focus{
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+
+.customize-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+  border-top: 1px dashed rgba(17,20,15,0.2);
+  padding-top: 16px;
+}
+.btn-primary, .btn-secondary{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor:pointer;
+  transition: all 0.2s ease;
+}
+.btn-primary{
+  background: var(--green);
+  color: var(--ink);
+  border: 1px solid var(--green);
+}
+.btn-primary:hover{ background: var(--green-bright); }
+.btn-secondary{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(17,20,15,0.3);
+}
+.btn-secondary:hover{ background: rgba(17,20,15,0.06); }
+
+@media (max-width: 720px){
+  .machine{ padding:30px 22px; }
+  .reel{ width: 100%; max-width: 320px; }
+  .reels{ width:100%; }
+  .reel-bank{ flex-direction:column; align-items:stretch; }
+  .lever-wrap{ flex-direction:row; padding-bottom:0; padding-top:6px; }
+  .lever-track{ width:120px; height:16px; }
+  .lever-handle{ top:50%; left:-6px; transform: translateY(-50%); }
+  .lever.pulling .lever-handle{ animation: pullH 0.6s ease; }
+  @keyframes pullH{
+    0%{ left:-6px; }
+    45%{ left: 76px; }
+    100%{ left:-6px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reel-strip{ transition-duration: 0.01s !important; }
+  .reel-label-inner{ transition-duration: 0.01s !important; }
+  .lever.pulling .lever-handle{ animation: none; }
+  .reel-window.landed{ animation:none; }
+}
+
+.toolkit-nav{ display:flex; flex-wrap:wrap; gap:8px 18px; padding:0 0 14px; margin:0 0 10px; border-bottom:1px solid rgba(63,184,113,0.3); font-size:0.82rem; line-height:1.6; }
+.toolkit-nav a, .toolkit-back, .toolkit-cite a{ color:var(--green-bright); text-underline-offset:4px; }
+.toolkit-nav [aria-current="page"]{ color:var(--white); font-weight:600; border-bottom:2px solid var(--green-bright); }
+.toolkit-location{ margin:0 0 24px; color:rgba(244,244,239,0.64); font-size:0.76rem; line-height:1.6; }
+.toolkit-cite{ margin:24px 0 0; padding-top:16px; border-top:1px solid rgba(63,184,113,0.3); font-size:0.82rem; line-height:1.6; color:rgba(244,244,239,0.78); }
+.toolkit-cite a + a{ margin-left:18px; }
+.slip-actions{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+.slip-actions button{ border:1px solid rgba(17,20,15,0.35); border-radius:999px; background:transparent; color:var(--ink); padding:8px 13px; font-family:'Space Mono', 'Courier New', monospace; font-size:0.72rem; cursor:pointer; }
+button:disabled{ cursor:default; }
+button:disabled:not(.core){ opacity:0.5; }
+button:focus-visible, a:focus-visible{ outline:2px solid var(--green-bright); outline-offset:4px; }
+.ticket button:focus-visible, .modal-panel button:focus-visible{ outline-color:#176d3d; }
+.machine-status, .session-note{ font-size:0.8rem; line-height:1.55; color:rgba(244,244,239,0.7); }
+.machine-status{ min-height:1.55em; margin:12px 0 0; }
+.session-note{ margin:10px 0 0; }
+.record-controls{ flex-wrap:wrap; }
+.modal-panel{ max-height:calc(100dvh - 48px); overflow-y:auto; }
+.customize-panel{ max-height:84vh; overflow:hidden; }
+.customize-panel h2, .customize-intro, .customize-actions{ flex-shrink:0; }
+#customize-fields{ min-height:0; }
+.dialog-open{ overflow:hidden; }
+#print-notes{ display:none; }
+
+@media print{
+  @page{ margin:18mm; }
+  body{ display:block; background:#fff; color:#111; padding:0; }
+  .machine{ max-width:none; padding:0; border:0; border-radius:0; background:#fff; box-shadow:none; }
+  .toolkit-nav, .toolkit-location, .toolkit-cite, .toolkit-back, .rivet, .header-row, .intro, .layer-toggles, .reel-bank, .footnote, .machine-status, .slip-actions, .record-controls, .recording-playback, .session-note, .modal-overlay, .harvest-notes, .embodiment-followup{ display:none !important; }
+  h1{ font-size:24pt; }
+  .ticket{ box-shadow:none; border:1px solid #bbb; background:#fff; padding:18px; margin-top:18px; }
+  .ticket::before{ display:none; }
+  #ticket-lines li{ break-inside:avoid; }
+  .t-label{ color:#444; }
+  .scratchpad-label, .embodiment-label, .embodiment-instruction{ color:#111; }
+  #print-notes{ display:block; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.55; }
+  .embodiment{ border-top-color:#aaa; }
+}
+</style>
+</head>
+<body>
+<div class="machine">
+  <nav class="toolkit-nav" aria-label="Main navigation">
+    <a href="index.html#start" data-toolkit-path="index.html#start" target="_blank" rel="noopener">Start here</a>
+    <span aria-current="page">Interactive Tool</span>
+    <a href="index.html#print" data-toolkit-path="index.html#print" target="_blank" rel="noopener">Print cards</a>
+    <a href="guide.html" data-toolkit-path="guide.html" target="_blank" rel="noopener">Facilitate</a>
+    <a href="paper.html" data-toolkit-path="paper.html" target="_blank" rel="noopener">About &amp; cite</a>
+  </nav>
+  <p class="toolkit-location"><a class="toolkit-back" href="index.html" data-toolkit-path="index.html" target="_blank" rel="noopener">Toolkit home</a> / Interactive Tool<br>Other toolkit pages open in a new tab so your session stays here.</p>
+  <span class="rivet tl"></span>
+  <span class="rivet tr"></span>
+  <span class="rivet bl"></span>
+  <span class="rivet br"></span>
+
+  <div class="header-row">
+    <p class="eyebrow">Interactive Tool · v0.1.1</p>
+    <div class="header-actions">
+      <button class="icon-btn" id="customize-btn" aria-haspopup="dialog" aria-label="Edit the prompts in each reel">&#9998;</button>
+      <button class="icon-btn" id="info-btn" aria-haspopup="dialog" aria-label="How this works">?</button>
+    </div>
+  </div>
+  <h1>Co-Constructing Multispecies Futures</h1>
+  <p class="intro">Start with where and when. Layer on a guiding question, a tone, a voice, a form, a collaborator, a pivot, or a sensing practice if you want company. Pull the lever to see what comes up — lock anything worth keeping, then pull again.</p>
+
+  <div class="layer-toggles">
+    <button class="chip core" disabled aria-pressed="true">Spatial</button>
+    <button class="chip core" disabled aria-pressed="true">Temporal</button>
+    <button class="chip" data-layer="speculation">+ Speculation</button>
+    <button class="chip" data-layer="affect">+ Affect</button>
+    <button class="chip" data-layer="voice">+ Voice</button>
+    <button class="chip" data-layer="form">+ Form</button>
+    <button class="chip" data-layer="collaborator">+ Collaborator</button>
+    <button class="chip" data-layer="pivot">+ Pivot</button>
+    <button class="chip" data-layer="sensing">+ Sensing</button>
+  </div>
+
+  <div class="reel-bank">
+    <div class="reels" id="reels"></div>
+    <div class="lever-wrap">
+      <button class="lever" id="lever" aria-label="Pull the lever to generate a new combination">
+        <span class="lever-track"><span class="lever-handle"></span></span>
+      </button>
+      <span class="lever-label">PULL</span>
+    </div>
+  </div>
+
+  <div class="ticket">
+    <div class="ticket-head">
+      <span>Session slip</span>
+      <span id="ticket-no">No. 00001</span>
+    </div>
+    <ul id="ticket-lines"></ul>
+    <div class="slip-actions" aria-label="Save the current slip">
+      <button type="button" id="export-txt">Save slip + notes (.txt)</button>
+      <button type="button" id="export-json">Save session (.json)</button>
+      <button type="button" id="print-slip">Print slip</button>
+    </div>
+  </div>
+
+  <p class="machine-status" id="machine-status" role="status" aria-live="polite"></p>
+
+  <p class="footnote">Adapt the prompts to your group, setting, or workshop using the edit button above. Lock a reel to hold its result on the next pull; everything unlocked re-rolls.</p>
+  <p class="footnote">This interactive version uses a smaller, adapted prompt bank. The toolkit’s deck browser and printable PDFs contain the original analog cards. You are using development version 0.1.1.</p>
+
+  <div class="scratchpad">
+    <div class="scratchpad-header">
+      <label class="scratchpad-label" for="harvest-notes">Tell it</label>
+      <div class="record-controls">
+        <button id="record-btn" class="record-btn" type="button" aria-pressed="false">
+          <span class="record-dot"></span>
+          <span class="record-label">Record</span>
+        </button>
+        <span class="record-status" id="record-status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+    <textarea id="harvest-notes" class="harvest-notes" aria-describedby="session-note" placeholder="What has this combination created? Start telling it here — then try the prompt below, and come back to keep going."></textarea>
+    <div id="print-notes"></div>
+    <div id="recording-playback" class="recording-playback"></div>
+    <p class="session-note" id="session-note">Your notes, prompt edits and audio stay in this page; this tool does not upload them. Save before refreshing or closing. Only the latest audio clip is kept here, so download it before recording another. Audio is downloaded separately from the slip.</p>
+  </div>
+
+  <div class="embodiment">
+    <p class="embodiment-label">Now: try it</p>
+    <p class="embodiment-instruction" id="embodiment-instruction"></p>
+    <p class="embodiment-followup">Move between telling and trying as the scene takes shape. Come back with what you notice.</p><p class="footnote">Companion to <em>Performing the What-If</em>, a forthcoming book chapter by Ash Eliza Smith and Julia McQuillan. <a href="paper.html" data-toolkit-path="paper.html" target="_blank" rel="noopener">Paper, tools, and lineages ↗</a></p>
+  </div>
+  <p class="toolkit-cite"><a href="paper.html#cite" data-toolkit-path="paper.html#cite" target="_blank" rel="noopener">How to cite this tool</a><a href="versions.html" data-toolkit-path="versions.html" target="_blank" rel="noopener">Versions &amp; downloads</a><br>When sharing your work, record Interactive Tool v0.1.1 and keep the session slip.</p>
+</div>
+
+<div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <h2 id="modal-title">How this works</h2>
+    <p class="customize-intro">This tool guides groups through building and telling speculative scenes, then into roleplay, movement and rehearsal, and back to the story. It builds on <em>The Thing From The Future</em> (Candy &amp; Watson, 2014) and the <em>Rehearsing Realities</em> framework (Smith, Leadabrand, et al., in press).</p>
+    <ul class="modal-list">
+      <li>Spatial and Temporal are always running — together they set the where and when for whatever you're building.</li>
+      <li>Add more layers with the chips above: Speculation (a guiding "what if"), Affect (a tone), Voice (who's telling it) and Form (what it becomes), Collaborator (another participant), Pivot (a twist), and Sensing (a reflective practice).</li>
+      <li>Pull the lever to spin every active, unlocked reel — each one lands at a slightly different moment.</li>
+      <li>Lock a reel to hold its result on the next pull. Keep what's working, re-roll the rest.</li>
+      <li>Voice and Form combine into a single "Narrative" line on the slip when both are active.</li>
+      <li>Use the pencil icon to edit, add or remove prompts in any reel for this session.</li>
+      <li>The session slip shows the current combination. Save it with your notes as text or JSON, or print it, before drawing another combination. The JSON also includes your current prompt bank; there is no automatic history.</li>
+      <li>"Tell it" is a scratchpad for the story this combination creates — write or record it as you go. "Now: try it" gives you something to do physically — with a Collaborator drawn, it's a way of relating to that being; otherwise it's a general prompt to get up and play it out. Then come back to "Tell it" and keep going.</li>
+    </ul>
+    <p class="modal-footnote">This works best with company. Bring other people, but also objects, plants, animals, or machines already in the room into the co-creation — the more intelligences present, the more the world can become. Adapt the prompts to your group, setting, or workshop.</p>
+    <p class="modal-credits"><em>Co-Constructing Multispecies Futures</em> was created by Ash Eliza Smith, developed in the Speculative Devices Lab with Julia McQuillan and Sam Bendix. The deck and interactive tool build on <em>The Thing From The Future</em> (Stuart Candy and Jeff Watson, 2014) and the <em>Rehearsing Realities</em> framework (Smith, Leadabrand, and colleagues, in press).</p><p class="modal-credits">The embodied approach is described in <em>Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies</em> by Ash Eliza Smith and Julia McQuillan, a forthcoming book chapter. Its wider practice draws on performance, dance and somatic practice, walking scores, speculative design, spatial storytelling, playable theater, and immersive practice.</p><p class="modal-credits">Move between telling, making, and rehearsing while the scene is taking shape. Begin with what another being can sense, do, and need; let its limits and responses change the scene. Another being’s experience remains partly unknown. Agree on shared authorship, name an end to roleplay, and reflect on what you want to carry forward or set down.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="customize-overlay" aria-hidden="true">
+  <div class="modal-panel customize-panel" role="dialog" aria-modal="true" aria-labelledby="customize-title" tabindex="-1">
+    <button class="modal-close" id="customize-close" aria-label="Close">&times;</button>
+    <h2 id="customize-title">Write your own</h2>
+    <p class="customize-intro">These are the prompts each reel can land on — one per line. Edit, add, or remove any of them, then apply your changes. An empty reel keeps its existing prompts. Changes last for this session.</p>
+    <div id="customize-fields"></div>
+    <div class="customize-actions">
+      <button class="btn-secondary" id="customize-reset">Reset to defaults</button>
+      <button class="btn-primary" id="customize-apply">Apply changes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const PROJECT_NAME = 'Co-Constructing Multispecies Futures';
+if(location.protocol === 'file:' || location.pathname.includes('/downloads/')){
+  const toolkitBase = 'https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/';
+  document.querySelectorAll('[data-toolkit-path]').forEach(link => {
+    link.href = toolkitBase + link.dataset.toolkitPath;
+  });
+}
+const TOOL_LABEL = 'Interactive Tool';
+const APP_VERSION = '0.1.1';
+const VERSION_STATUS = 'development';
+const VERSION_DATE = '2026-10-20';
+const EXPORT_BASENAME = `Co-Constructing_Multispecies_Futures_Session_v${APP_VERSION}`;
+
+const LAYERS = {
+  spatial: {
+    label: 'Spatial', sub: 'where', core: true,
+    description: 'Where this lives — a doorway, a city block, a whole bioregion.',
+    values: ['a watershed','a street corner','a shipping port','a community garden','a server farm','a clinic waiting room','an entire bioregion','a kitchen table','a border crossing','a single doorway']
+  },
+  temporal: {
+    label: 'Temporal', sub: 'when', core: true,
+    description: 'When this happens — an afternoon, a season, the deep past.',
+    values: ['the deep past','fifty years from now','a single afternoon','an entire growing season','the moment just before everything changes','a slow century','next Tuesday','the tail end of a long migration','a recurring anniversary','the last five minutes']
+  },
+  affect: {
+    label: 'Affect', sub: 'the tone', core: false,
+    description: 'The emotional tone or atmosphere running through it.',
+    values: ['wonder','urgency','tenderness','grief','defiance','calm','mischief','awe','longing','relief']
+  },
+  voice: {
+    label: 'Voice', sub: "who's telling it", core: false,
+    description: "Who's telling it — the perspective that speaks or remembers.",
+    values: ['a river, slow and remembering','an algorithm, indifferent and pattern-seeking','a descendant looking back a hundred years','a narrator who gets some details wrong','a chorus of many voices at once','a direct address to "you"','an object that has quietly seen everything',"a caregiver's daily notes"]
+  },
+  form: {
+    label: 'Form', sub: 'what it becomes', core: false,
+    description: 'What it becomes — the object or medium that carries it.',
+    values: ['a podcast episode','a billboard','a recipe card','a museum exhibit','a piece of folklore','a policy memo',"a children's game",'a startup pitch','a ritual','a piece of street art']
+  },
+  collaborator: {
+    label: 'Collaborator', sub: 'who else is involved', core: false,
+    description: 'Another participant — human, non-human, or in between.',
+    values: ['a fungus that connects everything underground','a migratory species that crosses every border','a piece of infrastructure no one notices','a microbe that thrives in community','a machine that learns faster than it understands','an object passed down for generations','a flock that moves as one mind','a material that outlives everyone in the room']
+  },
+  pivot: {
+    label: 'Pivot', sub: 'one more twist', core: false,
+    description: "A twist on how it's told, not what it's about.",
+    values: ["make it backwards","make it from a child's perspective",'make it through a single object','make it as a rumor','make it interactive','make it silent','make it impossibly small','make it impossibly large']
+  },
+  speculation: {
+    label: 'Speculation', sub: 'a "what if"', core: false,
+    description: 'The guiding "what if" everything else responds to.',
+    values: ['what if the people most affected were the ones designing it?','what if this had to work for the next seven generations?','what if this was treated as a basic right, not a privilege?','what if success was measured by wellbeing, not growth?','what if everyone involved could see the whole picture?','what if this could repair something, not just sustain it?','what if the smallest version of this spread the fastest?','what if failure here was useful information, not a setback?','what if this had to make sense to a child?','what if the people doing the work set the terms?']
+  },
+  sensing: {
+    label: 'Sensing', sub: 'a way of noticing', core: false,
+    description: 'An embodied practice — get up, do it, then notice what you learned.',
+    values: ['a sensory walk — notice sights, sounds, smells, and textures as you move','gesture it — tell what you found through movement alone, no words','LARP it — embody another perspective (human, animal, plant, or machine) for a few minutes','touch exploration — handle materials and surfaces to learn through your hands','sound mapping — move toward and away from sounds, mapping them with your body','a trash audit — sort and handle what gets discarded, and ask why','body memory — enact what the body remembers, rather than just recalling it','threshold crossing — physically move through edges, doorways, and transitions, noticing each one','elemental encounter — go stand in wind, water, sun, or shade and let it act on you','object interrogation — pick up an object, turn it over, and ask what it knows']
+  }
+};
+
+const ORDER = ['spatial','temporal','speculation','affect','voice','form','collaborator','pivot','sensing'];
+const ITEM_H = 128;
+const DEFAULTS = {};
+ORDER.forEach(k => { DEFAULTS[k] = [...LAYERS[k].values]; });
+
+let active = {};
+let locked = {};
+let current = {};
+ORDER.forEach(k => { active[k] = LAYERS[k].core; locked[k] = false; });
+
+const MODE_PROMPTS = {
+  encounter: c => `Bring ${c} into the scene — have someone roleplay or voice it while everyone else responds.`,
+  moveWith: c => `Choreograph in relation to ${c} — let your movement respond to it, and imagine its movement responding back.`,
+  become: c => `Become ${c} for a few minutes — move, act, and sense as it would.`
+};
+const MODE_KEYS = ['encounter', 'moveWith', 'become'];
+
+const GENERIC_PROMPTS = [
+  "Build a brief scene from this combination and act it out — even thirty seconds counts.",
+  "Take a short walk, inside or out, and let this combination shape what you notice.",
+  "Larp it for a minute: say a line, strike a pose, make a sound that fits.",
+  "Find an object nearby and let it stand in for this — show, don't just tell.",
+  "Sketch or arrange something physical that represents this, then describe it."
+];
+
+let pullMode = MODE_KEYS[Math.floor(Math.random() * MODE_KEYS.length)];
+let pullGenericIndex = Math.floor(Math.random() * GENERIC_PROMPTS.length);
+
+function updateEmbodimentPrompt(){
+  const el = document.getElementById('embodiment-instruction');
+  if(!el) return;
+  if(active.collaborator){
+    el.textContent = MODE_PROMPTS[pullMode](current.collaborator);
+  } else {
+    el.textContent = GENERIC_PROMPTS[pullGenericIndex];
+  }
+}
+
+const reelsEl = document.getElementById('reels');
+const lever = document.getElementById('lever');
+const machineStatus = document.getElementById('machine-status');
+const machine = document.querySelector('.machine');
+let ticketNo = 1;
+let spinning = false;
+
+function shuffle(arr){
+  const a = [...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function buildStrip(values, landingValue, repeats=5){
+  const strip = [];
+  for(let i=0;i<repeats-1;i++) strip.push(...shuffle(values));
+  const last = shuffle(values);
+  strip.push(...last);
+  const targetIndex = strip.length - last.length + last.indexOf(landingValue);
+  return { strip, targetIndex };
+}
+
+// Prompts are text, including when they contain HTML-like characters.
+function fillStrip(stripEl, values){
+  const fragment = document.createDocumentFragment();
+  values.forEach(value => {
+    const item = document.createElement('div');
+    item.className = 'reel-item';
+    item.textContent = value;
+    fragment.appendChild(item);
+  });
+  stripEl.replaceChildren(fragment);
+}
+
+function createReel(key){
+  const data = LAYERS[key];
+  const keepCurrent = data.values.includes(current[key]);
+  const initialValue = keepCurrent ? current[key] : data.values[Math.floor(Math.random()*data.values.length)];
+  if(!keepCurrent) locked[key] = false;
+  current[key] = initialValue;
+  const { strip, targetIndex } = buildStrip(data.values, initialValue);
+  const reel = document.createElement('div');
+  reel.className = 'reel' + (active[key] ? '' : ' inactive');
+  reel.dataset.key = key;
+
+  const flip = document.createElement('div');
+  flip.className = 'reel-label-flip';
+  flip.tabIndex = 0;
+  flip.setAttribute('role', 'button');
+  flip.setAttribute('aria-label', `${data.label}: ${data.description}`);
+  flip.setAttribute('aria-pressed', 'false');
+  const inner = document.createElement('div');
+  inner.className = 'reel-label-inner';
+  const front = document.createElement('div');
+  front.className = 'reel-label-front';
+  front.textContent = data.label;
+  const sub = document.createElement('small');
+  sub.textContent = data.sub;
+  front.appendChild(sub);
+  const back = document.createElement('div');
+  back.className = 'reel-label-back';
+  back.textContent = data.description;
+  inner.append(front, back);
+  flip.appendChild(inner);
+
+  const windowEl = document.createElement('div');
+  windowEl.className = 'reel-window';
+  windowEl.id = `window-${key}`;
+  windowEl.setAttribute('aria-hidden', 'true');
+  const stripEl = document.createElement('div');
+  stripEl.className = 'reel-strip';
+  stripEl.id = `strip-${key}`;
+  fillStrip(stripEl, strip);
+  stripEl.style.transition = 'none';
+  stripEl.style.transform = `translateY(-${targetIndex*ITEM_H}px)`;
+  windowEl.appendChild(stripEl);
+
+  const lock = document.createElement('button');
+  lock.type = 'button';
+  lock.className = 'lock';
+  lock.dataset.key = key;
+  lock.setAttribute('aria-pressed', String(locked[key]));
+  lock.setAttribute('aria-label', `Hold the ${data.label.toLowerCase()} result`);
+  lock.textContent = locked[key] ? 'locked' : 'lock';
+  reel.append(flip, windowEl, lock);
+  reelsEl.appendChild(reel);
+}
+
+function bindReelInteractions(){
+  document.querySelectorAll('.reel-label-flip').forEach(el => {
+    const flip = () => {
+      const flipped = el.classList.toggle('flipped');
+      el.setAttribute('aria-pressed', String(flipped));
+    };
+    el.addEventListener('click', flip);
+    el.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); flip(); }
+    });
+  });
+  document.querySelectorAll('.lock').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if(spinning) return;
+      const key = btn.dataset.key;
+      locked[key] = !locked[key];
+      btn.setAttribute('aria-pressed', String(locked[key]));
+      btn.textContent = locked[key] ? 'locked' : 'lock';
+    });
+  });
+}
+
+function rebuildReels(){
+  reelsEl.replaceChildren();
+  ORDER.forEach(createReel);
+  bindReelInteractions();
+  updateTicket();
+  updateEmbodimentPrompt();
+}
+
+function slipLines(){
+  const lines = [];
+  ORDER.forEach(key => {
+    if(!active[key]) return;
+    if(key === 'voice' && active.form){
+      lines.push({ label:'Narrative', value:`Told by ${current.voice}, as ${current.form}.`, id:'val-narrative' });
+    } else if(key !== 'form' || !active.voice){
+      lines.push({ label:LAYERS[key].label, value:current[key], id:`val-${key}` });
+    }
+  });
+  return lines;
+}
+
+function updateTicket(){
+  const list = document.getElementById('ticket-lines');
+  list.replaceChildren();
+  slipLines().forEach(line => {
+    const li = document.createElement('li');
+    const label = document.createElement('span');
+    label.className = 't-label';
+    label.textContent = line.label;
+    const value = document.createElement('span');
+    value.className = 't-value';
+    value.id = line.id;
+    value.textContent = line.value;
+    li.append(label, value);
+    list.appendChild(li);
+  });
+}
+
+rebuildReels();
+
+document.querySelectorAll('.chip[data-layer]').forEach(chip => {
+  chip.setAttribute('aria-pressed', String(active[chip.dataset.layer]));
+  chip.addEventListener('click', () => {
+    if(spinning) return;
+    const key = chip.dataset.layer;
+    active[key] = !active[key];
+    document.querySelector(`.reel[data-key="${key}"]`).classList.toggle('inactive', !active[key]);
+    chip.classList.toggle('active', active[key]);
+    chip.setAttribute('aria-pressed', String(active[key]));
+    updateTicket();
+    updateEmbodimentPrompt();
+  });
+});
+
+function setSpinBusy(busy){
+  spinning = busy;
+  lever.disabled = busy;
+  reelsEl.setAttribute('aria-busy', String(busy));
+  document.querySelectorAll('.chip[data-layer], .lock, #customize-btn, #export-txt, #export-json, #print-slip').forEach(button => { button.disabled = busy; });
+}
+
+function animateReel(key, index){
+  const data = LAYERS[key];
+  const alternatives = data.values.filter(value => value !== current[key]);
+  const pool = alternatives.length ? alternatives : data.values;
+  const landingValue = pool[Math.floor(Math.random()*pool.length)];
+  const { strip, targetIndex } = buildStrip(data.values, landingValue);
+  const stripEl = document.getElementById(`strip-${key}`);
+  const windowEl = document.getElementById(`window-${key}`);
+  stripEl.style.transition = 'none';
+  fillStrip(stripEl, strip);
+  stripEl.style.transform = 'translateY(0px)';
+  void stripEl.offsetHeight;
+
+  return new Promise(resolve => {
+    let settled = false;
+    let timer;
+    const finish = () => {
+      if(settled) return;
+      settled = true;
+      clearTimeout(timer);
+      stripEl.removeEventListener('transitionend', onTransitionEnd);
+      current[key] = landingValue;
+      updateTicket();
+      updateEmbodimentPrompt();
+      const flashId = ((key === 'voice' || key === 'form') && active.voice && active.form) ? 'val-narrative' : `val-${key}`;
+      document.getElementById(flashId)?.classList.add('flash');
+      windowEl.classList.remove('landed');
+      void windowEl.offsetWidth;
+      windowEl.classList.add('landed');
+      resolve();
+    };
+    const onTransitionEnd = event => {
+      if(event.target === stripEl && event.propertyName === 'transform') finish();
+    };
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      stripEl.style.transform = `translateY(-${targetIndex*ITEM_H}px)`;
+      finish();
+      return;
+    }
+    const duration = 1.1 + index*0.22;
+    stripEl.style.transition = `transform ${duration}s cubic-bezier(0.13,0.84,0.2,1)`;
+    stripEl.addEventListener('transitionend', onTransitionEnd);
+    requestAnimationFrame(() => { stripEl.style.transform = `translateY(-${targetIndex*ITEM_H}px)`; });
+    // Transition events may be skipped in a background tab or after a motion-setting change.
+    timer = setTimeout(finish, duration*1000 + 250);
+  });
+}
+
+async function spin(){
+  if(spinning) return;
+  const keys = ORDER.filter(key => active[key] && !locked[key]);
+  if(!keys.length){
+    machineStatus.textContent = 'All active reels are locked. Unlock one to draw again.';
+    return;
+  }
+  setSpinBusy(true);
+  lever.classList.add('pulling');
+  machineStatus.textContent = 'Drawing a new combination…';
+  setTimeout(() => lever.classList.remove('pulling'), 600);
+  ticketNo++;
+  document.getElementById('ticket-no').textContent = `No. ${String(ticketNo).padStart(5,'0')}`;
+  pullMode = MODE_KEYS[Math.floor(Math.random() * MODE_KEYS.length)];
+  pullGenericIndex = Math.floor(Math.random() * GENERIC_PROMPTS.length);
+  try{
+    await Promise.all(keys.map((key, index) => animateReel(key, index)));
+    machineStatus.textContent = `Slip ${ticketNo} is ready. Locked results were kept.`;
+  } finally {
+    setSpinBusy(false);
+  }
+}
+lever.addEventListener('click', spin);
+
+const infoBtn = document.getElementById('info-btn');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+const customizeBtn = document.getElementById('customize-btn');
+const customizeOverlay = document.getElementById('customize-overlay');
+const customizeClose = document.getElementById('customize-close');
+const customizeFields = document.getElementById('customize-fields');
+const customizeApply = document.getElementById('customize-apply');
+const customizeReset = document.getElementById('customize-reset');
+let openDialog = null;
+let returnFocus = null;
+
+function openModal(overlay, trigger){
+  if(openDialog) closeModal(openDialog, false);
+  returnFocus = trigger || document.activeElement;
+  openDialog = overlay;
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  machine.inert = true;
+  machine.setAttribute('aria-hidden', 'true');
+  document.body.classList.add('dialog-open');
+  trigger?.setAttribute('aria-expanded', 'true');
+  overlay.querySelector('.modal-close').focus();
+}
+
+function closeModal(overlay, restoreFocus=true){
+  if(openDialog !== overlay) return;
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  machine.inert = false;
+  machine.removeAttribute('aria-hidden');
+  document.body.classList.remove('dialog-open');
+  returnFocus?.setAttribute('aria-expanded', 'false');
+  openDialog = null;
+  if(restoreFocus && returnFocus?.isConnected) returnFocus.focus();
+  returnFocus = null;
+}
+
+infoBtn.setAttribute('aria-controls', 'modal-overlay');
+infoBtn.setAttribute('aria-expanded', 'false');
+customizeBtn.setAttribute('aria-controls', 'customize-overlay');
+customizeBtn.setAttribute('aria-expanded', 'false');
+infoBtn.addEventListener('click', () => openModal(modalOverlay, infoBtn));
+modalClose.addEventListener('click', () => closeModal(modalOverlay));
+customizeClose.addEventListener('click', () => closeModal(customizeOverlay));
+[modalOverlay, customizeOverlay].forEach(overlay => {
+  overlay.addEventListener('click', event => { if(event.target === overlay) closeModal(overlay); });
+});
+
+document.addEventListener('keydown', event => {
+  if(!openDialog) return;
+  if(event.key === 'Escape'){
+    event.preventDefault();
+    closeModal(openDialog);
+  } else if(event.key === 'Tab'){
+    const focusable = [...openDialog.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex="0"]')].filter(el => el.getClientRects().length);
+    const first = focusable[0];
+    const last = focusable[focusable.length-1];
+    if(!first){ event.preventDefault(); openDialog.querySelector('[role="dialog"]').focus(); return; }
+    if(event.shiftKey && (document.activeElement === first || !openDialog.contains(document.activeElement))){ event.preventDefault(); last.focus(); }
+    else if(!event.shiftKey && (document.activeElement === last || !openDialog.contains(document.activeElement))){ event.preventDefault(); first.focus(); }
+  }
+});
+
+function populateCustomizeForm(){
+  customizeFields.replaceChildren();
+  ORDER.forEach(key => {
+    const data = LAYERS[key];
+    const field = document.createElement('div');
+    field.className = 'customize-field';
+    const label = document.createElement('label');
+    label.htmlFor = `custom-${key}`;
+    label.textContent = data.label;
+    const sub = document.createElement('span');
+    sub.className = 'field-sub';
+    sub.textContent = data.sub;
+    label.appendChild(sub);
+    const textarea = document.createElement('textarea');
+    textarea.id = `custom-${key}`;
+    textarea.rows = 4;
+    textarea.value = data.values.join('\n');
+    field.append(label, textarea);
+    customizeFields.appendChild(field);
+  });
+}
+
+customizeBtn.addEventListener('click', () => {
+  if(spinning) return;
+  populateCustomizeForm();
+  openModal(customizeOverlay, customizeBtn);
+});
+
+customizeApply.addEventListener('click', () => {
+  if(spinning) return;
+  ORDER.forEach(key => {
+    const values = document.getElementById(`custom-${key}`).value.split('\n').map(value => value.trim()).filter(Boolean);
+    if(values.length) LAYERS[key].values = values;
+  });
+  const releasedLocks = ORDER.some(key => locked[key] && !LAYERS[key].values.includes(current[key]));
+  rebuildReels();
+  closeModal(customizeOverlay);
+  machineStatus.textContent = 'Prompts updated for this session.' + (releasedLocks ? ' Locks on removed prompts were released.' : ' Current results and locks were kept where possible.');
+});
+
+customizeReset.addEventListener('click', () => {
+  if(spinning) return;
+  ORDER.forEach(key => { LAYERS[key].values = [...DEFAULTS[key]]; });
+  populateCustomizeForm();
+  rebuildReels();
+  machineStatus.textContent = 'Default prompt banks restored.';
+});
+
+function sessionData(){
+  return {
+    schemaVersion: 1,
+    projectName: PROJECT_NAME,
+    title: PROJECT_NAME,
+    tool: TOOL_LABEL,
+    version: APP_VERSION,
+    status: VERSION_STATUS,
+    versionDate: VERSION_DATE,
+    savedAt: new Date().toISOString(),
+    slipNumber: ticketNo,
+    prompts: ORDER.filter(key => active[key]).map(key => ({ key, label:LAYERS[key].label, value:current[key], locked:locked[key] })),
+    notes: document.getElementById('harvest-notes').value,
+    tryIt: document.getElementById('embodiment-instruction').textContent,
+    promptBank: Object.fromEntries(ORDER.map(key => [key, [...LAYERS[key].values]])),
+    sourceNote: 'Adapted interactive prompt bank; distinct from the full analog Co-Constructing Multispecies Futures deck. Audio is downloaded separately.'
+  };
+}
+
+function downloadFile(content, type, extension){
+  const url = URL.createObjectURL(new Blob([content], { type }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `${EXPORT_BASENAME}.${extension}`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+document.getElementById('export-txt').addEventListener('click', () => {
+  if(spinning) return;
+  const data = sessionData();
+  const text = [data.projectName, `${data.tool} v${data.version} (${data.status})`, `Version date: ${data.versionDate}`, `Session slip No. ${String(data.slipNumber).padStart(5,'0')}`, '', ...slipLines().map(line => `${line.label}: ${line.value}`), '', 'Tell it', data.notes || '(No notes yet.)', '', 'Now: try it', data.tryIt, '', `Saved: ${data.savedAt}`, data.sourceNote].join('\n');
+  downloadFile(text, 'text/plain;charset=utf-8', 'txt');
+});
+document.getElementById('export-json').addEventListener('click', () => {
+  if(!spinning) downloadFile(JSON.stringify(sessionData(), null, 2), 'application/json;charset=utf-8', 'json');
+});
+function preparePrint(){ document.getElementById('print-notes').textContent = document.getElementById('harvest-notes').value || '(No notes yet.)'; }
+window.addEventListener('beforeprint', preparePrint);
+document.getElementById('print-slip').addEventListener('click', () => { if(!spinning){ preparePrint(); window.print(); } });
+
+const recordBtn = document.getElementById('record-btn');
+const recordStatus = document.getElementById('record-status');
+const recordLabel = recordBtn.querySelector('.record-label');
+const playbackEl = document.getElementById('recording-playback');
+const recordingSupported = Boolean(navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== 'undefined');
+let mediaRecorder = null;
+let activeStream = null;
+let recordingURL = null;
+let recordTimer = null;
+let recordState = 'idle';
+let recordRequestId = 0;
+
+function formatElapsed(ms){
+  const total = Math.floor(ms / 1000);
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}`;
+}
+
+function recordingExtension(mime){
+  const type = mime.split(';')[0].trim().toLowerCase();
+  return ({ 'audio/webm':'webm', 'video/webm':'webm', 'audio/mp4':'m4a', 'video/mp4':'mp4', 'audio/ogg':'ogg', 'audio/wav':'wav', 'audio/x-wav':'wav', 'audio/mpeg':'mp3' })[type] || 'bin';
+}
+
+function resetRecordingUI(){
+  clearInterval(recordTimer);
+  recordTimer = null;
+  recordState = 'idle';
+  recordBtn.disabled = !recordingSupported;
+  recordBtn.classList.remove('recording');
+  recordBtn.setAttribute('aria-pressed', 'false');
+  recordLabel.textContent = 'Record';
+}
+
+async function startRecording(){
+  if(recordState !== 'idle' || !recordingSupported) return;
+  recordState = 'requesting';
+  recordBtn.disabled = true;
+  recordLabel.textContent = 'Waiting…';
+  recordStatus.textContent = 'Waiting for microphone permission…';
+  const requestId = ++recordRequestId;
+  let stream;
+  try{
+    stream = await navigator.mediaDevices.getUserMedia({ audio:true });
+    if(requestId !== recordRequestId){ stream.getTracks().forEach(track => track.stop()); return; }
+    activeStream = stream;
+    const candidates = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg;codecs=opus', 'audio/ogg'];
+    const mimeType = typeof MediaRecorder.isTypeSupported === 'function' ? candidates.find(type => MediaRecorder.isTypeSupported(type)) : '';
+    const recorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+    const chunks = [];
+    let failed = false;
+    mediaRecorder = recorder;
+    recorder.addEventListener('dataavailable', event => { if(event.data?.size) chunks.push(event.data); });
+    recorder.addEventListener('error', () => {
+      failed = true;
+      recordState = 'stopping';
+      recordBtn.disabled = true;
+      clearInterval(recordTimer);
+      recordStatus.textContent = 'Recording stopped because the browser reported an error. You can keep writing below.';
+      if(recorder.state !== 'inactive') recorder.stop();
+      stream.getTracks().forEach(track => track.stop());
+    });
+    recorder.addEventListener('stop', () => {
+      try{
+        if(!failed && chunks.length){
+          const type = recorder.mimeType || chunks.find(chunk => chunk.type)?.type || 'application/octet-stream';
+          const blob = new Blob(chunks, { type });
+          if(recordingURL) URL.revokeObjectURL(recordingURL);
+          recordingURL = URL.createObjectURL(blob);
+          const audio = document.createElement('audio');
+          audio.controls = true;
+          audio.src = recordingURL;
+          audio.setAttribute('aria-label', 'Play your latest recording');
+          const download = document.createElement('a');
+          download.className = 'download-link';
+          download.href = recordingURL;
+          download.download = `${EXPORT_BASENAME}.${recordingExtension(type)}`;
+          download.textContent = 'Download audio';
+          playbackEl.replaceChildren(audio, download);
+          recordStatus.textContent = 'Recording ready. Download it to keep it.';
+        } else if(!failed){
+          recordStatus.textContent = 'No audio was captured. Try again or keep writing below.';
+        }
+      } finally {
+        stream.getTracks().forEach(track => track.stop());
+        if(mediaRecorder === recorder){ mediaRecorder = null; activeStream = null; resetRecordingUI(); }
+      }
+    }, { once:true });
+    recorder.start();
+    const started = Date.now();
+    recordState = 'recording';
+    recordBtn.disabled = false;
+    recordBtn.classList.add('recording');
+    recordBtn.setAttribute('aria-pressed', 'true');
+    recordLabel.textContent = 'Stop';
+    recordStatus.textContent = 'Recording… 0:00';
+    recordTimer = setInterval(() => { recordStatus.textContent = `Recording… ${formatElapsed(Date.now() - started)}`; }, 1000);
+  } catch(error){
+    stream?.getTracks().forEach(track => track.stop());
+    if(requestId !== recordRequestId) return;
+    mediaRecorder = null;
+    activeStream = null;
+    resetRecordingUI();
+    recordStatus.textContent = error?.name === 'NotAllowedError' ? 'Microphone access was not granted. You can keep writing and save the slip.' : "Could not start the microphone. Try this page in its own HTTPS browser tab, or keep writing below.";
+  }
+}
+
+function stopRecording(){
+  if(recordState !== 'recording' || !mediaRecorder) return;
+  recordState = 'stopping';
+  recordBtn.disabled = true;
+  recordLabel.textContent = 'Saving…';
+  clearInterval(recordTimer);
+  if(mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+}
+
+recordBtn.addEventListener('click', () => {
+  if(recordState === 'recording') stopRecording();
+  else if(recordState === 'idle') startRecording();
+});
+if(!recordingSupported){
+  recordBtn.disabled = true;
+  recordStatus.textContent = 'Recording is unavailable in this browser or context. You can still write and export your slip; microphone access needs a supported browser and a secure page.';
+}
+window.addEventListener('pagehide', () => {
+  recordRequestId++;
+  if(recordState === 'recording') stopRecording();
+  activeStream?.getTracks().forEach(track => track.stop());
+  clearInterval(recordTimer);
+  if(recordState === 'requesting') resetRecordingUI();
+});
+
+</script>
+</body>
+</html>

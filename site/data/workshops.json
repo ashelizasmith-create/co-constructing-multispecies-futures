@@ -1,0 +1,480 @@
+{
+  "project_name": "Co-Constructing Multispecies Futures",
+  "status": "working history",
+  "updated": "2026-10-20",
+  "version": "0.1.0",
+  "scope": "Documented workshop materials, presentations, development contexts, and related embodied-worldbuilding projects. A related project does not establish use of the card deck at every event. Dates and locations are left open where the sources do not establish them.",
+  "entries": [
+    {
+      "id": "mhdi-2023",
+      "title": "Minority Health Disparities Initiative",
+      "connection_kind": "workshop",
+      "date_label": "2023",
+      "event_start": "2023",
+      "event_end": null,
+      "date_basis": "event date",
+      "place": "Venue not recorded",
+      "theme": "Health and collective futures",
+      "iteration": "An early version combined an object, mood, and what-if question, then asked for a story from a particular point of view. Later design discussions recalled this as an early shared workshop.",
+      "evidence_status": "Retrospective workshop account",
+      "confidence": "retrospective",
+      "unknowns": "Exact date, venue, and formal event title remain to be confirmed.",
+      "sources": [
+        {
+          "label": "Card-development discussion, “Transcript from zoom from oct 14”"
+        },
+        {
+          "label": "Card-deck instruction drafts, 24 June 2025 development notes"
+        }
+      ]
+    },
+    {
+      "id": "nist-2024",
+      "title": "Animal and Cellular Agriculture Futures / NIST",
+      "connection_kind": "workshop",
+      "date_label": "7–8 March 2024",
+      "event_start": "2024-03-07",
+      "event_end": "2024-03-08",
+      "date_basis": "event date",
+      "place": "Venue not recorded",
+      "theme": "Animal agriculture, cellular agriculture, and food systems",
+      "iteration": "Participants used what-if prompts, moods, and objects to imagine food-system futures in 2040, tell short sensory stories, and compare themes across groups.",
+      "evidence_status": "Workshop instructions and retrospective account",
+      "confidence": "documented",
+      "unknowns": "The event venue is not established by the reviewed materials.",
+      "sources": [
+        {
+          "label": "“Nist 2024” workshop instructions"
+        },
+        {
+          "label": "Heartland Robotics breakfast invitation and workshop plan, 24 October 2025"
+        },
+        {
+          "label": "“Playing with” Creative Engagement, Great Plains Futures Conference script, 1 April 2026"
+        }
+      ]
+    },
+    {
+      "id": "plf-2025",
+      "title": "Animal Agriculture 2050: A Co-Visioning Lunch",
+      "connection_kind": "workshop",
+      "date_label": "4 June 2025",
+      "event_start": "2025-06-04",
+      "event_end": null,
+      "date_basis": "event date",
+      "place": "Regents B&C, Lincoln, Nebraska · US PLF 2025",
+      "theme": "Livestock, technology, welfare, and food-system futures",
+      "iteration": "The PLF edition used Mood, Object, and Spark cards for collaborative storytelling. The post-session reflection considered a shorter introduction and easier routes from memory warmup into play.",
+      "evidence_status": "Dated workshop description and post-session reflection",
+      "confidence": "documented",
+      "unknowns": "The source gives the room name; the exact building is not specified here.",
+      "sources": [
+        {
+          "label": "“PLF Social sustainability and CO-Visioning Lunch,” workshop description"
+        },
+        {
+          "label": "Speculative Design Cards SmithBendix Edgeworks, post-PLF reflection"
+        },
+        {
+          "label": "University of Nebraska–Lincoln, 2025 USPLF conference page",
+          "url": "https://enreec.unl.edu/2025usplf-lincoln/"
+        }
+      ]
+    },
+    {
+      "id": "heartland-2025",
+      "title": "Re-imagining the Future of Food Systems in Nebraska",
+      "connection_kind": "workshop",
+      "date_label": "24 October 2025",
+      "event_start": "2025-10-24",
+      "event_end": null,
+      "date_basis": "event date",
+      "place": "Innovation Campus, University of Nebraska–Lincoln · before the Heartland Robotics Conference",
+      "theme": "Robotics, automation, and future food production",
+      "iteration": "The breakfast recipe paired Speculation, Affect, and Narrative Construction in a Nebraska 2050 setting. Facilitators held the additional layers, with Collaborator and Point of View available for later rounds.",
+      "evidence_status": "Dated invitation and facilitator instructions",
+      "confidence": "documented",
+      "unknowns": "The reviewed source establishes the planned session and recipe; no outcome claim is made.",
+      "sources": [
+        {
+          "label": "Heartland Robotics breakfast invitation and workshop plan, 24 October 2025"
+        },
+        {
+          "label": "“cards instructions,” robotics session, 24 October 2025"
+        }
+      ]
+    },
+    {
+      "id": "foodid-helsinki-2025",
+      "title": "FoodID / VTT: Hybrid Foods Futures",
+      "connection_kind": "workshop",
+      "date_label": "27 October 2025",
+      "event_start": "2025-10-27",
+      "event_end": null,
+      "date_basis": "event date",
+      "place": "Helsinki, Finland · FoodID / VTT materials",
+      "theme": "Hybrid foods and alternative proteins",
+      "iteration": "Future food dreams became what-if prompts. A sensory-memory exercise led into group stories in 2050 using Construction, Affect, and Speculation, with optional Point of View and Collaborator cards.",
+      "evidence_status": "Dated workshop slide set",
+      "confidence": "documented",
+      "unknowns": "Helsinki is the source-file location label; the exact venue is not recorded.",
+      "sources": [
+        {
+          "label": "FoodID Helsinki/VTT workshop slides, 27 October 2025, slides 1 and 5–14"
+        }
+      ]
+    },
+    {
+      "id": "sws-2026",
+      "title": "Co-Constructing Multispecies Feminist Futures",
+      "connection_kind": "workshop",
+      "date_label": "7 February 2026 · programmed",
+      "event_start": "2026-02-07",
+      "event_end": null,
+      "date_basis": "event date",
+      "place": "Sociologists for Women in Society Winter Conference · San Diego, California",
+      "theme": "Preferable feminist futures in 2050",
+      "iteration": "The accepted session proposed successive rounds of what-if, mood, object, and other-species prompts, followed by short collective stories and discussion of how to carry the work forward.",
+      "evidence_status": "Accepted and programmed session",
+      "confidence": "documented",
+      "unknowns": "The programme date is documented; delivery and participant outcomes are not confirmed in the reviewed material.",
+      "sources": [
+        {
+          "label": "SWS 2026 accepted-session description, LLE07; programme date 7 February 2026"
+        }
+      ]
+    },
+    {
+      "id": "nordic-2026",
+      "title": "Nordic Sensory Workshop: Communicating Science Beyond Slides",
+      "connection_kind": "workshop",
+      "date_label": "23 April 2026",
+      "event_start": "2026-04-23",
+      "event_end": null,
+      "date_basis": "event date",
+      "place": "Tieteiden talo, Helsinki, Finland",
+      "theme": "Sensory science, systems, and sustainability",
+      "iteration": "The table guide combines a childhood food memory, participant-authored food fantasies, and Construction / Speculation / Affect stories in 2050. The public programme identifies playful groupwork inspired by the toolkit’s approach.",
+      "evidence_status": "Official programme and workshop table guide",
+      "confidence": "documented",
+      "unknowns": "The wider event ran 22–23 April; this activity is assigned to 23 April.",
+      "sources": [
+        {
+          "label": "Nordic Sensory Workshop table guide, 23 April 2026"
+        },
+        {
+          "label": "Nordic Sensory Workshop official programme, 23 April 2026 science-communication session",
+          "url": "https://blogs.helsinki.fi/nordic-sensory-workshop/programme/"
+        },
+        {
+          "label": "Nordic Sensory Workshop official event page and venue",
+          "url": "https://blogs.helsinki.fi/nordic-sensory-workshop/"
+        }
+      ]
+    },
+    {
+      "id": "foodid-teachers-2026",
+      "title": "FoodID Biotechnology Teacher’s Workshop",
+      "connection_kind": "workshop",
+      "date_label": "22–23 June 2026",
+      "event_start": "2026-06-22",
+      "event_end": "2026-06-23",
+      "date_basis": "event date",
+      "place": "Venue not recorded",
+      "theme": "Food and biotechnology education",
+      "iteration": "A pleasant sensory food memory and a personal future fantasy precede shared Construction, Speculation, and Affect draws. Participants may use their own what-if cards to make a short sensory story set in 2046.",
+      "evidence_status": "Dated participant table guide",
+      "confidence": "documented",
+      "unknowns": "The handout gives the workshop dates but does not identify a venue.",
+      "sources": [
+        {
+          "label": "FoodID Biotechnology Teacher’s Workshop table guide, 22–23 June 2026"
+        }
+      ]
+    },
+    {
+      "id": "june-food-bioeconomy",
+      "title": "The Bioeconomy: Fermentation and the Future of Food",
+      "connection_kind": "workshop",
+      "date_label": "25 June · year to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "day and month in agenda; year unknown",
+      "place": "FoodID teaching workshop · venue not recorded",
+      "theme": "Biotechnology and future food",
+      "iteration": "The agenda includes a 35-minute Speculative Design Activity: The Future of Food, alongside fermentation experiments and food-system teaching modules.",
+      "evidence_status": "Workshop agenda",
+      "confidence": "partial date",
+      "unknowns": "The agenda states June 25 without a year. A 2025 revision appears in the filename; that is not treated as a confirmed event year.",
+      "sources": [
+        {
+          "label": "The Bioeconomy: Fermentation and the Future of Food, June 25 workshop agenda"
+        }
+      ]
+    },
+    {
+      "id": "scc-teachers",
+      "title": "SCC workshop with middle- and high-school teachers",
+      "connection_kind": "workshop",
+      "date_label": "Date to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "not recorded",
+      "place": "SCC · venue to confirm",
+      "theme": "Teaching and co-visioning",
+      "iteration": "Development discussions identify an earlier set of instruction cards made for this teacher workshop. Those cards informed later welcome, warmup, preferable-futures, ground-rule, and story instructions.",
+      "evidence_status": "Retrospective development account",
+      "confidence": "retrospective",
+      "unknowns": "The source uses the acronym SCC; the date and venue are not specified.",
+      "sources": [
+        {
+          "label": "Card-development discussion, “Transcript from zoom from oct 14”"
+        }
+      ]
+    },
+    {
+      "id": "scicomm-development",
+      "title": "Science-communication workshops / SciComm",
+      "connection_kind": "workshop",
+      "date_label": "Workshop dates to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "document label only",
+      "place": "Venue not recorded",
+      "theme": "Communicating science through speculative stories",
+      "iteration": "Development discussions recall science-communication sessions using tailored what-if questions. Workshop slides ask groups to revise and select Sparks; a companion talk explains the Mood / Object / Spark-to-Narrative card structure.",
+      "evidence_status": "Retrospective account and workshop slides",
+      "confidence": "retrospective",
+      "unknowns": "The workshop file is labeled 30 October 2024; that is a document label, not a confirmed session date.",
+      "sources": [
+        {
+          "label": "Card-development discussion, “Transcript from zoom from oct 14”"
+        },
+        {
+          "label": "Card-deck instruction drafts, 24 June 2025 development notes"
+        },
+        {
+          "label": "Co-Creating ArtScience, SciComm workshop slides, p. 44; file label 30 October 2024"
+        },
+        {
+          "label": "Co-Creating ArtScience, SciComm 30-minute talk slides, p. 44"
+        }
+      ]
+    },
+    {
+      "id": "isp-development",
+      "title": "I-SPARK prompt-bank adaptation",
+      "connection_kind": "development",
+      "date_label": "Date to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "not recorded",
+      "place": "Venue not recorded",
+      "theme": "Food systems, community, and sustainability",
+      "iteration": "An I-SPARK source tab contains Object, Mood, and food-system what-if prompts. The instruction-development notes identify ISPARK among the contexts used to tailor the activity.",
+      "evidence_status": "Context-specific prompt materials",
+      "confidence": "context documented",
+      "unknowns": "No dated workshop agenda or venue is present in the reviewed record.",
+      "sources": [
+        {
+          "label": "“I-SPARK” prompt-bank tab"
+        },
+        {
+          "label": "Card-deck instruction drafts, 24 June 2025 development notes"
+        }
+      ]
+    },
+    {
+      "id": "lincoln-recycling",
+      "title": "Recycling Futures in Lincoln",
+      "connection_kind": "development",
+      "date_label": "Date to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "not recorded",
+      "place": "Lincoln, Nebraska",
+      "theme": "Recycling, waste, and community futures",
+      "iteration": "A worksheet explores a 2075 world through ecology and health, resources, culture, infrastructure, governance, and economy. Seven logic lenses connect these domains to multispecies relationships.",
+      "evidence_status": "Workshop-development worksheet",
+      "confidence": "context documented",
+      "unknowns": "2075 is the imagined setting, not the event date. Delivery of a particular workshop is not established by this worksheet.",
+      "sources": [
+        {
+          "label": "“Recycling Futures in Lincoln (2075)” worksheet"
+        },
+        {
+          "label": "Card-development discussion, “Transcript from zoom from oct 14”"
+        }
+      ]
+    },
+    {
+      "id": "mss-talk-2025",
+      "title": "Community Engaged Art and Social Science",
+      "connection_kind": "presentation",
+      "date_label": "13 March 2025",
+      "event_start": "2025-03-13",
+      "event_end": null,
+      "date_basis": "event title slide",
+      "place": "Midwest Sociological Society · Chicago, Illinois",
+      "theme": "Worldbuilding, futuring, and speculative design to co-imagine equitable futures",
+      "iteration": "The talk presents the card method alongside community-engaged art and social science, including the earlier NIST what-if / mood / object recipe. Its slides also informed the deck’s introductory explanation.",
+      "evidence_status": "Dated presentation slide set",
+      "confidence": "documented",
+      "unknowns": "The source establishes a presentation of the methods; it does not establish that attendees played the cards at this event.",
+      "sources": [
+        {
+          "label": "“Introduction – Overview,” reference to a March 2025 Midwest sociological talk"
+        },
+        {
+          "label": "Community Engaged Art and Social Science, Midwest Sociological Society slides, pp. 1, 28, 77"
+        }
+      ]
+    },
+    {
+      "id": "no-coast-scicomm-2025",
+      "title": "Playing for Perspectives: Growing Systems Thinking in the Virtual Farm of the Future",
+      "connection_kind": "presentation",
+      "date_label": "17 September 2025",
+      "event_start": "2025-09-17",
+      "event_end": null,
+      "date_basis": "event title slide",
+      "place": "No Coast SciComm symposium · city not recorded",
+      "theme": "MuMu, systems thinking, and playful science communication",
+      "iteration": "The Fun and Games presentation connects MuMu’s virtual farm with worldbuilding and speculative-design methods. Its slides describe the cards and reuse an earlier NIST story recipe.",
+      "evidence_status": "Dated presentation slide set",
+      "confidence": "documented",
+      "unknowns": "The event city and whether attendees used the deck during this presentation are not established.",
+      "sources": [
+        {
+          "label": "Playing for Perspectives, No Coast SciComm symposium slides, pp. 1, 40, 85"
+        }
+      ]
+    },
+    {
+      "id": "great-plains-2026",
+      "title": "“Playing with” Creative Engagement",
+      "connection_kind": "presentation",
+      "date_label": "1 April 2026",
+      "event_start": "2026-04-01",
+      "event_end": null,
+      "date_basis": "talk-script heading",
+      "place": "Great Plains Futures Conference · venue to confirm",
+      "theme": "Creative public engagement and collective futures",
+      "iteration": "Lisa PytlikZillig’s talk script describes worldbuilding, futuring, and speculative design. It presents the mood / object / what-if card approach alongside NIST workshop examples, MuMu, and The Middle.",
+      "evidence_status": "Dated conference talk script",
+      "confidence": "documented",
+      "unknowns": "The script establishes the scheduled talk and content; the venue is not given.",
+      "sources": [
+        {
+          "label": "“Playing with” Creative Engagement, Great Plains Futures Conference script, 1 April 2026"
+        }
+      ]
+    },
+    {
+      "id": "hatch-worldbuilding",
+      "title": "HATCH worldbuilding session",
+      "connection_kind": "related",
+      "date_label": "Date to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "not recorded",
+      "place": "Venue not recorded",
+      "theme": "Collective worldbuilding",
+      "iteration": "Development discussions recall table-based worldbuilding using mandala worksheets and supporting what-if questions. The discussion distinguishes this session from the more tightly structured card recipe.",
+      "evidence_status": "Retrospective method-development account",
+      "confidence": "retrospective",
+      "unknowns": "No date or place is recorded here. Direct use of the current card deck is not established.",
+      "sources": [
+        {
+          "label": "Card-development discussion, “Transcript from zoom from oct 14”"
+        },
+        {
+          "label": "Speculative Design Cards SmithBendix Edgeworks, post-PLF reflection"
+        }
+      ]
+    },
+    {
+      "id": "robotics-popup",
+      "title": "Speculative Robotics Lab Pop-Up",
+      "connection_kind": "related",
+      "date_label": "January 2025; about three months reported",
+      "event_start": "2025-01",
+      "event_end": null,
+      "date_basis": "project account",
+      "place": "University of Nebraska–Lincoln Innovation Campus",
+      "theme": "Encountering: live action robotic roleplay and care",
+      "iteration": "Participants rehearsed relations with human-voiced robots and live scenarios. The paper develops encountering from this practice; it does not establish that every pop-up session used the card deck.",
+      "evidence_status": "Manuscript project account",
+      "confidence": "documented",
+      "unknowns": "The paper reports the duration but does not specify an exact closing date.",
+      "sources": [
+        {
+          "label": "Performing the What-If, Ash Eliza Smith and Julia McQuillan, §§3–5"
+        }
+      ]
+    },
+    {
+      "id": "southern-devices",
+      "title": "Southern Devices",
+      "connection_kind": "related",
+      "date_label": "2024 project reference; workshop dates not given",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "bibliographic project year",
+      "place": "Western North Carolina; Optimist Park",
+      "theme": "Moving with: dance, place, infrastructure, and the drone",
+      "iteration": "A drone duet and community interviews inform the paper’s account of moving with. This is a related performance and worldbuilding practice, not a documented card-deck workshop.",
+      "evidence_status": "Manuscript project account",
+      "confidence": "documented",
+      "unknowns": "Two years of development are reported; their exact start and end dates are not specified.",
+      "sources": [
+        {
+          "label": "Performing the What-If, Ash Eliza Smith and Julia McQuillan, §§3–5"
+        }
+      ]
+    },
+    {
+      "id": "mumu",
+      "title": "MuMu: Worlds of Connections",
+      "connection_kind": "related",
+      "date_label": "Playtest dates not recorded; 2025 project reference",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "project reference; playtest dates unknown",
+      "place": "Cedar Point Biological Station (fieldwork); playtest venues not listed",
+      "theme": "Becoming-with: a multispecies XR world",
+      "iteration": "Youth, scientists, and artists helped shape a world experienced as prairie dog, apple tree, planting robot, and caretaker. Field observation and playtesting inform becoming-with and bodily perspective shifts.",
+      "evidence_status": "Manuscript project and fieldwork account",
+      "confidence": "documented",
+      "unknowns": "The paper describes about 20 playtests but does not list each event or establish card use at each one.",
+      "sources": [
+        {
+          "label": "Performing the What-If, Ash Eliza Smith and Julia McQuillan, §§3–5"
+        }
+      ]
+    },
+    {
+      "id": "the-middle",
+      "title": "The Middle / rural community futuring",
+      "connection_kind": "related",
+      "date_label": "Dates to confirm",
+      "event_start": null,
+      "event_end": null,
+      "date_basis": "not recorded",
+      "place": "Rural Nebraska; specific venue not recorded",
+      "theme": "Community health and preferable local futures",
+      "iteration": "The Great Plains talk describes collective rural futuring that fed a digital story archive through 3D collage, audio, and storytelling. It documents a related workflow rather than a confirmed use of this exact deck.",
+      "evidence_status": "Retrospective project account",
+      "confidence": "retrospective",
+      "unknowns": "Specific workshop dates and locations are not provided in this account.",
+      "sources": [
+        {
+          "label": "“Playing with” Creative Engagement, Great Plains Futures Conference script, 1 April 2026"
+        },
+        {
+          "label": "Card-deck instruction drafts, 24 June 2025 development notes"
+        }
+      ]
+    }
+  ]
+}

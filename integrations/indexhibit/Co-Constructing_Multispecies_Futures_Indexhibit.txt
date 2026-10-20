@@ -1,0 +1,55 @@
+<!-- Co-Constructing Multispecies Futures: exhibit text fragment.
+     Existing exhibit: https://asheveryday.com/index.php/worldbuilding-community/co-constructing-multispecies-futures/
+     Keep the existing Indexhibit gallery image and settings:
+     https://asheveryday.com/files/gimgs/397_SDL_WB_Engagement.png
+     The image is supplied by the existing gallery; this fragment does not add another copy.
+-->
+<style>
+#ccmf-exhibit{max-width:660px;color:#111;font:14px/1.65 Arial,Helvetica,sans-serif}
+#ccmf-exhibit h1{font-size:25px;line-height:1.2;font-weight:600;margin:0 0 22px;letter-spacing:-.025em}
+#ccmf-exhibit h2{font-size:15px;line-height:1.35;font-weight:600;margin:30px 0 12px}
+#ccmf-exhibit p{margin:0 0 16px}
+#ccmf-exhibit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+#ccmf-exhibit a:focus-visible{outline:2px solid #111;outline-offset:4px}
+#ccmf-exhibit .ccmf-intro{font-size:17px;line-height:1.55}
+#ccmf-exhibit .ccmf-actions{display:flex;flex-wrap:wrap;gap:10px 18px;margin:24px 0 16px}
+#ccmf-exhibit .ccmf-actions a{display:inline-block;font-size:13px;line-height:1.4;padding:7px 0}
+#ccmf-exhibit .ccmf-actions a:first-child{border:1px solid #111;padding:7px 12px;text-decoration:none}
+#ccmf-exhibit .ccmf-small{font-size:12px;line-height:1.6}
+#ccmf-exhibit .ccmf-meta{border-top:1px solid #ddd;margin-top:26px;padding-top:16px}
+#ccmf-exhibit .ccmf-references{margin:0;padding-left:18px;font-size:12px;line-height:1.6}
+#ccmf-exhibit .ccmf-references li{margin:0 0 12px;padding-left:3px}
+@media(max-width:600px){#ccmf-exhibit h1{font-size:23px}#ccmf-exhibit .ccmf-intro{font-size:16px}}
+</style>
+<section id="ccmf-exhibit" aria-labelledby="ccmf-title">
+  <h1 id="ccmf-title">Co-Constructing Multispecies Futures</h1>
+  <p class="ccmf-intro">An evolving toolkit for imagining and rehearsing multispecies futures through chance, affect, storytelling, and embodied play.</p>
+  <p>Build and tell speculative scenes, then enter them through roleplay, movement, and rehearsal—with other people, animals, plants, materials, machines, and places. Return to the story with what the body noticed.</p>
+  <p>Begin with where and when. Add a feeling, a voice, a form, a more-than-human collaborator, or a pivot. Use chance to find a beginning, then decide together what to keep, change, and try.</p>
+
+  <nav class="ccmf-actions" aria-label="Toolkit links">
+    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="interactive.html">Try the Interactive Tool</a>
+    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="index.html#print">Print the Card Deck</a>
+    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="guide.html">Lead a Session</a>
+    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="workshops.html">Workshops &amp; development</a>
+    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="paper.html">About &amp; cite</a>
+    <a href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures#quickstart" data-ccmf-path="versions.html">Versions</a>
+  </nav>
+  <p class="ccmf-small">The project repository brings together the tools, print files, and instructions. The general Card Deck includes 94 cards, with US Letter and A4 home-print options. The Interactive Tool has an adapted prompt bank and numbered versions to keep.</p>
+
+  <h2>From a scene to an encounter</h2>
+  <p>Encountering, moving with, and becoming-with offer overlapping ways to enter a world while it is taking shape. Attend to another being's capacities and constraints, and let the relation change what you sense and imagine. A perspective remains partial; participation can shift through attention, orientation, gesture, or scale.</p>
+  <p>Move between imagining, rehearsing, reflecting, and writing. Some rehearsals become stories, artworks, prototypes, or technologies. Others remain a gesture or a question worth carrying.</p>
+
+  <h2>Paper and practice</h2>
+  <p><em>Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies</em>, by Ash Eliza Smith and Julia McQuillan, is a forthcoming book chapter and is not yet public. It describes the practice behind these shared tools.</p>
+
+  <h2>Lineage and credits</h2>
+  <p>The Card Deck and Interactive Tool build on <em>The Thing From The Future</em> and the <em>Rehearsing Realities</em> framework. The wider practice draws on performance, dance and somatic practice, walking scores, speculative design, spatial storytelling, playable theater, and immersive practice.</p>
+  <ul class="ccmf-references">
+    <li>Candy, S., &amp; Watson, J. (2014). <em>The thing from the future</em> [Card game]. Situation Lab.</li>
+    <li>Smith, A. E., Leadabrand, M., Lichtman, D., Bendix, S., PytlikZillig, L. M., &amp; McQuillan, J. (in press). Rehearsing realities: A dramaturgy for co-creating preferable futures. <em>TDR/The Drama Review</em>.</li>
+  </ul>
+  <p class="ccmf-small">Created by Ash Eliza Smith, developed in the Speculative Devices Lab with Julia McQuillan and Sam Bendix. Chapter and framework authorship are distinct from the credits for the toolkit and its workshop activities.</p>
+  <p class="ccmf-small ccmf-meta">Interactive Tool v0.1.1 · Development edition<br>Previous numbered versions will be retained as the project develops.</p>
+</section>

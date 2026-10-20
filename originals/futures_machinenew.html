@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Co-Creating Multispecies Worlds</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#0A0D0A;
+  --panel:#141810;
+  --green:#3FB871;
+  --green-bright:#7CF7AA;
+  --white:#F4F4EF;
+  --ink:#11140F;
+  --item-h: 128px;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{ margin:0; }
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at 50% -10%, #16271c 0%, var(--bg) 55%);
+  font-family:'Work Sans', sans-serif;
+  color: var(--white);
+  padding: 36px 16px;
+}
+
+.machine{
+  position:relative;
+  width:100%;
+  max-width: 980px;
+  background: linear-gradient(180deg, var(--panel), #060805);
+  border: 1px solid rgba(63,184,113,0.35);
+  border-radius: 18px;
+  padding: 36px 40px 32px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.rivet{
+  position:absolute;
+  width:10px; height:10px;
+  border-radius:50%;
+  background: radial-gradient(circle at 35% 35%, var(--green-bright), var(--green) 60%, #1c4a30 100%);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+}
+.rivet.tl{ top:14px; left:14px; }
+.rivet.tr{ top:14px; right:14px; }
+.rivet.bl{ bottom:14px; left:14px; }
+.rivet.br{ bottom:14px; right:14px; }
+
+.header-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 16px;
+}
+
+.eyebrow{
+  font-family:'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin: 0 0 8px;
+}
+
+.header-actions{
+  display:flex;
+  gap: 8px;
+  flex-shrink:0;
+}
+
+.icon-btn{
+  flex-shrink:0;
+  width: 30px; height:30px;
+  border-radius:50%;
+  border: 1px solid rgba(63,184,113,0.45);
+  background: transparent;
+  color: var(--green-bright);
+  font-family:'Space Mono', monospace;
+  font-size:0.85rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: all 0.2s ease;
+}
+.icon-btn:hover{
+  background: rgba(63,184,113,0.15);
+  border-color: var(--green-bright);
+}
+
+h1{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin: 0 0 14px;
+  letter-spacing: 0.01em;
+}
+
+.intro{
+  margin: 0 0 28px;
+  max-width: 58ch;
+  font-size: 0.98rem;
+  line-height:1.6;
+  color: rgba(244,244,239,0.78);
+}
+
+.layer-toggles{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.chip{
+  font-family:'Space Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(63,184,113,0.4);
+  background: transparent;
+  color: var(--white);
+  cursor:pointer;
+  transition: all 0.2s ease;
+}
+.chip:hover{ border-color: var(--green-bright); }
+.chip.active{
+  background: var(--green);
+  color: var(--ink);
+  border-color: var(--green);
+}
+.chip.core{
+  opacity:0.5;
+  cursor:default;
+  border-style:dashed;
+}
+.chip.core:hover{ border-color: rgba(63,184,113,0.4); }
+
+.reel-bank{
+  display:flex;
+  gap: 28px;
+  align-items:flex-end;
+  flex-wrap:wrap;
+}
+
+.reels{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 18px;
+  flex:1;
+}
+
+.reel{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+  width: 204px;
+}
+.reel.inactive{ display:none; }
+
+.reel-label-flip{
+  width:100%;
+  height: 50px;
+  perspective: 600px;
+  cursor: help;
+}
+.reel-label-flip:focus-visible{
+  outline: 2px solid var(--green-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.reel-label-inner{
+  position:relative;
+  width:100%; height:100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.reel-label-flip:hover .reel-label-inner,
+.reel-label-flip.flipped .reel-label-inner{
+  transform: rotateX(180deg);
+}
+.reel-label-front, .reel-label-back{
+  position:absolute; inset:0;
+  backface-visibility: hidden;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.reel-label-front{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+}
+.reel-label-front small{
+  display:block;
+  font-size:0.65rem;
+  letter-spacing:0.08em;
+  text-transform:lowercase;
+  color: rgba(244,244,239,0.55);
+  margin-top:3px;
+}
+.reel-label-back{
+  transform: rotateX(180deg);
+  font-family:'Work Sans', sans-serif;
+  font-size:0.72rem;
+  line-height:1.3;
+  color: rgba(244,244,239,0.9);
+  padding: 0 4px;
+}
+
+.reel-window{
+  position:relative;
+  width:100%;
+  height: var(--item-h);
+  border-radius: 10px;
+  border: 3px solid var(--green);
+  background: var(--white);
+  overflow:hidden;
+  box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.35);
+}
+.reel-window::after{
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0) 32%, rgba(0,0,0,0) 68%, rgba(0,0,0,0.18));
+  pointer-events:none;
+}
+.reel-window.landed{ animation: clickFlash 0.4s ease; }
+@keyframes clickFlash{
+  0%{ box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 0 0 0 rgba(124,247,170,0.7); }
+  40%{ box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 0 0 7px rgba(124,247,170,0.35); }
+  100%{ box-shadow: inset 0 0 18px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.35); }
+}
+
+.reel-strip{
+  display:flex;
+  flex-direction:column;
+  will-change: transform;
+}
+.reel-item{
+  height: var(--item-h);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 0 16px;
+  font-family:'Space Mono', monospace;
+  font-size: 0.86rem;
+  line-height:1.35;
+  color: var(--ink);
+}
+
+.lock{
+  font-size:0.74rem;
+  background:transparent;
+  border:1px solid rgba(63,184,113,0.4);
+  color: var(--white);
+  border-radius:999px;
+  padding:5px 14px;
+  cursor:pointer;
+  font-family:'Space Mono', monospace;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  transition: all 0.2s ease;
+}
+.lock[aria-pressed="true"]{
+  background: var(--green);
+  color: var(--ink);
+  border-color: var(--green);
+}
+
+.lever-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  padding-bottom: 30px;
+}
+
+.lever{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding: 0;
+}
+.lever-track{
+  display:block;
+  width: 16px;
+  height: 100px;
+  background: linear-gradient(180deg, #060805, #1f3a27);
+  border-radius: 999px;
+  border: 1px solid rgba(63,184,113,0.5);
+  position:relative;
+}
+.lever-handle{
+  position:absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px; height:40px;
+  border-radius:50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff, var(--white) 65%, #c9d1c7 100%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.3);
+  transition: top 0.18s ease;
+}
+.lever.pulling .lever-handle{ animation: pull 0.6s ease; }
+@keyframes pull{
+  0%{ top:-6px; }
+  45%{ top: 66px; }
+  100%{ top:-6px; }
+}
+.lever-label{
+  font-family:'Space Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.22em;
+  color: var(--green-bright);
+}
+
+.ticket{
+  margin-top: 30px;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 24px 26px 18px;
+  font-family:'Space Mono', monospace;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  position:relative;
+}
+.ticket::before{
+  content:'';
+  position:absolute;
+  top:-6px; left:0; right:0; height:12px;
+  background-image: radial-gradient(circle, var(--bg) 6px, transparent 6.5px);
+  background-size: 22px 12px;
+  background-position: 0 -6px;
+  background-repeat: repeat-x;
+}
+.ticket-head{
+  display:flex;
+  justify-content:space-between;
+  font-size:0.78rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  border-bottom: 1px dashed rgba(17,20,15,0.3);
+  padding-bottom:12px;
+  margin-bottom:10px;
+}
+#ticket-lines{ list-style:none; margin:0; padding:0; }
+#ticket-lines li{
+  display:flex;
+  justify-content:space-between;
+  gap: 18px;
+  padding: 9px 0;
+  border-bottom: 1px dotted rgba(17,20,15,0.18);
+  font-size:0.9rem;
+}
+#ticket-lines li:last-child{ border-bottom:none; }
+.t-label{
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-size:0.7rem;
+  color: rgba(17,20,15,0.5);
+  white-space:nowrap;
+  padding-top:3px;
+}
+.t-value{ text-align:right; }
+.t-value.flash{ animation: textFlash 0.6s ease; }
+@keyframes textFlash{
+  0%{ color: var(--green); }
+  100%{ color: var(--ink); }
+}
+
+.footnote{
+  margin-top:18px;
+  font-size:0.78rem;
+  color: rgba(244,244,239,0.45);
+  line-height:1.5;
+}
+
+.scratchpad{
+  margin-top: 22px;
+}
+.scratchpad-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.scratchpad-label{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+  margin: 0;
+}
+
+.embodiment{
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px dashed rgba(63,184,113,0.3);
+}
+.embodiment-label{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+  margin: 0 0 10px;
+}
+.embodiment-instruction{
+  font-size:0.98rem;
+  line-height:1.6;
+  color: rgba(244,244,239,0.85);
+  margin: 0 0 8px;
+  max-width: 60ch;
+  min-height: 1.6em;
+}
+.embodiment-followup{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  letter-spacing:0.04em;
+  color: rgba(244,244,239,0.45);
+  margin: 0;
+}
+.record-controls{
+
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.record-btn{
+  display:flex;
+  align-items:center;
+  gap: 7px;
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(63,184,113,0.4);
+  background: transparent;
+  color: var(--green-bright);
+  cursor:pointer;
+  transition: all 0.2s ease;
+}
+.record-btn:hover{ border-color: var(--green-bright); }
+.record-dot{
+  display:inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #e0556b;
+}
+.record-btn.recording{
+  border-color: #e0556b;
+  color: #ff9aa8;
+}
+.record-btn.recording .record-dot{
+  animation: recordPulse 1s ease-in-out infinite;
+}
+@keyframes recordPulse{
+  0%, 100%{ opacity: 1; transform: scale(1); }
+  50%{ opacity: 0.4; transform: scale(0.8); }
+}
+.record-status{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  color: rgba(244,244,239,0.5);
+}
+.recording-playback{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.recording-playback audio{
+  height: 32px;
+}
+.recording-playback .download-link{
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color: var(--green-bright);
+  text-decoration: underline;
+}
+.harvest-notes{
+  width:100%;
+  min-height: 90px;
+  resize: vertical;
+  font-family:'Work Sans', sans-serif;
+  font-size:0.92rem;
+  line-height:1.55;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid rgba(63,184,113,0.4);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.harvest-notes::placeholder{ color: rgba(17,20,15,0.4); }
+.harvest-notes:focus{
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+  opacity:0;
+  visibility:hidden;
+  transition: opacity 0.2s ease;
+  z-index: 50;
+}
+.modal-overlay.open{ opacity:1; visibility:visible; }
+
+.modal-panel{
+  position:relative;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 10px;
+  border: 3px solid var(--green);
+  max-width: 480px;
+  width:100%;
+  padding: 30px 28px 22px;
+  font-family:'Work Sans', sans-serif;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transform: translateY(12px);
+  transition: transform 0.2s ease;
+}
+.modal-overlay.open .modal-panel{ transform: translateY(0); }
+
+.modal-panel h2{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.5rem;
+  margin: 0 0 16px;
+}
+
+.modal-close{
+  position:absolute;
+  top:14px; right:14px;
+  width:28px; height:28px;
+  border-radius:50%;
+  border:1px solid rgba(17,20,15,0.25);
+  background:transparent;
+  color: var(--ink);
+  font-size:1.2rem;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.modal-close:hover{ background: rgba(17,20,15,0.08); }
+
+.modal-list{
+  margin:0 0 16px;
+  padding-left: 20px;
+  font-size:0.92rem;
+  line-height:1.6;
+}
+.modal-list li{ margin-bottom:10px; }
+.modal-list li:last-child{ margin-bottom:0; }
+
+.modal-footnote{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  color: rgba(17,20,15,0.55);
+  margin:0;
+  border-top: 1px dashed rgba(17,20,15,0.2);
+  padding-top:12px;
+}
+
+.modal-credits{
+  font-family:'Work Sans', sans-serif;
+  font-size:0.78rem;
+  line-height:1.5;
+  color: rgba(17,20,15,0.45);
+  margin: 12px 0 0;
+}
+
+.customize-panel{
+  max-width: 600px;
+  max-height: 84vh;
+  display:flex;
+  flex-direction:column;
+}
+.customize-intro{
+  font-size:0.9rem;
+  line-height:1.55;
+  color: rgba(17,20,15,0.75);
+  margin: 0 0 18px;
+}
+#customize-fields{
+  overflow-y:auto;
+  padding-right: 6px;
+  margin-bottom: 16px;
+}
+.customize-field{
+  margin-bottom: 16px;
+}
+.customize-field label{
+  display:block;
+  font-family:'Space Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.customize-field label .field-sub{
+  text-transform:lowercase;
+  letter-spacing:0.04em;
+  color: rgba(17,20,15,0.45);
+  margin-left: 6px;
+}
+.customize-field textarea{
+  width:100%;
+  min-height: 96px;
+  resize: vertical;
+  font-family:'Space Mono', monospace;
+  font-size:0.82rem;
+  line-height:1.5;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid rgba(17,20,15,0.2);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+.customize-field textarea:focus{
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+
+.customize-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+  border-top: 1px dashed rgba(17,20,15,0.2);
+  padding-top: 16px;
+}
+.btn-primary, .btn-secondary{
+  font-family:'Space Mono', monospace;
+  font-size:0.75rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor:pointer;
+  transition: all 0.2s ease;
+}
+.btn-primary{
+  background: var(--green);
+  color: var(--ink);
+  border: 1px solid var(--green);
+}
+.btn-primary:hover{ background: var(--green-bright); }
+.btn-secondary{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(17,20,15,0.3);
+}
+.btn-secondary:hover{ background: rgba(17,20,15,0.06); }
+
+@media (max-width: 720px){
+  .machine{ padding:30px 22px; }
+  .reel{ width: 100%; max-width: 320px; }
+  .reels{ width:100%; }
+  .reel-bank{ flex-direction:column; align-items:stretch; }
+  .lever-wrap{ flex-direction:row; padding-bottom:0; padding-top:6px; }
+  .lever-track{ width:120px; height:16px; }
+  .lever-handle{ top:50%; left:-6px; transform: translateY(-50%); }
+  .lever.pulling .lever-handle{ animation: pullH 0.6s ease; }
+  @keyframes pullH{
+    0%{ left:-6px; }
+    45%{ left: 76px; }
+    100%{ left:-6px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reel-strip{ transition-duration: 0.01s !important; }
+  .reel-label-inner{ transition-duration: 0.01s !important; }
+  .lever.pulling .lever-handle{ animation: none; }
+  .reel-window.landed{ animation:none; }
+}
+</style>
+</head>
+<body>
+<div class="machine">
+  <span class="rivet tl"></span>
+  <span class="rivet tr"></span>
+  <span class="rivet bl"></span>
+  <span class="rivet br"></span>
+
+  <div class="header-row">
+    <p class="eyebrow">a chance-based prompt generator</p>
+    <div class="header-actions">
+      <button class="icon-btn" id="customize-btn" aria-haspopup="dialog" aria-label="Edit the prompts in each reel">&#9998;</button>
+      <button class="icon-btn" id="info-btn" aria-haspopup="dialog" aria-label="How this works">?</button>
+    </div>
+  </div>
+  <h1>Co-Creating Multispecies Worlds</h1>
+  <p class="intro">Start with where and when. Layer on a guiding question, a tone, a voice, a form, a collaborator, a pivot, or a sensing practice if you want company. Pull the lever to see what comes up — lock anything worth keeping, then pull again.</p>
+
+  <div class="layer-toggles">
+    <button class="chip core" disabled>Spatial</button>
+    <button class="chip core" disabled>Temporal</button>
+    <button class="chip" data-layer="speculation">+ Speculation</button>
+    <button class="chip" data-layer="affect">+ Affect</button>
+    <button class="chip" data-layer="voice">+ Voice</button>
+    <button class="chip" data-layer="form">+ Form</button>
+    <button class="chip" data-layer="collaborator">+ Collaborator</button>
+    <button class="chip" data-layer="pivot">+ Pivot</button>
+    <button class="chip" data-layer="sensing">+ Sensing</button>
+  </div>
+
+  <div class="reel-bank">
+    <div class="reels" id="reels"></div>
+    <div class="lever-wrap">
+      <button class="lever" id="lever" aria-label="Pull the lever to generate a new combination">
+        <span class="lever-track"><span class="lever-handle"></span></span>
+      </button>
+      <span class="lever-label">PULL</span>
+    </div>
+  </div>
+
+  <div class="ticket">
+    <div class="ticket-head">
+      <span>Futures Slip</span>
+      <span id="ticket-no">No. 00001</span>
+    </div>
+    <ul id="ticket-lines"></ul>
+  </div>
+
+  <p class="footnote">Placeholder categories and prompts shown here — these are easy to swap out per project, client, or workshop. Lock a reel to hold its result on the next pull; everything unlocked re-rolls.</p>
+
+  <div class="scratchpad">
+    <div class="scratchpad-header">
+      <p class="scratchpad-label">Tell it</p>
+      <div class="record-controls">
+        <button id="record-btn" class="record-btn" type="button" aria-pressed="false">
+          <span class="record-dot"></span>
+          <span class="record-label">Record</span>
+        </button>
+        <span class="record-status" id="record-status"></span>
+      </div>
+    </div>
+    <textarea id="harvest-notes" class="harvest-notes" placeholder="What has this combination created? Start telling it here — then try the prompt below, and come back to keep going."></textarea>
+    <div id="recording-playback" class="recording-playback"></div>
+  </div>
+
+  <div class="embodiment">
+    <p class="embodiment-label">Now: try it</p>
+    <p class="embodiment-instruction" id="embodiment-instruction"></p>
+    <p class="embodiment-followup">Then come back up and keep telling it.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <h2 id="modal-title">How this works</h2>
+    <ul class="modal-list">
+      <li>Spatial and Temporal are always running — together they set the where and when for whatever you're building.</li>
+      <li>Add more layers with the chips above: Speculation (a guiding "what if"), Affect (a tone), Voice (who's telling it) and Form (what it becomes), Collaborator (another participant), Pivot (a twist), and Sensing (a reflective practice).</li>
+      <li>Pull the lever to spin every active, unlocked reel — each one lands at a slightly different moment.</li>
+      <li>Lock a reel to hold its result on the next pull. Keep what's working, re-roll the rest.</li>
+      <li>Voice and Form combine into a single "Narrative" line on the slip when both are active.</li>
+      <li>Use the pencil icon to write your own prompts into any reel — they're added to that reel's pool for this session.</li>
+      <li>Everything drawn so far prints below as a futures slip — a running record of the session.</li>
+      <li>"Tell it" is a scratchpad for the story this combination creates — write or record it as you go. "Now: try it" gives you something to do physically — with a Collaborator drawn, it's a way of relating to that being; otherwise it's a general prompt to get up and play it out. Then come back to "Tell it" and keep going.</li>
+    </ul>
+    <p class="modal-footnote">This works best with company. Bring other people, but also objects, plants, animals, or machines already in the room into the co-creation — the more intelligences present, the more the world can become. Categories and prompts here are placeholders — swap in your own for any project, client, or workshop.</p>
+    <p class="modal-credits"><em>Co-Constructing Multispecies Worlds</em> was created by Ash Eliza Smith, developed in the Speculative Devices Lab with Julia McQuillan and Sam Bendix. This tool draws on that deck and a wider lineage of visionary card decks — including <em>The Thing From The Future</em> by Stuart Candy and Jeff Watson — and will continue to be developed and updated.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="customize-overlay">
+  <div class="modal-panel customize-panel" role="dialog" aria-modal="true" aria-labelledby="customize-title">
+    <button class="modal-close" id="customize-close" aria-label="Close">&times;</button>
+    <h2 id="customize-title">Write your own</h2>
+    <p class="customize-intro">These are the prompts each reel can land on — one per line. Edit, add, or remove any of them, then apply to update the machine. Changes last for this session.</p>
+    <div id="customize-fields"></div>
+    <div class="customize-actions">
+      <button class="btn-secondary" id="customize-reset">Reset to defaults</button>
+      <button class="btn-primary" id="customize-apply">Apply changes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const LAYERS = {
+  spatial: {
+    label: 'Spatial', sub: 'where', core: true,
+    description: 'Where this lives — a doorway, a city block, a whole bioregion.',
+    values: ['a watershed','a street corner','a shipping port','a community garden','a server farm','a clinic waiting room','an entire bioregion','a kitchen table','a border crossing','a single doorway']
+  },
+  temporal: {
+    label: 'Temporal', sub: 'when', core: true,
+    description: 'When this happens — an afternoon, a season, the deep past.',
+    values: ['the deep past','fifty years from now','a single afternoon','an entire growing season','the moment just before everything changes','a slow century','next Tuesday','the tail end of a long migration','a recurring anniversary','the last five minutes']
+  },
+  affect: {
+    label: 'Affect', sub: 'the tone', core: false,
+    description: 'The emotional tone or atmosphere running through it.',
+    values: ['wonder','urgency','tenderness','grief','defiance','calm','mischief','awe','longing','relief']
+  },
+  voice: {
+    label: 'Voice', sub: "who's telling it", core: false,
+    description: "Who's telling it — the perspective that speaks or remembers.",
+    values: ['a river, slow and remembering','an algorithm, indifferent and pattern-seeking','a descendant looking back a hundred years','a narrator who gets some details wrong','a chorus of many voices at once','a direct address to "you"','an object that has quietly seen everything',"a caregiver's daily notes"]
+  },
+  form: {
+    label: 'Form', sub: 'what it becomes', core: false,
+    description: 'What it becomes — the object or medium that carries it.',
+    values: ['a podcast episode','a billboard','a recipe card','a museum exhibit','a piece of folklore','a policy memo',"a children's game",'a startup pitch','a ritual','a piece of street art']
+  },
+  collaborator: {
+    label: 'Collaborator', sub: 'who else is involved', core: false,
+    description: 'Another participant — human, non-human, or in between.',
+    values: ['a fungus that connects everything underground','a migratory species that crosses every border','a piece of infrastructure no one notices','a microbe that thrives in community','a machine that learns faster than it understands','an object passed down for generations','a flock that moves as one mind','a material that outlives everyone in the room']
+  },
+  pivot: {
+    label: 'Pivot', sub: 'one more twist', core: false,
+    description: "A twist on how it's told, not what it's about.",
+    values: ["make it backwards","make it from a child's perspective",'make it through a single object','make it as a rumor','make it interactive','make it silent','make it impossibly small','make it impossibly large']
+  },
+  speculation: {
+    label: 'Speculation', sub: 'a "what if"', core: false,
+    description: 'The guiding "what if" everything else responds to.',
+    values: ['what if the people most affected were the ones designing it?','what if this had to work for the next seven generations?','what if this was treated as a basic right, not a privilege?','what if success was measured by wellbeing, not growth?','what if everyone involved could see the whole picture?','what if this could repair something, not just sustain it?','what if the smallest version of this spread the fastest?','what if failure here was useful information, not a setback?','what if this had to make sense to a child?','what if the people doing the work set the terms?']
+  },
+  sensing: {
+    label: 'Sensing', sub: 'a way of noticing', core: false,
+    description: 'An embodied practice — get up, do it, then notice what you learned.',
+    values: ['a sensory walk — notice sights, sounds, smells, and textures as you move','gesture it — tell what you found through movement alone, no words','LARP it — embody another perspective (human, animal, plant, or machine) for a few minutes','touch exploration — handle materials and surfaces to learn through your hands','sound mapping — move toward and away from sounds, mapping them with your body','a trash audit — sort and handle what gets discarded, and ask why','body memory — enact what the body remembers, rather than just recalling it','threshold crossing — physically move through edges, doorways, and transitions, noticing each one','elemental encounter — go stand in wind, water, sun, or shade and let it act on you','object interrogation — pick up an object, turn it over, and ask what it knows']
+  }
+};
+
+const ORDER = ['spatial','temporal','speculation','affect','voice','form','collaborator','pivot','sensing'];
+const ITEM_H = 128;
+const DEFAULTS = {};
+ORDER.forEach(k => { DEFAULTS[k] = [...LAYERS[k].values]; });
+
+let active = {};
+let locked = {};
+let current = {};
+ORDER.forEach(k => { active[k] = LAYERS[k].core; locked[k] = false; });
+
+const MODE_PROMPTS = {
+  encounter: c => `Bring ${c} into the scene — have someone roleplay or voice it while everyone else responds.`,
+  moveWith: c => `Choreograph in relation to ${c} — let your movement respond to it, and imagine its movement responding back.`,
+  become: c => `Become ${c} for a few minutes — move, act, and sense as it would.`
+};
+const MODE_KEYS = ['encounter', 'moveWith', 'become'];
+
+const GENERIC_PROMPTS = [
+  "Build a brief scene from this combination and act it out — even thirty seconds counts.",
+  "Take a short walk, inside or out, and let this combination shape what you notice.",
+  "Larp it for a minute: say a line, strike a pose, make a sound that fits.",
+  "Find an object nearby and let it stand in for this — show, don't just tell.",
+  "Sketch or arrange something physical that represents this, then describe it."
+];
+
+let pullMode = MODE_KEYS[Math.floor(Math.random() * MODE_KEYS.length)];
+let pullGenericIndex = Math.floor(Math.random() * GENERIC_PROMPTS.length);
+
+function updateEmbodimentPrompt(){
+  const el = document.getElementById('embodiment-instruction');
+  if(!el) return;
+  if(active.collaborator){
+    el.textContent = MODE_PROMPTS[pullMode](current.collaborator);
+  } else {
+    el.textContent = GENERIC_PROMPTS[pullGenericIndex];
+  }
+}
+
+const reelsEl = document.getElementById('reels');
+
+function shuffle(arr){
+  const a = [...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function buildStrip(values, landingValue, repeats=5){
+  const strip = [];
+  for(let i=0;i<repeats-1;i++) strip.push(...shuffle(values));
+  const last = shuffle(values);
+  strip.push(...last);
+  const targetIndex = strip.length - last.length + last.indexOf(landingValue);
+  return { strip, targetIndex };
+}
+
+function createReel(key){
+  const data = LAYERS[key];
+  const initialValue = data.values[Math.floor(Math.random()*data.values.length)];
+  const { strip, targetIndex } = buildStrip(data.values, initialValue);
+  current[key] = initialValue;
+
+  const reel = document.createElement('div');
+  reel.className = 'reel' + (active[key] ? '' : ' inactive');
+  reel.dataset.key = key;
+  reel.innerHTML = `
+    <div class="reel-label-flip" tabindex="0" role="button" aria-label="${data.label}: ${data.description}">
+      <div class="reel-label-inner">
+        <div class="reel-label-front">${data.label}<small>${data.sub}</small></div>
+        <div class="reel-label-back">${data.description}</div>
+      </div>
+    </div>
+    <div class="reel-window" id="window-${key}">
+      <div class="reel-strip" id="strip-${key}">
+        ${strip.map(v => `<div class="reel-item">${v}</div>`).join('')}
+      </div>
+    </div>
+    <button class="lock" data-key="${key}" aria-pressed="false">lock</button>
+  `;
+  reelsEl.appendChild(reel);
+
+  const stripEl = document.getElementById(`strip-${key}`);
+  stripEl.style.transition = 'none';
+  stripEl.style.transform = `translateY(-${targetIndex*ITEM_H}px)`;
+}
+
+function bindReelInteractions(){
+  document.querySelectorAll('.reel-label-flip').forEach(el => {
+    el.addEventListener('click', () => el.classList.toggle('flipped'));
+    el.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        el.classList.toggle('flipped');
+      }
+    });
+  });
+  document.querySelectorAll('.lock').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.key;
+      locked[key] = !locked[key];
+      btn.setAttribute('aria-pressed', locked[key]);
+      btn.textContent = locked[key] ? 'locked' : 'lock';
+    });
+  });
+}
+
+function rebuildReels(){
+  reelsEl.innerHTML = '';
+  ORDER.forEach(createReel);
+  bindReelInteractions();
+  updateTicket();
+  updateEmbodimentPrompt();
+}
+
+rebuildReels();
+
+function updateTicket(){
+  const list = document.getElementById('ticket-lines');
+  list.innerHTML = '';
+
+  function addLine(label, value, id){
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="t-label">${label}</span><span class="t-value" id="${id}">${value}</span>`;
+    list.appendChild(li);
+  }
+
+  ORDER.forEach(key => {
+    if(key === 'voice'){
+      if(active.voice && active.form){
+        addLine('Narrative', `Told by ${current.voice}, as ${current.form}.`, 'val-narrative');
+      } else if(active.voice){
+        addLine(LAYERS.voice.label, current.voice, 'val-voice');
+      }
+      return;
+    }
+    if(key === 'form'){
+      if(active.voice && active.form) return; // already shown as Narrative
+      if(active.form){
+        addLine(LAYERS.form.label, current.form, 'val-form');
+      }
+      return;
+    }
+    if(!active[key]) return;
+    addLine(LAYERS[key].label, current[key], `val-${key}`);
+  });
+}
+
+document.querySelectorAll('.chip[data-layer]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const keys = chip.dataset.layer.split(',');
+    keys.forEach(key => {
+      active[key] = !active[key];
+      document.querySelector(`.reel[data-key="${key}"]`).classList.toggle('inactive', !active[key]);
+    });
+    chip.classList.toggle('active', active[keys[0]]);
+    updateTicket();
+    updateEmbodimentPrompt();
+  });
+});
+
+let ticketNo = 1;
+const lever = document.getElementById('lever');
+lever.addEventListener('click', spin);
+
+function spin(){
+  lever.classList.add('pulling');
+  setTimeout(() => lever.classList.remove('pulling'), 600);
+  ticketNo++;
+  document.getElementById('ticket-no').textContent = `No. ${String(ticketNo).padStart(5,'0')}`;
+
+  pullMode = MODE_KEYS[Math.floor(Math.random() * MODE_KEYS.length)];
+  pullGenericIndex = Math.floor(Math.random() * GENERIC_PROMPTS.length);
+
+  ORDER.forEach((key, i) => {
+    if(!active[key] || locked[key]) return;
+    const data = LAYERS[key];
+    const stripEl = document.getElementById(`strip-${key}`);
+    const windowEl = document.getElementById(`window-${key}`);
+
+    let landingValue = data.values[Math.floor(Math.random()*data.values.length)];
+    while(data.values.length > 1 && landingValue === current[key]){
+      landingValue = data.values[Math.floor(Math.random()*data.values.length)];
+    }
+    const { strip, targetIndex } = buildStrip(data.values, landingValue);
+
+    stripEl.style.transition = 'none';
+    stripEl.innerHTML = strip.map(v => `<div class="reel-item">${v}</div>`).join('');
+    stripEl.style.transform = 'translateY(0px)';
+    void stripEl.offsetHeight;
+
+    const duration = 1.1 + i*0.22;
+    stripEl.style.transition = `transform ${duration}s cubic-bezier(0.13,0.84,0.2,1)`;
+    requestAnimationFrame(() => {
+      stripEl.style.transform = `translateY(-${targetIndex*ITEM_H}px)`;
+    });
+
+    stripEl.addEventListener('transitionend', function handler(){
+      current[key] = landingValue;
+      updateTicket();
+      updateEmbodimentPrompt();
+
+      let flashId = `val-${key}`;
+      if((key === 'voice' || key === 'form') && active.voice && active.form){
+        flashId = 'val-narrative';
+      }
+      const valEl = document.getElementById(flashId);
+      if(valEl){
+        valEl.classList.remove('flash');
+        void valEl.offsetWidth;
+        valEl.classList.add('flash');
+      }
+
+      windowEl.classList.remove('landed');
+      void windowEl.offsetWidth;
+      windowEl.classList.add('landed');
+      stripEl.removeEventListener('transitionend', handler);
+    }, { once:true });
+  });
+}
+
+const infoBtn = document.getElementById('info-btn');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+
+infoBtn.addEventListener('click', () => modalOverlay.classList.add('open'));
+modalClose.addEventListener('click', () => modalOverlay.classList.remove('open'));
+modalOverlay.addEventListener('click', (e) => {
+  if(e.target === modalOverlay) modalOverlay.classList.remove('open');
+});
+
+const customizeBtn = document.getElementById('customize-btn');
+const customizeOverlay = document.getElementById('customize-overlay');
+const customizeClose = document.getElementById('customize-close');
+const customizeFields = document.getElementById('customize-fields');
+const customizeApply = document.getElementById('customize-apply');
+const customizeReset = document.getElementById('customize-reset');
+
+function populateCustomizeForm(){
+  customizeFields.innerHTML = ORDER.map(key => {
+    const data = LAYERS[key];
+    return `
+      <div class="customize-field">
+        <label for="custom-${key}">${data.label}<span class="field-sub">${data.sub}</span></label>
+        <textarea id="custom-${key}" rows="4">${data.values.join('\n')}</textarea>
+      </div>
+    `;
+  }).join('');
+}
+
+customizeBtn.addEventListener('click', () => {
+  populateCustomizeForm();
+  customizeOverlay.classList.add('open');
+});
+customizeClose.addEventListener('click', () => customizeOverlay.classList.remove('open'));
+customizeOverlay.addEventListener('click', (e) => {
+  if(e.target === customizeOverlay) customizeOverlay.classList.remove('open');
+});
+
+customizeApply.addEventListener('click', () => {
+  ORDER.forEach(key => {
+    const textarea = document.getElementById(`custom-${key}`);
+    const values = textarea.value.split('\n').map(v => v.trim()).filter(Boolean);
+    if(values.length > 0){
+      LAYERS[key].values = values;
+    }
+  });
+  rebuildReels();
+  customizeOverlay.classList.remove('open');
+});
+
+customizeReset.addEventListener('click', () => {
+  ORDER.forEach(key => { LAYERS[key].values = [...DEFAULTS[key]]; });
+  populateCustomizeForm();
+  rebuildReels();
+});
+
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape'){
+    modalOverlay.classList.remove('open');
+    customizeOverlay.classList.remove('open');
+  }
+});
+
+const recordBtn = document.getElementById('record-btn');
+const recordStatus = document.getElementById('record-status');
+const recordLabel = recordBtn.querySelector('.record-label');
+const playbackEl = document.getElementById('recording-playback');
+
+let mediaRecorder = null;
+let recordedChunks = [];
+let recordingURL = null;
+let recordTimer = null;
+let recordStart = null;
+
+function formatElapsed(ms){
+  const total = Math.floor(ms / 1000);
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+async function startRecording(){
+  if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || typeof MediaRecorder === 'undefined'){
+    recordStatus.textContent = "Mic not available here — try opening this page in its own browser tab, or just write below.";
+    return;
+  }
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    recordedChunks = [];
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.addEventListener('dataavailable', e => {
+      if(e.data && e.data.size > 0) recordedChunks.push(e.data);
+    });
+    mediaRecorder.addEventListener('stop', () => {
+      const blob = new Blob(recordedChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
+      if(recordingURL) URL.revokeObjectURL(recordingURL);
+      recordingURL = URL.createObjectURL(blob);
+      playbackEl.innerHTML = `
+        <audio controls src="${recordingURL}"></audio>
+        <a class="download-link" href="${recordingURL}" download="futures-slip-recording.webm">Download</a>
+      `;
+      stream.getTracks().forEach(t => t.stop());
+    });
+    mediaRecorder.start();
+    recordStart = Date.now();
+    recordBtn.classList.add('recording');
+    recordBtn.setAttribute('aria-pressed', 'true');
+    recordLabel.textContent = 'Stop';
+    recordStatus.textContent = 'recording… 0:00';
+    recordTimer = setInterval(() => {
+      recordStatus.textContent = `recording… ${formatElapsed(Date.now() - recordStart)}`;
+    }, 250);
+  } catch(err){
+    recordStatus.textContent = "Couldn't access the microphone — try opening this page in its own browser tab, or just write below.";
+  }
+}
+
+function stopRecording(){
+  if(mediaRecorder && mediaRecorder.state !== 'inactive'){
+    mediaRecorder.stop();
+  }
+  clearInterval(recordTimer);
+  recordBtn.classList.remove('recording');
+  recordBtn.setAttribute('aria-pressed', 'false');
+  recordLabel.textContent = 'Record';
+  recordStatus.textContent = '';
+}
+
+recordBtn.addEventListener('click', () => {
+  if(recordBtn.classList.contains('recording')){
+    stopRecording();
+  } else {
+    startRecording();
+  }
+});
+
+
+
+</script>
+</body>
+</html>

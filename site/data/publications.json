@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "project_name": "Co-Constructing Multispecies Futures",
+  "publications": [
+    {
+      "id": "performing-the-what-if",
+      "title": "Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies",
+      "authors": [
+        { "name": "Ash Eliza Smith" },
+        { "name": "Julia McQuillan" }
+      ],
+      "publication_type": "book_chapter",
+      "publication_status": "forthcoming",
+      "publicly_available": false,
+      "url": null,
+      "doi": null,
+      "book_title": null,
+      "publisher": null,
+      "publication_year": null,
+      "local_overview": "paper.html",
+      "provisional_citation": "Smith, A. E., & McQuillan, J. (forthcoming). Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies [Book chapter].",
+      "toolkit_repository": "https://github.com/ashelizasmith-create/co-constructing-multispecies-futures",
+      "relationship_to_toolkit": "The chapter identifies the Card Deck and Interactive Tool as shared tools for building and telling speculative scenes within an iterative practice of embodied worldbuilding.",
+      "primary_deck_lineage": [
+        {
+          "title": "The thing from the future",
+          "citation": "Candy, S., & Watson, J. (2014). The thing from the future [Card game]. Situation Lab."
+        },
+        {
+          "title": "Rehearsing realities: A dramaturgy for co-creating preferable futures",
+          "publication_status": "in_press",
+          "citation": "Smith, A. E., Leadabrand, M., Lichtman, D., Bendix, S., PytlikZillig, L. M., & McQuillan, J. (in press). Rehearsing realities: A dramaturgy for co-creating preferable futures. TDR/The Drama Review."
+        }
+      ],
+      "broader_practice_lineages": [
+        "performance",
+        "dance and somatic practice",
+        "walking scores",
+        "speculative design",
+        "spatial storytelling",
+        "playable theater",
+        "immersive practice"
+      ],
+      "attribution_note": "Chapter authorship and cited framework authorship do not establish the creator roster of the toolkit or a workshop activity."
+    }
+  ]
+}
