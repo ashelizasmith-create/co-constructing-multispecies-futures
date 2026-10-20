@@ -4,7 +4,15 @@ Prepared exhibit text, quick links, and an additive image insert for the existin
 
 https://asheveryday.com/index.php/worldbuilding-community/co-constructing-multispecies-futures/
 
-On **20 October 2026**, Ash reported applying the prepared text to Indexhibit. That report is retained as the current status; the latest live text has not been independently verified. The **Quick Links v0.1** and **Images v0.1** inserts are ready to paste into that existing text. Neither has been applied to Indexhibit by this work. The canonical full-text files are retained and now include the quick links.
+On **20 October 2026**, Ash reported applying the prepared text to Indexhibit, then approved the published image-layout preview with clear project links. **Complete v0.1** now combines that approved introduction, navigation, three credited photographs, background, and lineage into one paste-ready fragment. The live Indexhibit text has not been independently verified or modified by this work. Earlier versioned component inserts remain available.
+
+## Install the complete approved layout
+
+Use **`Co-Constructing_Multispecies_Futures_Indexhibit_Complete_v0.1.txt`** for the approved layout in one file. Copy the full content into the exhibit text/source editor, replacing the exhibit text after keeping a copy of any edits you wish to retain. Keep the native card-image gallery and its settings. The three practice photographs are included through hosted URLs; no uploads are required.
+
+This complete fragment already contains the Quick Links and Images blocks. Install it once; do not also paste the older component inserts. It excludes the preview sidebar, status banner, footer, and native tabletop photograph. The canonical unversioned HTML/TXT files now match Complete v0.1.
+
+See `Co-Constructing_Multispecies_Futures_Indexhibit_Complete_README.txt` for the full installation instructions. The following component instructions remain useful for selective additions to an existing exhibit.
 
 ## Give visitors two clear destinations
 
@@ -34,13 +42,16 @@ See `Co-Constructing_Multispecies_Futures_Indexhibit_Images_README.txt` for curr
 
 ## Files
 
+- `Co-Constructing_Multispecies_Futures_Indexhibit_Complete_v0.1.html` and identical `.txt`: the complete approved exhibit fragment, including all three practice photographs.
+- `Co-Constructing_Multispecies_Futures_Indexhibit_Complete_README.txt`: instructions for installing the complete fragment once.
+
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Quick_Links_v0.1.html` and identical `.txt`: compact additive destination links, with CSS scoped to `#ccmf-quick-links`.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Quick_Links_README.txt`: placement instructions and destination URLs.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.html` and identical `.txt`: additive three-image insert, with CSS scoped to `#ccmf-practice-images`.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Images_README.txt`: placement instructions, credits, source URLs, and image sizes.
 - `Co-Constructing_Multispecies_Futures_Indexhibit_Images_v0.1.zip`: the insert, instructions, and unchanged copies of the three images in `images/`.
 
-- `Co-Constructing_Multispecies_Futures_Indexhibit.html`: full exhibit text, refreshed to include Quick Links immediately after the introduction. The lower navigation contains only contextual extras. The separate image insert is not included.
+- `Co-Constructing_Multispecies_Futures_Indexhibit.html`: canonical complete exhibit text, matching Complete v0.1 with introduction, quick links, photographs, context, and credits.
 - `Co-Constructing_Multispecies_Futures_Indexhibit.txt`: the identical fragment in a plain-text file for copying.
 - [Preview page](https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/indexhibit-preview.html): a clearly labeled proposed layout with quick links before the photographs, prepared exhibit text, and local assets. It does not verify or reproduce Ash's latest live edits.
 
@@ -50,7 +61,7 @@ Ash reports completing the earlier text update. The additive instructions above 
 
 1. Open the existing **Co-Constructing Multispecies Futures** exhibit in Indexhibit. Keep a copy of the current exhibit text so it can be restored.
 2. Open the fragment as source text. Copy the complete fragment, including its scoped `<style>` block. Do not copy the preview page's sidebar, document shell, or image.
-3. In the exhibit text/source editor, replace the intended exhibit text with the fragment. This is an HTML fragment, so it belongs in the exhibit text rather than the site's global template. The Quick Links block is already included. Add the separate image insert after it if desired.
+3. In the exhibit text/source editor, replace the intended exhibit text with the fragment. This is an HTML fragment, so it belongs in the exhibit text rather than the site's global template. Both the Quick Links and three-photo image blocks are already included; do not add them again.
 4. Preserve the exhibit's existing image, image order, width, and gallery settings. Do not import or upload the image again.
 5. Save when ready and use Indexhibit's preview to check the exhibit. Confirm there is one existing image, the text is readable, and the project links lead to their intended destinations. Check a narrow screen as well.
 

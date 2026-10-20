@@ -1,0 +1,123 @@
+<!-- Co-Constructing Multispecies Futures: complete approved exhibit v0.1.
+     Includes introduction, quick links, three credited photographs, and background.
+     Install as one exhibit-text fragment; no separate inserts are needed.
+     Existing exhibit: https://asheveryday.com/index.php/worldbuilding-community/co-constructing-multispecies-futures/
+     Keep the existing Indexhibit gallery image and settings:
+     https://asheveryday.com/files/gimgs/397_SDL_WB_Engagement.png
+     The image is supplied by the existing gallery; this fragment does not add another copy.
+-->
+<style>
+#ccmf-exhibit{max-width:660px;color:#111;font:14px/1.65 Arial,Helvetica,sans-serif}
+#ccmf-exhibit h1{font-size:25px;line-height:1.2;font-weight:600;margin:0 0 22px;letter-spacing:-.025em}
+#ccmf-exhibit h2{font-size:15px;line-height:1.35;font-weight:600;margin:30px 0 12px}
+#ccmf-exhibit p{margin:0 0 16px}
+#ccmf-exhibit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+#ccmf-exhibit a:focus-visible{outline:2px solid #111;outline-offset:4px}
+#ccmf-exhibit .ccmf-intro{font-size:17px;line-height:1.55}
+#ccmf-exhibit .ccmf-actions{display:flex;flex-wrap:wrap;gap:10px 18px;margin:24px 0 16px}
+#ccmf-exhibit .ccmf-actions a{display:inline-block;font-size:13px;line-height:1.4;padding:7px 0}
+#ccmf-exhibit .ccmf-small{font-size:12px;line-height:1.6}
+#ccmf-exhibit .ccmf-meta{border-top:1px solid #ddd;margin-top:26px;padding-top:16px}
+#ccmf-exhibit .ccmf-references{margin:0;padding-left:18px;font-size:12px;line-height:1.6}
+#ccmf-exhibit .ccmf-references li{margin:0 0 12px;padding-left:3px}
+@media(max-width:600px){#ccmf-exhibit h1{font-size:23px}#ccmf-exhibit .ccmf-intro{font-size:16px}}
+</style>
+<section id="ccmf-exhibit" aria-labelledby="ccmf-title">
+  <h1 id="ccmf-title">Co-Constructing Multispecies Futures</h1>
+  <p class="ccmf-intro">An evolving toolkit for imagining and rehearsing multispecies futures through chance, affect, storytelling, and embodied play.</p>
+<!-- Co-Constructing Multispecies Futures · quick links v0.1.
+This navigation is already included in the complete exhibit.
+-->
+<style>
+#ccmf-quick-links{max-width:660px;margin:20px 0 24px;padding:16px 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;color:#111;font:13px/1.5 Arial,Helvetica,sans-serif}
+#ccmf-quick-links,#ccmf-quick-links *{box-sizing:border-box}
+#ccmf-quick-links .ccmf-destinations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#ccmf-quick-links a.ccmf-destination{display:block;min-width:0;padding:14px 16px;border:1px solid #111;background:#fff;color:#111;text-decoration:none}
+#ccmf-quick-links a.ccmf-destination strong{display:block;font-size:14px;font-weight:600;line-height:1.4}
+#ccmf-quick-links a.ccmf-destination span{display:block;margin-top:5px;font-size:12px;line-height:1.5}
+#ccmf-quick-links a.ccmf-destination-primary{background:#111;color:#fff}
+#ccmf-quick-links a.ccmf-destination:hover{background:#f4f4f4}
+#ccmf-quick-links a.ccmf-destination-primary:hover{background:#333}
+#ccmf-quick-links .ccmf-shortcuts{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:10px}
+#ccmf-quick-links .ccmf-shortcuts a{display:inline-block;padding:5px 0;color:#111;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+#ccmf-quick-links a:focus-visible{outline:2px solid #111;outline-offset:4px}
+@media(max-width:620px){#ccmf-quick-links .ccmf-destinations{grid-template-columns:1fr}}
+</style>
+<nav id="ccmf-quick-links" aria-label="Project website, GitHub repository, and quick links">
+  <div class="ccmf-destinations">
+    <a class="ccmf-destination ccmf-destination-primary" href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#start" data-ccmf-path="index.html#start"><strong>Open project website ↗</strong><span>Interactive Tool, printable cards and facilitation guides</span></a>
+    <a class="ccmf-destination" href="https://github.com/ashelizasmith-create/co-constructing-multispecies-futures"><strong>View GitHub repository ↗</strong><span>Source files, documentation and version history</span></a>
+  </div>
+  <div class="ccmf-shortcuts">
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/interactive.html" data-ccmf-path="interactive.html">Try the Interactive Tool</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/index.html#print" data-ccmf-path="index.html#print">Print the Card Deck</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/paper.html#cite" data-ccmf-path="paper.html#cite">How to cite</a>
+  </div>
+</nav>
+
+<!-- Co-Constructing Multispecies Futures · image insert v0.1.
+These photographs are already included in the complete exhibit.
+It uses hosted image copies; no image upload is required. Keep the existing card image in the native gallery.
+-->
+<style>
+#ccmf-practice-images{max-width:660px;margin:28px 0 32px;color:#111;font:12px/1.55 Arial,Helvetica,sans-serif}
+#ccmf-practice-images,#ccmf-practice-images *{box-sizing:border-box}
+#ccmf-practice-images figure{margin:0;padding:0;min-width:0}
+#ccmf-practice-images .ccmf-photo-link{display:block;border:0;text-decoration:none}
+#ccmf-practice-images img{display:block;width:100%;max-width:100%;height:auto;border:0;object-fit:contain}
+#ccmf-practice-images figcaption{padding:9px 0 0;font-size:12px;line-height:1.55}
+#ccmf-practice-images figcaption strong{display:block;font-size:13px;font-weight:600}
+#ccmf-practice-images .ccmf-photo-context,#ccmf-practice-images .ccmf-photo-credit{display:block}
+#ccmf-practice-images .ccmf-photo-credit{font-size:10.5px;color:#555;margin-top:3px}
+#ccmf-practice-images .ccmf-photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:22px;align-items:start}
+#ccmf-practice-images a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+#ccmf-practice-images a:focus-visible{outline:2px solid #111;outline-offset:4px}
+#ccmf-practice-images .ccmf-photo-note{margin:14px 0 0;font-size:11px;line-height:1.55;color:#555}
+@media(max-width:620px){#ccmf-practice-images .ccmf-photo-pair{grid-template-columns:1fr;gap:22px}}
+@media print{#ccmf-practice-images figure{break-inside:avoid}}
+</style>
+<section id="ccmf-practice-images" aria-label="Scenes from embodied worldbuilding through performance and play">
+  <figure>
+    <a class="ccmf-photo-link" href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html#robot-arm-guiding"><img src="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/assets/examples/robot-arm-guiding.webp" width="1090" height="629" alt="Ash Eliza Smith raises one arm and gestures with the other beside a white robotic arm, with a projected virtual care setting behind her."></a>
+    <figcaption><strong>Gestures with a robotic arm</strong><span class="ccmf-photo-context">Ash Eliza Smith at the Speculative Robotics Lab.</span><span class="ccmf-photo-credit">Photo: Deann Gayman / University Communication and Marketing. <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html#robot-arm-guiding">Context &amp; credits ↗</a></span></figcaption>
+  </figure>
+  <div class="ccmf-photo-pair">
+    <figure>
+      <a class="ccmf-photo-link" href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html#paper-drone-dance"><img src="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/assets/examples/paper-drone-dance.webp" width="1080" height="766" loading="lazy" alt="Two aerial stills from Southern Devices: Ash Eliza Smith dances near a drone’s shadow, and a wider view shows the peace-sign paths of Optimist Park."></a>
+      <figcaption><strong>Moving with a drone</strong><span class="ccmf-photo-context">Southern Devices · Optimist Park</span><span class="ccmf-photo-credit">Stills: Raber Umphenhour and Ash Eliza Smith. <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html#paper-drone-dance">Context &amp; credits ↗</a></span></figcaption>
+    </figure>
+    <figure>
+      <a class="ccmf-photo-link" href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html#teaching-fabric-prop"><img src="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/assets/examples/teaching-fabric-prop.webp" width="640" height="427" loading="lazy" alt="Two people hold and adjust a colorful fabric piece beside a table."></a>
+      <figcaption><strong>Making with materials</strong><span class="ccmf-photo-context">Student work · Edgeland Futurism, UC San Diego</span><span class="ccmf-photo-credit">Instructors: Ash Eliza Smith and Pepe Rojo. Photographer not specified. <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html#teaching-fabric-prop">Context &amp; credits ↗</a></span></figcaption>
+    </figure>
+  </div>
+  <p class="ccmf-photo-note">Scenes from the wider embodied worldbuilding practice. Each image links to its context and credits.</p>
+</section>
+
+  <p>Build and tell speculative scenes, then enter them through roleplay, movement, and rehearsal—with other people, animals, plants, materials, machines, and places. Return to the story with what the body noticed.</p>
+  <p>Begin with where and when. Add a feeling, a voice, a form, a more-than-human collaborator, or a pivot. Use chance to find a beginning, then decide together what to keep, change, and try.</p>
+
+  <nav class="ccmf-actions" aria-label="Further project context">
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/guide.html" data-ccmf-path="guide.html">Lead a Session</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/workshops.html" data-ccmf-path="workshops.html">Workshops &amp; development</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/examples.html" data-ccmf-path="examples.html">Examples</a>
+    <a href="https://ashelizasmith-create.github.io/co-constructing-multispecies-futures/versions.html" data-ccmf-path="versions.html">Versions</a>
+  </nav>
+  <p class="ccmf-small">The general Card Deck includes 94 cards, with US Letter and A4 home-print options. The Interactive Tool has an adapted prompt bank and numbered versions to keep.</p>
+
+  <h2>From a scene to an encounter</h2>
+  <p>Encountering, moving with, and becoming-with offer overlapping ways to enter a world while it is taking shape. Attend to another being's capacities and constraints, and let the relation change what you sense and imagine. A perspective remains partial; participation can shift through attention, orientation, gesture, or scale.</p>
+  <p>Move between imagining, rehearsing, reflecting, and writing. Some rehearsals become stories, artworks, prototypes, or technologies. Others remain a gesture or a question worth carrying.</p>
+
+  <h2>Paper and practice</h2>
+  <p><em>Performing the What-If: Embodied Worldbuilding with More-than-Human Intelligences, from Roleplay to Emerging Technologies</em>, by Ash Eliza Smith and Julia McQuillan, is a forthcoming chapter in <em>Strategic Handbook of Worldbuilding</em> (Routledge) and is not yet public. It describes the practice behind these shared tools.</p>
+
+  <h2>Lineage and credits</h2>
+  <p>The Card Deck and Interactive Tool build on <em>The Thing From The Future</em> and the <em>Rehearsing Realities</em> framework. The wider practice draws on performance, dance and somatic practice, walking scores, speculative design, spatial storytelling, playable theater, and immersive practice.</p>
+  <ul class="ccmf-references">
+    <li>Candy, S., &amp; Watson, J. (2014). <em>The thing from the future</em> [Card game]. Situation Lab.</li>
+    <li>Smith, A. E., Leadabrand, M., Lichtman, D., Bendix, S., PytlikZillig, L. M., &amp; McQuillan, J. (in press). Rehearsing realities: A dramaturgy for co-creating preferable futures. <em>TDR/The Drama Review</em>.</li>
+  </ul>
+  <p class="ccmf-small">Created by Ash Eliza Smith, developed in the Speculative Devices Lab with Julia McQuillan and Sam Bendix. Chapter and framework authorship are distinct from the credits for the toolkit and its workshop activities.</p>
+  <p class="ccmf-small ccmf-meta">Interactive Tool v0.1.2 · Development edition<br>Previous numbered versions will be retained as the project develops.</p>
+</section>
